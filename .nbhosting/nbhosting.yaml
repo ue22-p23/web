@@ -37,3 +37,4 @@ builds:
     script: |
       pip install jupyter-book
       jupyter-book build .
+    external_url: https://ue22-p23-web.readthedocs.io/
