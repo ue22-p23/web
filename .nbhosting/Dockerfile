@@ -20,10 +20,9 @@ ENV NODE_PATH="/opt/conda/lib/node_modules/"
 # because we provide our own nbconfig/notebook.json
 # and that is where is stored the enabled/disabled extensions
 RUN true \
- && pip install -U nb-courselevels \
+ && pip install -U jupyterlab-courselevels \
  && pip install -U nbautoeval \
  && pip install -U ipythontutor \
- && pip install -U rise \
  && true
 
 
