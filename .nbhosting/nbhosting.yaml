@@ -31,8 +31,8 @@ static-mappings:
 
 builds:
   - id: handouts
-    name: format HTML
-    description: contenu statique et cherchable
+    name: intro html, css, js
+    description: HTML statique et cherchable
     directory: notebooks
     script: |
       pip install jupyter-book
