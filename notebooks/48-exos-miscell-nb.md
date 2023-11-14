@@ -1,0 +1,67 @@
+---
+celltoolbar: Slideshow
+jupytext:
+  cell_metadata_filter: all,-hidden,-heading_collapsed,-run_control,-trusted
+  formats: md:myst
+  notebook_metadata_filter: all,-language_info,-toc,-jupytext.text_representation.jupytext_version,-jupytext.text_representation.format_version
+  text_representation:
+    extension: .md
+    format_name: myst
+kernelspec:
+  display_name: JavaScript (Node.js)
+  language: javascript
+  name: javascript
+language_info:
+  name: javascript
+nbhosting:
+  title: 'practice : additional assignments'
+---
+
++++ {"slideshow": {"slide_type": ""}}
+
+Licence CC BY-NC-ND, Thierry Parmentelat
+
++++ {"slideshow": {"slide_type": ""}}
+
+# practice : additional assignments
+
+```{code-cell}
+tools = require('../js/tools'); tools.init()
+```
+
++++ {"slideshow": {"slide_type": ""}}
+
+## pythagore
+
++++
+
+you are tasked to write a "graphical demonstration" for the Pythagorean Theorem, getting inspiration from the page below
+
+the sample app is not responsive, you will need to open it in a separate window
+
+```{code-cell}
+:hide_input: true
+:tags: [hide-input]
+
+tools.sample_from_stem("../samples/48-pythagore/pythagore",
+                       {sources_show: false, separate_height: '1000px', separate_width: '800px'})
+```
+
++++ {"slideshow": {"slide_type": ""}}
+
+## fibonacci and the golden number
+
+you are asked to write a small app as a html+css+js that explores the neighbourhood between fibonacci numbers and the golden number, taking - as loose as you want - inspiration from the page below
+
+here again the sample app is not responsive, you will need to open it in a separate window
+
+**HINT** the slope of the 2 fixed rules is of course the golden ratio and its inverse
+
+```{code-cell}
+:hide_input: true
+:tags: [hide-input]
+
+// the minified version somehow was not working...
+tools.sample_from_stem("../samples/48-fibonacci/fibonacci",
+                       {sources_show: false, separate_height: '1000px', separate_width: '900px'})
+```

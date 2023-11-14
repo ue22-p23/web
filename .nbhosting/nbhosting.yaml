@@ -1,0 +1,39 @@
+tracks:
+- description: web intro
+  id: web
+  name: 'html + css + js'
+  sections:
+  - name: intro - Web frontend
+    notebooks:
+    - "notebooks/0*-nb.md"
+  - name: "HTML & CSS basics"
+    notebooks:
+    - "notebooks/1*-nb.md"
+  - name: layout with CSS
+    notebooks:
+    - "notebooks/2*-nb.md"
+  - name: intro to JS
+    notebooks:
+    - "notebooks/3*-nb.md"
+  - name: practising JS
+    # last minute: reordering the exos in a more progressive order
+    # do not change numbering though because it's too intrusive
+    # as we're in the middle of the course
+    notebooks:
+    - "notebooks/[45]*.md"
+  - name: optional content
+    notebooks:
+    - "notebooks/6*-nb.md"
+
+static-mappings:
+- source: media
+  destination: media
+
+builds:
+  - id: handouts
+    name: format HTML
+    description: contenu statique et cherchable
+    directory: notebooks
+    script: |
+      pip install jupyter-book
+      jupyter-book build .

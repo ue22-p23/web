@@ -1,0 +1,21 @@
+format: jb-book
+parts:
+- caption: intro - Web frontend
+  chapters:
+  - glob: 0*-nb
+- caption: HTML & CSS basics
+  chapters:
+  - glob: 1*-nb
+- caption: layout with CSS
+  chapters:
+  - glob: 2*-nb
+- caption: intro to JS
+  chapters:
+  - glob: 3*-nb
+- caption: practising JS
+  chapters:
+  - glob: '[45]*'
+- caption: optional content
+  chapters:
+  - glob: 6*-nb
+root: 01-motivation-nb
