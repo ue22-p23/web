@@ -40,7 +40,7 @@ build a small app that will let us browse the collection of drawings by xkcd
 
 clone the repo below, and follow the instructions
 
-<https://github.com/ue22-p22/web-xkcd.git>
+<https://github.com/ue22-p23/web-xkcd.git>
 
 +++
 
@@ -51,4 +51,4 @@ build a small app that will let us paint a commonly shared image one pixel at a 
 
 clone the repo below, and follow the instructions
 
-<https://github.com/ue22-p22/web-pixelwar>
+<https://github.com/ue22-p23/web-pixelwar>
