@@ -179,15 +179,15 @@ a first, not-quite-working example (at least on Chrome)
 :tags: [hide-input]
 
 hover1_html = `<div id="part1">
-  <a href="https://nbhosting.inria.fr" target="_">
+  <a href="https://minesparis.psl.eu/" target="_">
 a regular link is unsensitive to hovering</a>
 </div>
 
 <div class="part2">
-  <a href="https://nbhosting.inria.fr" target="_">
+  <a href="https://minesparis.psl.eu/" target="_">
      this one reacts if you hover mouse here</a>
   <br>
-  <a name="nbhosting">
+  <a name="minesparis">
      this is an anchor tag,
      it reacts to mouse presence
      (at least on Chrome), that is not what we want</a>
@@ -218,15 +218,15 @@ that is set only on `<a>` tags that have a `href=` attribute
 :tags: [hide-input]
 
 hover2_html = `<div id="part1">
-  <a href="https://nbhosting.inria.fr" target="_">
+  <a href="https://minesparis.psl.eu/" target="_">
      a regular link</a>
 </div>
 
 <div class="part2">
-  <a href="https://nbhosting.inria.fr" target="_">
+  <a href="https://minesparis.psl.eu/" target="_">
      hover mouse here</a>
   <br>
-  <a name="nbhosting">now this anchor tag
+  <a name="minesparis">now this anchor tag
      is excluded from the CSS selector, so it behaves
      as expected</a>
 </div>`
