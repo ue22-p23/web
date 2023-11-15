@@ -31,59 +31,72 @@ tools = require('../js/tools'); tools.init()
 
 +++ {"slideshow": {"slide_type": ""}}
 
-as usual you can enjoy this course with no local installation
+as usual you can enjoy this course with no local installation, and use the pure HTML version here  
+<https://ue22-p23-web.readthedocs.io/>
 
 if however you plan on reading this course locally on your computer, there are a few specific requirements that need to be fulfilled
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## install as user as far as possible
+## foreword
 
-+++
+* **PREREQUISITES**  
+  the instructions below assume you have installed the common stack used for the
+  S1 courses, namely `miniconda` + `bash` + `git` + `vs-code`
+* **WARNING**  
+  note that on Windows, the installation instructions below involve the
+  installation of some Visual-Studio components, which is a little intrusive and
+  take a looonng time...
+* do all the installs as **a regular user**  
+  the commands below should be as far as possible run as a regular user  
+  if however, depending on your setup, they fail to complete because of a lack of permissions, you may need to invoke them as super-user  
+  by prepending them `sudo`; like in
+  ```
+  sudo npm install -g ijavascript
+  ```
+  instead of just
+  ```
+  npm install -g ijavascript
+  ```
 
-the commands below should be as far as possible run as a regular user  
-if however, depending on your setup, they fail to complete because  
-of a lack of permissions, you may need to invoke them as super-user  
-by prepending them `sudo`; like in
++++ {"slideshow": {"slide_type": "slide"}}
+
+## create a virtualenv
+
+in one go: will install jointly Python and nodejs !
+
 ```
-sudo npm install -g ijavascript
-```
-instead of just
-```
-npm install -g ijavascript
+conda create -n web python=3.11 nodejs=20
+conda activate web
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## Jupyter JavaScript kernel
+## install Python requirements
+
+```
+# like always
+pip install -r requirements.txt
+```
 
 +++
+
+## install the JavaScript kernel for Jupyter
 
 * we use a JavaScript kernel - of course
-* this requires `node` and `npm`, and can be installed with
-  * `npm install -g ijavascript`
-  * `ijsinstall`
+* this requires `node` and `npm` (that we have installed with conda)
+* and can be installed with
+
+```
+npm install -g ijavascript
+ijsinstall
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## Jupyter extensions
+## read the course
 
-this slideshow takes advantage of a few Jupyter extensions;  
-most notably, `hide_input` is massively used to **hide**
-the code that in turn produces code layout, so this one is rather critical
-
-that being said, without any extension it is still possible to read the notebooks in regular - as opposed to slideshow - mode
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-* slideshow :
-  * `pip install rise`  
-* to read notebooks stored as markdown :  
-  * `pip install jupytext[myst]`
-* install Jupyter extensions
-  * `pip install jupyter_contrib_nbextensions`  
-  * `jupyter contrib nbextension install --user`   
-* enable Jupyter's `hide_input` extension :  
-  * `jupyter nbextension enable hide_input/main`
-* (optional) enable Jupyter's `splitcell` extension  
-  * `RUN jupyter nbextension enable splitcell/splitcell`
+```
+# the usual
+jupyter lab
+```
