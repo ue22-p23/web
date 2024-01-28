@@ -21,7 +21,7 @@ nbhosting:
 
 Licence CC BY-NC-ND, Thierry Parmentelat
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 # jQuery
 
@@ -138,7 +138,7 @@ as per <https://jquery.com>
 
 ### CSS selectors example
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 for example this one-liner would hide  
 all elements of class `to-hide`

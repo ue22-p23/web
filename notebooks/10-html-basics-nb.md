@@ -18,7 +18,7 @@ nbhosting:
 
 Licence CC BY-NC-ND, Thierry Parmentelat
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 # HTML basics
 
@@ -72,7 +72,7 @@ tools.sample_from_strings({html: fragment1}, {separate_show: false})
 
 ## browser and server
 
-+++ {"slideshow": {"slide_type": ""}, "cell_style": "split"}
++++ {"cell_style": "split"}
 
 ### regular setup
 
@@ -83,7 +83,7 @@ files are on the Internet
 :align: center
 ```
 
-+++ {"slideshow": {"slide_type": ""}, "cell_style": "split"}
++++ {"cell_style": "split"}
 
 ### our setup today
 
@@ -107,7 +107,7 @@ without the presence of a server, this is what the <code>file://</code> URLs are
 
 ## practice
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * start from an empty folder
 * open vs-code and create a file named `hello.html`  
@@ -159,13 +159,13 @@ it should look like <code>file:///the/path/to/your/current/directory/hello.html<
 * for that, the simplest way is to right-click on the 'Hello' text
 * and choose 'Inspect'
 
-+++ {"slideshow": {"slide_type": ""}, "cell_style": "split"}
++++ {"cell_style": "split"}
 
 ```{image} media/inspect-element-menu.png
 :align: center
 ```
 
-+++ {"slideshow": {"slide_type": ""}, "cell_style": "split"}
++++ {"cell_style": "split"}
 
 <p class="note">
 
@@ -198,7 +198,7 @@ we recommend using Chrome in case it is not working as expected
 
 ## *Elements* navigator
 
-+++ {"slideshow": {"slide_type": ""}, "cell_style": "split"}
++++ {"cell_style": "split"}
 
 ```{image} media/inspect-element-elements.png
 :align: center
@@ -212,7 +212,7 @@ we recommend using Chrome in case it is not working as expected
   *Styles* and *Computed* properties  
   (more on this later)
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 <p class="note">
 
@@ -229,7 +229,7 @@ from that view you can navigate the elements tree, although in this case it is v
   end up (if any; here of course  
   there are none)
 
-+++ {"slideshow": {"slide_type": ""}, "cell_style": "split"}
++++ {"cell_style": "split"}
 
 ```{image} media/inspect-element-console.png
 :align: center
@@ -257,7 +257,7 @@ your first JavaScript code
 
 ## DOM = Document Object Model
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * the `<tag> ... </tag>` notation
 * unambiguously maps to a tree structure  
@@ -297,7 +297,7 @@ in the ***Elements*** devel tools tab
 
 ## be rigourous
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * browsers tend to be as tolerant as possible
 * e.g. omitting a closing tag may render just fine

@@ -19,7 +19,7 @@ nbhosting:
 
 Licence CC BY-NC-ND, Thierry Parmentelat
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 # JavaScript by examples
 
@@ -195,7 +195,7 @@ remember the slides on relative and absolute URLs
 
 ### `<script defer>`
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * we can use the attribute **`defer`** to ensure  
   that the script runs **only once the entire page is loaded**  
@@ -221,7 +221,7 @@ we will talk about that again later on
 * this is **not** the usual way to do it  
   (for reusability, primarily)
 
-+++ {"incorrectly_encoded_metadata": "cell_style=\"center", "slideshow": {"slide_type": ""}, "cell_style": "split"}
++++ {"incorrectly_encoded_metadata": "cell_style=\"center", "cell_style": "split"}
 
 ```html
 <script>
@@ -239,7 +239,7 @@ we will talk about that again later on
 
 ## practice
 
-+++ {"slideshow": {"slide_type": ""}, "cell_style": "center"}
++++ {"cell_style": "center"}
 
 * take a working html
 * create a separate file named `loading.js` that contains  

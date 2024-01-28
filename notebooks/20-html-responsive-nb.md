@@ -19,7 +19,7 @@ nbhosting:
 
 Licence CC BY-NC-ND, Thierry Parmentelat
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 # responsiveness
 
@@ -47,7 +47,7 @@ tools = require('../js/tools'); tools.init()
 
 this means for example :
 
-+++ {"cell_style": "split", "slideshow": {"slide_type": ""}}
++++ {"cell_style": "split"}
 
 wide viewport
 

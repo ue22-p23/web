@@ -21,7 +21,7 @@ nbhosting:
 
 Licence CC BY-NC-ND, Thierry Parmentelat
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 # how to code: general tips
 
@@ -29,7 +29,7 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 tools = require('../js/tools'); tools.init()
 ```
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * first do not think on coding, but think about what do you want to achieve
 * decompose the thing you are trying to achieve into smaller things  

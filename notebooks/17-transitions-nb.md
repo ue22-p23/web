@@ -19,7 +19,7 @@ nbhosting:
 
 Licence CC BY-NC-ND, Thierry Parmentelat
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 # CSS transitions and animations
 
@@ -84,7 +84,7 @@ tools.sample_from_stem("../samples/17-transition1", {start_with: 'css'})
 
 ### the `transition` property
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * is a **shorthand** property for setting in one rule
   * `transition-property` : comma separated names of properties  
@@ -98,7 +98,7 @@ tools.sample_from_stem("../samples/17-transition1", {start_with: 'css'})
 
 ### most common timing functions
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * `linear` is, well of course, linear interpolation
 * the other 3: `ease-in`, `ease-out`, and `ease-in-out` make the move
@@ -178,7 +178,7 @@ for example :
 
 ### more on animations
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * see [one example on codepen](https://codepen.io/team/css-tricks/pen/EjaJNd) for a better idea of what can be achived
 * extracted [from this blog on CSS-Tricks](https://css-tricks.com/almanac/properties/a/animation/)  

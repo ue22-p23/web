@@ -17,7 +17,7 @@ nbhosting:
   title: vscode extensions
 ---
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 Licence CC BY-NC-ND, Thierry Parmentelat
 
@@ -34,7 +34,7 @@ in an opinionated order of usefulness
 tools = require('../js/tools'); tools.init()
 ```
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 ##  live server
 
@@ -55,7 +55,7 @@ when you rename a tag, it will rename the other (closing or opening) side
 
 say you want to take a fragment and insert a <code>&lt;div&gt;</code> around that, just select and type `⌃I` (Control-i)
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 ## emmet
 
@@ -71,7 +71,7 @@ I had never used that because I did not even know about it, but that sounds awes
 
 control-click in the document to find tools that will format it nicely
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 ## HTML CSS support
 
@@ -84,7 +84,7 @@ control-click in the document to find tools that will format it nicely
 
 you can control-click a file in the browser left pane, this gives you the option to open that static file in your default browser - and others as well actually
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 ## auto close tag
 

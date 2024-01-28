@@ -19,7 +19,7 @@ nbhosting:
 
 Licence CC BY-NC-ND, Thierry Parmentelat
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 # more elaborate selectors
 
@@ -55,7 +55,7 @@ that have class `class1` **or** class `class2` - or both, naturally
 
 ## selecting X under Y
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 `div p`  
 matches all `<p>` elements that are **below** a `<div>` element **at any depth**
@@ -103,7 +103,7 @@ tools.sample_from_strings({html: under_html, css: under_css}, {start_with: 'css'
 
 ## selecting X as a sibling of Y
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 `div + p`  
 matches all `<p>` elements that are **immediate right sibling** of a `<div>` element

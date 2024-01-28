@@ -17,11 +17,11 @@ nbhosting:
   title: exo - spinning wheel
 ---
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 Licence CC BY-NC-ND, Thierry Parmentelat
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 # practice : a spinning wheel
 
@@ -29,7 +29,7 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 tools = require('../js/tools'); tools.init()
 ```
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 ## what it should look like
 
@@ -39,7 +39,7 @@ tools = require('../js/tools'); tools.init()
 tools.sample_from_stem("../samples/44-spinning-wheel/spinning-wheel", {id: 'finished', sources_show: false})
 ```
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 ## recommended steps
 
@@ -47,55 +47,55 @@ the notebooks will probably not have covered everything you need to know to do t
 
 so, like always: **use your favorite search engine**
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 ### step #1
 
 make the base layout with dummy button and svg area
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 ### step #2
 
 draw circles on the base layout using java script (inline script is ok)
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 ### step #3
 
 change color and style of painted circle
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 ### step #4
 
 animate the color to make transition
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 ### step #5
 
 fix the animation to give the desired look
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 ### step #6
 
 make the animation stopable
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 ### step #7
 
 make the animation startabel/stopable by pressing the button
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 ### step #8
 
 cleanup the code, and cleanup again
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 ## a few hints
 
@@ -125,7 +125,7 @@ for example (but that's entirely up to you)
 * a function that creates the spinning wheel
 * and then stops it after a fixed duration
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 ## also remember that
 
@@ -138,7 +138,7 @@ const svgNS = "http://www.w3.org/2000/svg";
 let dot = document.createElementNS(svgNS, 'circle');
 ```
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 ## the  HTML part
 
@@ -154,7 +154,7 @@ tools.sample_from_stem(
    {id: 'source-only', css_show: false, js_show: false, output_show: false,})
 ```
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 ## observe
 
@@ -162,7 +162,7 @@ tools.sample_from_stem(
 
 * as usual now, the way we attach a callback to the `load` event
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 ## observe (2)
 

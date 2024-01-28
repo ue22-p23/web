@@ -17,11 +17,11 @@ nbhosting:
   title: 'practice : networking apps'
 ---
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 Licence CC BY-NC-ND, Thierry Parmentelat
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 # practice : networking apps
 

@@ -21,7 +21,7 @@ nbhosting:
 
 Licence CC BY-NC-ND, Thierry Parmentelat
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 # JavaScript events and callbacks
 
@@ -155,7 +155,7 @@ elem.addEventListener('myevent', foo, false)
 elem.dispatchEvent(event)
 ```
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 ### time-related events
 
@@ -192,7 +192,7 @@ const mylambda0 = function (arg0, arg1) { /* some code here */ }
 const mylambda0 = (arg0, arg1) => { /* some code here */ }
 ```
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 <div class=note>
 

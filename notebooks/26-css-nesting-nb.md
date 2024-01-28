@@ -18,7 +18,7 @@ nbhosting:
 
 Licence CC BY-NC-ND, Thierry Parmentelat
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 # CSS nesting
 
@@ -34,19 +34,19 @@ tags: []
 tools = require('../js/tools'); tools.init()
 ```
 
-+++ {"editable": true, "slideshow": {"slide_type": ""}, "tags": []}
++++ {"editable": true, "tags": []}
 
 ## why
 
 * mostly CSS nesting is about writing less, and more structured, code
 
-+++ {"editable": true, "slideshow": {"slide_type": ""}, "tags": []}
++++ {"editable": true, "tags": []}
 
 ## example: without nesting
 
 let's consider this very small code
 
-+++ {"editable": true, "slideshow": {"slide_type": ""}, "tags": []}
++++ {"editable": true, "tags": []}
 
 ## example with nesting
 
@@ -162,7 +162,7 @@ div.second {
 tools.sample_from_strings({html, css}, {id: 'with_nesting', separate_show: false, start_with: 'css', height: '35em'})
 ```
 
-+++ {"editable": true, "slideshow": {"slide_type": ""}, "tags": []}
++++ {"editable": true, "tags": []}
 
 ## how does it work ?
 
@@ -180,7 +180,7 @@ the corresponding properties (`color: black`) will apply to selector
 
 and as you can see on line 12, this can be nested as deeply as you need..
 
-+++ {"editable": true, "slideshow": {"slide_type": ""}, "tags": []}
++++ {"editable": true, "tags": []}
 
 ## why is it cool ?
 

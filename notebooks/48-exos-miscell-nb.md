@@ -17,11 +17,11 @@ nbhosting:
   title: 'practice : additional assignments'
 ---
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 Licence CC BY-NC-ND, Thierry Parmentelat
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 # practice : additional assignments
 
@@ -29,7 +29,7 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 tools = require('../js/tools'); tools.init()
 ```
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 ## pythagore
 
@@ -46,7 +46,7 @@ tools.sample_from_stem("../samples/48-pythagore/pythagore",
                        {sources_show: false, separate_height: '1000px', separate_width: '800px'})
 ```
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 ## fibonacci and the golden number
 

@@ -21,7 +21,7 @@ nbhosting:
 
 Licence CC BY-NC-ND, Thierry Parmentelat
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 # JavaScript asynchronous behaviour
 
@@ -149,7 +149,7 @@ fetch(URL_small)
     .then((response) => console.log("DONE"))
 ```
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 as you can see, this causes 2 things:
 
@@ -434,7 +434,7 @@ function get_url2(url) {
 
 ### `.catch()` recalls exception handling
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * let us run this code with an invalid URL
 * note that the error occurs in the `fetch()` call itself

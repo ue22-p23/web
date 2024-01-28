@@ -21,7 +21,7 @@ nbhosting:
 
 Licence CC BY-NC-ND, Thierry Parmentelat
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 # 30,000 ft overview of JS
 
@@ -203,7 +203,7 @@ for (let i=0; i<3; i++) {
 
 ## variables ([link in tuto](https://javascript.info/variables))
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * as usual, variables are **names** that refer to **data in memory**
 * like in Python, any such data is **typed** (although the name is not)

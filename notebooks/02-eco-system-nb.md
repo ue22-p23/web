@@ -64,7 +64,7 @@ tools = require('../js/tools'); tools.init()
 
 ##  focus on HTML - CSS - JavaScript
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * we will only focus on **grassroots level**
   * that will likely remain valid for a while
@@ -75,7 +75,7 @@ tools = require('../js/tools'); tools.init()
 
 ## backend and frontend
 
-+++ {"slideshow": {"slide_type": ""}, "cell_style": "split"}
++++ {"cell_style": "split"}
 
 * Web server :  
   * operated by the application provider
@@ -86,7 +86,7 @@ tools = require('../js/tools'); tools.init()
     (even though that code  
     is fetched at the backend)
 
-+++ {"slideshow": {"slide_type": ""}, "cell_style": "split"}
++++ {"cell_style": "split"}
 
 ```{image}  media/client-server.svg
 :width: 300px
@@ -97,7 +97,7 @@ tools = require('../js/tools'); tools.init()
 
 ## you may have heard of
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * typical backend technologies
   * PHP, django or flask (Python), Ruby/on rails, SQL databases

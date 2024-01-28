@@ -19,7 +19,7 @@ nbhosting:
 
 Licence CC BY-NC-ND, Thierry Parmentelat
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 # how to apply CSS
 
@@ -31,7 +31,7 @@ tools = require('../js/tools'); tools.init()
 
 ## 3 ways to apply CSS
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * located in a separate **CSS file** - via its own URL
 * embedded in html within a `<style>` html tag
@@ -41,7 +41,7 @@ tools = require('../js/tools'); tools.init()
 
 ## preferred method : a separate CSS
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * write your CSS in a separate file, e.g. `mystyle.css`
 * which, assuming it is in the same directory as your `hello.html`
@@ -147,7 +147,7 @@ tools.sample_from_strings({html: embedded_html})
 
 ## method 3: hardwired with `style=`
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * attach a `style=` attribute on a HTML tag
 * this method is by far **the worst**
@@ -178,7 +178,7 @@ tools.sample_from_strings({html: embedded_html})
 
 ## practice
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * copy `hello.html` into `mycv.html`
 * create a more realistic skeleton for a résumé
@@ -196,7 +196,7 @@ tools.sample_from_strings({html: embedded_html})
 
 ### practice (continued)
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * create a CSS file `mycv.css`
   * with some settings that should apply to `mycv.html`

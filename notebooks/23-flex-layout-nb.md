@@ -19,7 +19,7 @@ nbhosting:
 
 Licence CC BY-NC-ND, Thierry Parmentelat
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 # `display: flex`
 
@@ -31,7 +31,7 @@ tools = require('../js/tools'); tools.init()
 
 ## purpose
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * `flex` is another modern layout engine  
 * that tries to solve or at least alleviate  

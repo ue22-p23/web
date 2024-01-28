@@ -17,11 +17,11 @@ nbhosting:
   title: user tools
 ---
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 Licence CC BY-NC-ND, Thierry Parmentelat
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 # visualization tools
 
@@ -29,7 +29,7 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 tools = require('../js/tools'); tools.init()
 ```
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 ## there is a library for everything
 
@@ -53,7 +53,7 @@ this is a personal choice, there are **tons** of other interesting libraries ava
 
 </div>
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 ## three.js
 
@@ -69,7 +69,7 @@ in a nutshell, to render a scene you need
 
 it is pretty easy to get started with, if you [follow the tuto](https://threejs.org/docs/index.html#manual/en/introduction/Creating-a-scene)
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 ### a selection
 
@@ -80,7 +80,7 @@ it is pretty easy to get started with, if you [follow the tuto](https://threejs.
   * <https://mixedreality.mozilla.org/hello-webxr/>
   * <http://chandlerprall.github.io/Physijs/examples/jenga.html>
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 ## `d3.js`
 
@@ -103,7 +103,7 @@ a cool way to play with d3 is to use <https://observablehq.com>, that was develo
     
 `observablehq` has its own [gallery of visualizations](https://observablehq.com/explore)
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 ### a selection
 

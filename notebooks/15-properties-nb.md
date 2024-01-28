@@ -19,7 +19,7 @@ nbhosting:
 
 Licence CC BY-NC-ND, Thierry Parmentelat
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 # CSS main properties
 
@@ -89,7 +89,7 @@ tools.sample_from_stem("../samples/15-font-demo")
 
 ### notes on the fonts example (1)
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * for cosmetic reasons, the example is a bit simplified  
   use something like this to import a font  
@@ -104,7 +104,7 @@ tools.sample_from_stem("../samples/15-font-demo")
 
 ### notes on the fonts example (2)
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * the single CSS rule here allows to apply  
   the font **to the whole document**  
@@ -117,7 +117,7 @@ tools.sample_from_stem("../samples/15-font-demo")
 
 ### notes on the fonts example (3)
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * also observe the import and use of *fontawesome*  
   to display custom symbols before address and phone number, like  
@@ -175,7 +175,7 @@ tools.sample_from_strings({
 
 ### Unicode - the easy way
 
-+++ {"slideshow": {"slide_type": ""}, "cell_style": "split"}
++++ {"cell_style": "split"}
 
 if you need to insert e.g. the ℃
 symbol, you can do it several ways :
@@ -187,7 +187,7 @@ easiest way : just cut-and-paste it right into the html as-is
 
 ### Unicode - the less easy way
 
-+++ {"slideshow": {"slide_type": ""}, "cell_style": "split"}
++++ {"cell_style": "split"}
 
 each Unicode character has a unique codepoint
 
@@ -234,7 +234,7 @@ as shown in the browser devel tools
 
 ![](media/box-model.png)
 
-+++ {"cell_style": "split", "slideshow": {"slide_type": ""}}
++++ {"cell_style": "split"}
 
 * padding is **inside the border**
 * margin is **outside the border**
@@ -330,11 +330,11 @@ that allow to set **several** atomic properties in one line
 
 ### shorthand order
 
-+++ {"slideshow": {"slide_type": ""}, "cell_style": "split"}
++++ {"cell_style": "split"}
 
 the trick is to remember this figure
 
-+++ {"slideshow": {"slide_type": ""}, "cell_style": "split"}
++++ {"cell_style": "split"}
 
 ![](media/box-sides-order.png)
 
@@ -420,7 +420,7 @@ several formats are supported to describe a color :
 * personnally I like this one  
   <https://colorhunt.co/palette>
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 <div class="note">
 

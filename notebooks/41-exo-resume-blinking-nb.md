@@ -21,7 +21,7 @@ nbhosting:
 
 Licence CC BY-NC-ND, Thierry Parmentelat
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 # practice : blinking background
 
@@ -29,7 +29,7 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 tools = require('../js/tools'); tools.init()
 ```
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 in this notebook :
 
@@ -70,7 +70,7 @@ tools.sample_from_stem("../samples/41-resume-blinking", {sources_show: false})
 
 ## tip #1 : run code upon load
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 so, you want to start some code, say call function `start()`   
 right **after the page loads**  
@@ -273,7 +273,7 @@ as mentioned earlier already, you can
 
 ### more on devel tools
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * there are standard keyboard shortcuts to invoke devel tools,  
 * e.g. for [google chrome](https://developers.google.com/web/tools/chrome-devtools/shortcuts)  

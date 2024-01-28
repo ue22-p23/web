@@ -123,7 +123,7 @@ this means that we will **not** address :
 * so-called *GUI*-oriented tools (Graphical User Interfaces)
   * like .net, Java Swing, Qt, …
   * based on an anachronic and rigid widget-based mental model
-  
+
 ***
 
 * web allows for much cooler and more flexible interaction
@@ -137,7 +137,7 @@ this means that we will **not** address :
 
 ## wider than just the browser
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * keep in mind that web frontend techologies
   * go way beyond the browsers per se
@@ -156,7 +156,7 @@ this means that we will **not** address :
 
 ## even wider than just the frontend
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * also be aware that JavaScript
   * that is primarily famous for powering frontends

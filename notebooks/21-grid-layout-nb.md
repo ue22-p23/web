@@ -18,7 +18,7 @@ nbhosting:
 
 Licence CC BY-NC-ND, Thierry Parmentelat
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 # `display: grid`
 
@@ -122,7 +122,7 @@ tools.sample_from_strings({html: grid_html, css: grid1_css}, {id: 'grid-1', star
 
 ![](media/grid-columns.png)
 
-+++ {"cell_style": "center", "slideshow": {"slide_type": ""}}
++++ {"cell_style": "center"}
 
   * `fr` stands for 'free space'
   * so we can allocate fixed or proportional space  

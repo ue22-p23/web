@@ -17,11 +17,11 @@ nbhosting:
   title: exo - grid
 ---
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 Licence CC BY-NC-ND, Thierry Parmentelat
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 # practice : a dynamic grid
 

@@ -19,7 +19,7 @@ nbhosting:
 
 Licence CC BY-NC-ND, Thierry Parmentelat
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 # CSS basics
 
@@ -31,7 +31,7 @@ tools = require('../js/tools'); tools.init()
 
 ## purpose of style sheet
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * keep contents and presentation separate
 * allow to adapt same contents
@@ -46,7 +46,7 @@ tools = require('../js/tools'); tools.init()
 
 ## what can be styled ?
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * short answer : virtually everything
 * let's start with the obvious
@@ -55,7 +55,7 @@ tools = require('../js/tools'); tools.init()
 
 ## text properties
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * `font-family` : e.g. Times
 * `font-size` : e.g. 12px

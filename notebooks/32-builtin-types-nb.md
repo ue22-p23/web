@@ -21,7 +21,7 @@ nbhosting:
 
 Licence CC BY-NC-ND, Thierry Parmentelat
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 # JS builtin types
 
@@ -58,7 +58,7 @@ we will add commented-out `/*let*/` chunks when using a new variable
 
 ## atomic types
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * `number` is the default type for numeric values  
 * `string`
@@ -94,7 +94,7 @@ google for `bigint` for error-free calculus on integers - like Python's `int`
 
 ### atomic types (continued)
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * `null` is similar to Python's `None`
 * `undefined` 
@@ -179,7 +179,7 @@ s = f"format expression like {x*x} in a string"
 
 ### see also
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 for a deeper study :
 
@@ -701,7 +701,7 @@ for (let key in bond) {
 
 #### building objects (advanced)
 
-+++ {"tags": ["level_advanced"], "slideshow": {"slide_type": ""}}
++++ {"tags": ["level_advanced"]}
 
 and also, because there is no difference between
 
@@ -813,7 +813,7 @@ foo("else", {height: 800})
 
 ### `console.log()` and objects
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 **TIP** about debugging JS objects :
 

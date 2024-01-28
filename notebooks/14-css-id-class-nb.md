@@ -19,7 +19,7 @@ nbhosting:
 
 Licence CC BY-NC-ND, Thierry Parmentelat
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 # HTML ids and classes
 
@@ -35,7 +35,7 @@ tools = require('../js/tools'); tools.init()
 
 there is a need for more accurate / selective settings
 
-+++ {"slideshow": {"slide_type": ""}, "cell_style": "split"}
++++ {"cell_style": "split"}
 
 remember our first CSS clause
 
@@ -46,7 +46,7 @@ a {
 }
 ```
 
-+++ {"cell_style": "split", "slideshow": {"slide_type": ""}}
++++ {"cell_style": "split"}
 
 it will apply both settings  
 *on ALL `<a>` elements*
@@ -57,7 +57,7 @@ we need **more selective** mechanisms
 
 ## `id=` : assign a unique identifier
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * an element that is unique in your document
 * can be attached a unique identifier
@@ -114,13 +114,13 @@ tools.sample_from_strings({html: id2_html, css: id2_css}, {start_with: 'css'})
 
 ## `class=` : styling elements by class
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * it is also possible to create arbitrary groups of elements
 * so that they can be styled together
 * this is simply done by setting a `class` attribute
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * an element can - and often has - several classes
 * e.g. `class="one-class another-class"`
@@ -150,7 +150,7 @@ tools.sample_from_strings({html: class_html, css: class_css})
 
 ## summary of basic selectors
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 let's summarize
 
@@ -167,7 +167,7 @@ let's summarize
 
 ## cascading and inheritance
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * cascading : what happens if **several rules** define,  
   say, the 'color' property on one element ?
@@ -177,7 +177,7 @@ let's summarize
 
 * in a nutshell :
 
-+++ {"slideshow": {"slide_type": ""}, "cell_style": "split"}
++++ {"cell_style": "split"}
 
 ##### cascading 
 the **most specific** rule wins
@@ -192,7 +192,7 @@ the **element's parent**
 
 ## cascading  & specificity
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 in a nutshell, the intuition behind the actual rules is that
 
@@ -206,7 +206,7 @@ in a nutshell, the intuition behind the actual rules is that
 
 ## specificity
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 selectors can be more convoluted than what we've seen so far,  
 (more on this later on) but the logic to compare  
@@ -223,7 +223,7 @@ specificity can be reasonably approximated as follows :
 
 ### specificity example
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 in the 4 examples below, the CSS is unchanged throughout; we will see
 
@@ -364,7 +364,7 @@ tools.sample_from_strings({html: inherit_html, css: inherit_css})
 
 ### inheritance (continued)
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 the point is that
 
@@ -378,7 +378,7 @@ the point is that
 
 ### inheritance & the `body` rule
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 * however, it is common practice to create a rule  
   whose selector targets the `body` element  
