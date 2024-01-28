@@ -79,15 +79,21 @@ tools.sample_from_strings({html: fragment1}, {separate_show: false})
 
 files are on the Internet
 
-![](media/client-server.svg)
+```{image} media/client-server.svg
+:height: 300px
+:align: center
+```
 
 +++ {"slideshow": {"slide_type": ""}, "cell_style": "split"}
 
 ### our setup today
 
-files are local on your laptop
+but today, files are local on your laptop
 
-![](media/local-file.svg)
+```{image} media/local-file.svg
+:height: 300px
+:align: center
+```
 
 +++
 
@@ -157,7 +163,9 @@ it should look like <code>file:///the/path/to/your/current/directory/hello.html<
 
 +++ {"slideshow": {"slide_type": ""}, "cell_style": "split"}
 
-![](media/inspect-element-menu.png)
+```{image} media/inspect-element-menu.png
+:align: center
+```
 
 +++ {"slideshow": {"slide_type": ""}, "cell_style": "split"}
 
@@ -194,7 +202,9 @@ we recommend using Chrome in case it is not working as expected
 
 +++ {"slideshow": {"slide_type": ""}, "cell_style": "split"}
 
-![](media/inspect-element-elements.png)
+```{image} media/inspect-element-elements.png
+:align: center
+```
 
 +++ {"cell_style": "split"}
 
@@ -223,7 +233,9 @@ from that view you can navigate the elements tree, although in this case it is v
 
 +++ {"slideshow": {"slide_type": ""}, "cell_style": "split"}
 
-![](media/inspect-element-console.png)
+```{image} media/inspect-element-console.png
+:align: center
+```
 
 +++ {"cell_style": "split", "slideshow": {"slide_type": "slide"}}
 
@@ -238,7 +250,10 @@ your first JavaScript code
 
 +++ {"cell_style": "split"}
 
-![](media/inspect-element-console-code.png)
+```{image} media/inspect-element-console-code.png
+:align: center
+:width: 600px
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -270,7 +285,9 @@ this HTML fragment
 +++ {"cell_style": "split"}
 
 will result in this tree
-![](media/abstract-syntax.svg)
+```{image} media/abstract-syntax.svg
+:align: center
+```
 
 +++ {"cell_style": "center"}
 

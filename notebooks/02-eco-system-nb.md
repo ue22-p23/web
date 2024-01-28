@@ -88,7 +88,10 @@ tools = require('../js/tools'); tools.init()
 
 +++ {"slideshow": {"slide_type": ""}, "cell_style": "split"}
 
-![](media/client-server.svg)
+```{image}  media/client-server.svg
+:width: 300px
+:align: center
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

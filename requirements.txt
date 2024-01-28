@@ -1,5 +1,4 @@
 jupyter
 jupytext
-jupyter_contrib_nbextensions
-nb-courselevels
-rise
+jupyterlab-myst
+jupyterlab-gridwidth

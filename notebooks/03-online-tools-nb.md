@@ -52,10 +52,14 @@ take a quick look at <https://codepen.io/spark>
 for great examples
 (may require log in)
 
-![](media/tooling-codepen-picks.png)
+```{image} media/tooling-codepen-picks.png
+:align: center
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 each snippet can be edited online and rendered as you work on it
 
-![](media/tooling-codepen.png)
+```{image} media/tooling-codepen.png
+:align: center
+```
