@@ -15,7 +15,7 @@
   * and it is also easier to check for proper execution
   */
 div.cell div.cell_output .output pre {
-    background-color: #fee;
+    background-color: rgb(255, 248, 248);
 }
 
 div.output_area pre {
@@ -117,7 +117,7 @@ div.prompt.input_prompt, div.prompt.output_prompt {
  * if it's a (sub)title, gets outlined
  */
 
-div.cell[data-tag-frame=true]>div.inner_cell>div.rendered_html>h1:first-child,
+/* div.cell[data-tag-frame=true]>div.inner_cell>div.rendered_html>h1:first-child,
 div.cell[data-tag-frame=true]>div.inner_cell>div.rendered_html>h2:first-child,
 div.cell[data-tag-frame=true]>div.inner_cell>div.rendered_html>h3:first-child,
 div.cell[data-tag-frame=true]>div.inner_cell>div.rendered_html>h4:first-child {
@@ -125,7 +125,7 @@ div.cell[data-tag-frame=true]>div.inner_cell>div.rendered_html>h4:first-child {
     text-decoration-line: underline;
     text-decoration-color: rgb(227 129 227);
     text-decoration-style: double;
-}
+} */
 
 
 /*
