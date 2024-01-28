@@ -32,7 +32,7 @@ div.prompt.input_prompt, div.prompt.output_prompt {
 
 
 /* minimal layout tooling */
-.column {
+/* .column {
     display: flex;
     flex-direction: column;
 }
@@ -44,7 +44,7 @@ div.prompt.input_prompt, div.prompt.output_prompt {
 .row {
     display: flex;
     flex-direction: row;
-}
+} */
 
 /* inline images */
 .rendered_html img.inline {
@@ -53,7 +53,7 @@ div.prompt.input_prompt, div.prompt.output_prompt {
 
 
 /* colors */
-.grey {
+/* .grey {
     background-color: #eee;
 }
 
@@ -67,11 +67,11 @@ div.prompt.input_prompt, div.prompt.output_prompt {
 
 .pink {
     background-color: pink;
-}
+} */
 
 
 /* notes and warning */
-.note {
+/* .note {
     font-style: italic;
     border-left: 1px dotted #ccc;
     border-radius: 5px;
@@ -98,7 +98,7 @@ div.prompt.input_prompt, div.prompt.output_prompt {
     background-color: red;
     padding: 4px 10px;
     border-radius: 4px;
-}
+} */
 
 
 /*
@@ -132,10 +132,10 @@ div.cell[data-tag-frame=true]>div.inner_cell>div.rendered_html>h4:first-child {
  * ----------- specific to this course
  * used in the notebook on memory layout
  */
-.memory {
+/* .memory {
     font-size: 180%;
     line-height: 1.2;
-}
+} */
 
 /* Deep selection to take precedence from sphinx */
 div.CodeMirror-lines div.CodeMirror-code pre.CodeMirror-line {
