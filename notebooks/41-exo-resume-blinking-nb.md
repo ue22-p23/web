@@ -208,7 +208,9 @@ as mentioned earlier already, you can
 
 +++
 
-![](media/devel-tools-change-properties.png)
+```{image} media/devel-tools-change-properties.png
+:align: center
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -231,19 +233,27 @@ as mentioned earlier already, you can
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-![](media/devel-tools-console-1.png)
+```{image} media/devel-tools-console-1.png
+:align: center
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-![](media/devel-tools-console-2.png)
+```{image} media/devel-tools-console-2.png
+:align: center
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-![](media/devel-tools-console-3.png)
+```{image} media/devel-tools-console-3.png
+:align: center
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-![](media/devel-tools-console-4.png)
+```{image} media/devel-tools-console-4.png
+:align: center
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -255,7 +265,9 @@ as mentioned earlier already, you can
 
 +++ {"cell_style": "split"}
 
-![](media/devel-tools-sources.png)
+```{image} media/devel-tools-sources.png
+:align: center
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -267,7 +279,9 @@ as mentioned earlier already, you can
 
 +++ {"cell_style": "split"}
 
-![](media/devel-tools-debugging.png)
+```{image} media/devel-tools-debugging.png
+:align: center
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

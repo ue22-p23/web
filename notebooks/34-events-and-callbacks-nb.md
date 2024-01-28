@@ -113,7 +113,9 @@ tools.sample_from_stem("../samples/34-events-and-callbacks-01",
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-![](media/callbacks-chain.svg)
+```{image} media/callbacks-chain.svg
+:align: center
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

@@ -52,7 +52,9 @@ next slide demontrates this CSS:
 
 +++ {"cell_style": "split"}
 
-![](media/grid-areas.png)
+```{image} media/grid-areas.png
+:align: center
+```
 
 +++ {"cell_style": "center"}
 
@@ -120,7 +122,9 @@ tools.sample_from_strings({html: grid_html, css: grid1_css}, {id: 'grid-1', star
 
 +++ {"cell_style": "split"}
 
-![](media/grid-columns.png)
+```{image} media/grid-columns.png
+:align: center
+```
 
 +++ {"cell_style": "center"}
 
@@ -353,11 +357,15 @@ tools.sample_from_strings({html: autosize_html, css: autosize_css}, {start_with:
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-![](media/devel-tools-devices.png)
+```{image} media/devel-tools-devices.png
+:align: center
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-![](media/devel-tools-phone.png)
+```{image} media/devel-tools-phone.png
+:align: center
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -384,11 +392,15 @@ it is easy to bind a keyboard shortcut to functions that you use often
 
 if you need to add a wrapping `<div>` / `</div>` around some text, select it
 
-![](media/vs-code-0.png)
+```{image} media/vs-code-0.png
+:align: center
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-![](media/vs-code-1.png)
+```{image} media/vs-code-1.png
+:align: center
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -396,16 +408,22 @@ then activate the palette and search for 'emmet: wrap with abbreviation'
 
 select that function, you will be prompted for the name of the wrapping tag
 
-![](media/vs-code-2.png)
+```{image} media/vs-code-2.png
+:align: center
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 it is rather straightforward to attach a custom keybinding to that function if you use it often
 
-![](media/vs-code-3.png)
+```{image} media/vs-code-3.png
+:align: center
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 for example here, for now we can type 'Alt-o' to call that function
 
-![](media/vs-code-4.png)
+```{image} media/vs-code-4.png
+:align: center
+```

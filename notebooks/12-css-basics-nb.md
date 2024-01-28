@@ -37,8 +37,7 @@ tools = require('../js/tools'); tools.init()
 * allow to adapt same contents
   * to different media
   * to differents tastes (themes)
-* generally written by people with  
-  different background and sensibility
+* generally written by people with different background and sensibility
 
   * engineers *vs* designers
 
@@ -66,11 +65,15 @@ tools = require('../js/tools'); tools.init()
 
 +++ {"cell_style": "center", "slideshow": {"slide_type": "slide"}}
 
-![](media/list-properties-all.png)
+```{image} media/list-properties-all.png
+:align: center
+```
 
 +++ {"cell_style": "center", "slideshow": {"slide_type": "slide"}}
 
-![](media/list-properties-filtered.png)
+```{image} media/list-properties-filtered.png
+:align: center
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

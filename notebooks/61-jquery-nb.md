@@ -64,15 +64,21 @@ so it is a **must know** component
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-![](media/cdnjs-search.png)
+```{image} media/cdnjs-search.png
+:align: center
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-![](media/cdnjs-copy.png)
+```{image} media/cdnjs-copy.png
+:align: center
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-![](media/cdnjs-paste.png)
+```{image} media/cdnjs-paste.png
+:align: center
+```
 
 +++
 

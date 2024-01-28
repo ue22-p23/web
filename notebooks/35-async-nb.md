@@ -103,12 +103,16 @@ an alternative to callbacks (since ES2015) that tries to address
 the issues known as either
 
 * the 'Callback Hell'
-  ![](media/callback-hell.png)
+```{image} media/callback-hell.png
+:align: center
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 * also known as the 'Pyramid of Doom'
-  ![](media/pyramid-of-doom.png)
+```{image} media/pyramid-of-doom.png
+:align: center
+```
 
 i.e. a programming technique where an essentially **sequential** business  
 ends up creating a **deeply nested** program structure
@@ -251,7 +255,9 @@ Promise.resolve(5)
 
 +++ {"cell_style": "split"}
 
-![](media/promise-chaining.png)
+```{image} media/promise-chaining.png
+:align: center
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

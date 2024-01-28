@@ -94,7 +94,9 @@ when loading the simplest possible page, contents get scattered into packets, so
 
 +++ {"cell_style": "split"}
 
-![](media/loading-1-simple.png)
+```{image} media/loading-1-simple.png
+:align: center
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -109,7 +111,9 @@ there are 2 HTTP requests at work
 
 +++ {"cell_style": "split"}
 
-![](media/loading-2-nested.png)
+```{image} media/loading-2-nested.png
+:align: center
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -121,7 +125,9 @@ Devel Tools can visualize the actual loading workflow
 
 +++
 
-![](media/loading-3-google.png)
+```{image} media/loading-3-google.png
+:align: center
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

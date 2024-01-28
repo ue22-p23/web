@@ -423,7 +423,9 @@ ref1
 
 ### pythontutor illustration
 
-![](media/references-shared.png)
+```{image} media/references-shared.png
+:align: center
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

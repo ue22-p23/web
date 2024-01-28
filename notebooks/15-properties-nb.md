@@ -199,11 +199,15 @@ you can use that in a pure-ASCII source, and  write either
 
 +++ {"cell_style": "split"}
 
-![](media/unicode-celsius.png)
+```{image} media/unicode-celsius.png
+:align: center
+```
 
 +++ {"cell_style": "split"}
 
-![](media/convert-unicode.png)
+```{image} media/convert-unicode.png
+:align: center
+```
 
 +++ {"slideshow": {"slide_type": "slide"}, "tags": ["level_intermediate"]}
 
@@ -232,7 +236,9 @@ as shown in the browser devel tools
 
 +++ {"cell_style": "split"}
 
-![](media/box-model.png)
+```{image} media/box-model.png
+:align: center
+```
 
 +++ {"cell_style": "split"}
 
@@ -336,7 +342,9 @@ the trick is to remember this figure
 
 +++ {"cell_style": "split"}
 
-![](media/box-sides-order.png)
+```{image} media/box-sides-order.png
+:align: center
+```
 
 +++
 
@@ -539,7 +547,9 @@ tools.sample_from_strings({html: background_html, css: background_css})
 
 ## `background` and margins - demo explained
 
-![](media/backgrounds-and-margins.png)
+```{image} media/backgrounds-and-margins.png
+:align: center
+```
 
 +++
 
