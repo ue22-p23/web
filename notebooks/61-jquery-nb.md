@@ -202,7 +202,6 @@ $(loaded)
 * let us see how the example works exactly
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 tools.sample_from_stem("../samples/61-jquery-colors", {start_with: 'js'})

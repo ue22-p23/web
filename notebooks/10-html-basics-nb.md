@@ -53,7 +53,6 @@ an element (a section, a header) is composed by
 the overall structure of a HTML document is composed of two parts, a **header** and a **body**, like this:
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 fragment1 = `<html>
@@ -131,7 +130,6 @@ and in the browser
 it will look like this
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 // need to set an id as the default is to hash the html content
@@ -312,7 +310,6 @@ in the ***Elements*** devel tools tab
 **do not do this !!**
 
 ```{code-cell}
-:hide_input: true
 :tags: [raises-exception, hide-input]
 
 fragment_unclosed = `<p> do not do this
@@ -329,7 +326,6 @@ tools.sample_from_strings({html: fragment_unclosed}, {separate_show: false})
 **do this instead**
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 fragment_closed = `<p> do this instead </p>

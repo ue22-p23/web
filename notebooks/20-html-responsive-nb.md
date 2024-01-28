@@ -144,7 +144,6 @@ we will study these 2 policies in separate notebooks
 
 ```{code-cell}
 ---
-hide_input: true
 slideshow:
   slide_type: ''
 tags: [hide-input]

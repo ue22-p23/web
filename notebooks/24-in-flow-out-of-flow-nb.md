@@ -56,7 +56,6 @@ most of the elements we have seen so far are said to be *in-flow* :
 ## `fixed` example : a pinned header
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 fixed_html = `<div>scroll me up !</div>
@@ -128,7 +127,6 @@ tools.sample_from_strings({html: fixed_html, css: fixed_css},
 ## `sticky` example : a pinned header
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 sticky_html = `

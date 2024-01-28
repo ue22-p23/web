@@ -59,7 +59,6 @@ tools = require('../js/tools'); tools.init()
 
 ```{code-cell}
 ---
-hide_input: true
 slideshow:
   slide_type: slide
 tags: [hide-input]

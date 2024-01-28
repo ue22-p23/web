@@ -56,7 +56,6 @@ tools = require('../js/tools'); tools.init()
 ```{code-cell}
 ---
 cell_style: center
-hide_input: true
 slideshow:
   slide_type: ''
 tags: [hide-input]
@@ -125,7 +124,6 @@ and the same goes with the <code>file:///</code> URL scheme
 
 ```{code-cell}
 ---
-hide_input: true
 slideshow:
   slide_type: ''
 tags: [hide-input]
@@ -156,7 +154,6 @@ tools.sample_from_strings({html: embedded_html})
 * and should be used in last resort
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 embedded_html = `<div
@@ -181,7 +178,7 @@ tools.sample_from_strings({html: embedded_html})
 
 ## practice
 
-+++ {"slideshow": {"slide_type": ""}, "hide_input": true}
++++ {"slideshow": {"slide_type": ""}}
 
 * copy `hello.html` into `mycv.html`
 * create a more realistic skeleton for a résumé
@@ -199,7 +196,7 @@ tools.sample_from_strings({html: embedded_html})
 
 ### practice (continued)
 
-+++ {"slideshow": {"slide_type": ""}, "hide_input": true}
++++ {"slideshow": {"slide_type": ""}}
 
 * create a CSS file `mycv.css`
   * with some settings that should apply to `mycv.html`

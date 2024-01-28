@@ -288,7 +288,6 @@ again it may make sense to run the code below in a browser console rather than i
 </div>
 
 ```{code-cell}
-:hide_input: true
 
 // this is a magic recipe to import fetch
 // useful **ONLY** if you're using node.js

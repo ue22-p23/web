@@ -269,7 +269,6 @@ in the following example :
 
 ```{code-cell}
 ---
-hide_input: true
 slideshow:
   slide_type: slide
 tags: [hide-input]
@@ -326,7 +325,6 @@ in this further example :
 
 ```{code-cell}
 ---
-hide_input: true
 slideshow:
   slide_type: slide
 tags: [hide-input]
@@ -405,7 +403,6 @@ in this further example :
 
 ```{code-cell}
 ---
-hide_input: true
 slideshow:
   slide_type: slide
 tags: [hide-input]

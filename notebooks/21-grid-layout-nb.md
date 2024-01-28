@@ -65,7 +65,6 @@ next slide demontrates this CSS:
 
 ```{code-cell}
 ---
-hide_input: true
 slideshow:
   slide_type: slide
 tags: [hide-input]
@@ -143,7 +142,7 @@ on this specific example, we could have omitted `grid-template-columns` altogeth
 
 ## example (2)
 
-+++ {"hide_input": true}
++++
 
 mostly the same, but :
 
@@ -152,7 +151,7 @@ mostly the same, but :
   * `grid-template-columns: 1fr 1fr 1fr 1fr` with
   * `grid-template-rows: 100px 1fr 5% 1fr;`
 
-+++ {"hide_input": true}
++++
 
 <div class="note">
 
@@ -162,7 +161,6 @@ mostly the same, but :
 
 ```{code-cell}
 ---
-hide_input: true
 slideshow:
   slide_type: slide
 tags: [hide-input]
@@ -201,7 +199,7 @@ tools.sample_from_strings({html: grid_html, css: grid2_css}, {id: 'grid-2', star
 
 ## example (3)
 
-+++ {"hide_input": true}
++++
 
 in the previous examples :
 
@@ -218,7 +216,6 @@ in the previous examples :
 
 ```{code-cell}
 ---
-hide_input: true
 slideshow:
   slide_type: slide
 tags: [hide-input]
@@ -308,7 +305,6 @@ you may also complete this game  <https://cssgridgarden.com/> at home if you fee
 ## auto-sizing example
 
 ```{code-cell}
-:hide_input: true
 :tags: [level_intermediate, hide-input]
 
 autosize_html = `<div class="container">

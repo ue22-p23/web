@@ -50,7 +50,6 @@ the assignment is to write the **javascript companion** so that
 
 ```{code-cell}
 ---
-hide_input: true
 slideshow:
   slide_type: ''
 tags: [hide-input]

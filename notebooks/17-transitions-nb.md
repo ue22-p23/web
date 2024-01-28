@@ -56,7 +56,6 @@ tools = require('../js/tools'); tools.init()
 ## transition example 1
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 tools.sample_from_stem("../samples/17-transition1", {start_with: 'css'})
@@ -113,7 +112,6 @@ tools.sample_from_stem("../samples/17-transition1", {start_with: 'css'})
 
 ```{code-cell}
 ---
-hide_input: true
 slideshow:
   slide_type: '-'
 tags: [hide-input]
@@ -152,7 +150,6 @@ with e.g. `growing.style.width = '200px'`
 
 ```{code-cell}
 ---
-hide_input: true
 slideshow:
   slide_type: '-'
 tags: [hide-input]

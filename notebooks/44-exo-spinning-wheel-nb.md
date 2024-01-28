@@ -34,7 +34,6 @@ tools = require('../js/tools'); tools.init()
 ## what it should look like
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 tools.sample_from_stem("../samples/44-spinning-wheel/spinning-wheel", {id: 'finished', sources_show: false})
@@ -148,7 +147,6 @@ let dot = document.createElementNS(svgNS, 'circle');
 your html part could look like the following
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 tools.sample_from_stem(

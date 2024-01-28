@@ -63,7 +63,6 @@ we need **more selective** mechanisms
 * can be attached a unique identifier
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 id_html = `<p id="only-me">This paragraph has an id 'only-me'</p>
@@ -83,13 +82,12 @@ p#only-me {
 tools.sample_from_strings({html: id_html, css: id_css}, {start_with: 'css'})
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}, "hide_input": true}
++++ {"slideshow": {"slide_type": "slide"}}
 
 Note that in this case you do not really need to mention the element tag
 
 ```{code-cell}
 ---
-hide_input: true
 slideshow:
   slide_type: ''
 tags: [hide-input]
@@ -128,7 +126,6 @@ tools.sample_from_strings({html: id2_html, css: id2_css}, {start_with: 'css'})
 * e.g. `class="one-class another-class"`
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 class_html = `<p class="yes">yes 1</p>
@@ -237,12 +234,11 @@ in the 4 examples below, the CSS is unchanged throughout; we will see
 1. and finally when we drop the `class` attribute  
    there is only one rule left to apply
 
-+++ {"hide_input": true, "slideshow": {"slide_type": "slide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ##### (1) embedded `style=` wins
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 specificity1_html = `<!-- the style
@@ -272,13 +268,12 @@ specificity_css = `p {
 tools.sample_from_strings({html: specificity1_html, css: specificity_css})
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}, "hide_input": true}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ##### (2) then `id=` wins
 
 ```{code-cell}
 ---
-hide_input: true
 slideshow:
   slide_type: ''
 tags: [hide-input]
@@ -303,7 +298,6 @@ tools.sample_from_strings({html: specificity2_html, css: specificity_css})
 
 ```{code-cell}
 ---
-hide_input: true
 slideshow:
   slide_type: ''
 tags: [hide-input]
@@ -327,7 +321,6 @@ tools.sample_from_strings({html: specificity3_html, css: specificity_css})
 
 ```{code-cell}
 ---
-hide_input: true
 slideshow:
   slide_type: ''
 tags: [hide-input]
@@ -349,7 +342,6 @@ tools.sample_from_strings({html: specificity4_html, css: specificity_css})
 
 ```{code-cell}
 :cell_style: center
-:hide_input: true
 :tags: [hide-input]
 
 inherit_html = `<div class="inheritance">

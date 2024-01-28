@@ -52,7 +52,6 @@ let's see how that can be done
 
 ```{code-cell}
 ---
-hide_input: true
 slideshow:
   slide_type: slide
 tags: [hide-input]
@@ -76,7 +75,6 @@ let's see how that can be done
 
 ```{code-cell}
 ---
-hide_input: true
 slideshow:
   slide_type: slide
 tags: [hide-input]

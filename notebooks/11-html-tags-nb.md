@@ -19,7 +19,7 @@ nbhosting:
 
 Licence CC BY-NC-ND, Thierry Parmentelat
 
-+++ {"slideshow": {"slide_type": ""}}
++++
 
 # most common HTML tags
 
@@ -32,7 +32,6 @@ tools = require('../js/tools'); tools.init()
 ## text tags `<p>` and `<br>`
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 text_fragment = `<p> it is wise to always embed your text
@@ -53,7 +52,6 @@ tools.sample_from_strings({html: text_fragment})
 ## lists with `<ul>`  and `<li>`
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 ul_fragment = `<p> a typical bullet list with a &amp;lt;ul&amp;gt; tag
@@ -69,7 +67,6 @@ tools.sample_from_strings({html: ul_fragment})
 ```
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 ol_fragment = `<p> the same with a &amp;lt;ol&amp;gt; tag instead
@@ -98,6 +95,9 @@ so **don't use this at scale**, they are just conveniences
 the right way to go is often **to use classes**, that we study later on
 ```
 
+```{code-cell}
+:tags: [hide-input]
+
 styling_fragment = `<p>
 there are tags for direct styling but <b>please note that their usage is discouraged</b> as generally you will style your own classes instead
 </p>
@@ -119,7 +119,6 @@ tools.sample_from_strings({html: styling_fragment})
 * `<code>` is for a terminal-like font and style
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 code_fragment = `<p>for inserting code that should be kept as-is
@@ -157,7 +156,6 @@ typical **hyperlink** reads like this
 **NOTE** that clicking the link will cause you to leave the present notebook !
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 hyperlink_fragment = `<a href="https://www.google.com/">the hyperlink</a>`;
@@ -173,7 +171,6 @@ tools.sample_from_strings({html: hyperlink_fragment})
 if you need a hyperlink to point, not at the beginning of this page, but somewhere in the middle, then create an anchor at that location
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 anchor_fragment = `<a name="the-anchor-name">the magic location</a>`;
@@ -194,7 +191,6 @@ tools.sample_from_strings({html: anchor_fragment})
 ### local URL
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 redirect_fragment = `<p>it is easy to craft a local URL
@@ -229,12 +225,8 @@ tools.sample_from_strings({html: redirect_fragment})
 ### `<div>` and `<span>` example
 
 ```{code-cell}
----
-hide_input: true
-slideshow:
-  slide_type: ''
-tags: [hide-input]
----
+:tags: [hide-input]
+
 group_html = `<p> a paragraph may  
 <span style="background-color: #ddd;">
       contain a fragment</span>
@@ -251,8 +243,6 @@ and for that use a &lt;span&gt; tag.</p>
 tools.sample_from_strings({html: group_html})
 ```
 
-+++ {"slideshow": {"slide_type": ""}, "tags": []}
-
 ```{admonition} note on styling
 :class: seealso
 
@@ -261,18 +251,13 @@ to outline the <code>&lt;span&gt;</code> and <code>&lt;div&gt;</code>
 elements by changing their background color
 ```
 
-
 +++ {"slideshow": {"slide_type": "slide"}}
 
 ### second example of `<div>`
 
 ```{code-cell}
----
-hide_input: true
-slideshow:
-  slide_type: ''
-tags: [hide-input]
----
+:tags: [hide-input]
+
 group2_html = `<div>
 the &amp;lt;div&amp;gt; tag is an essential unit brick for creating a page layout
 </div>
@@ -304,7 +289,6 @@ especially if your goal is to create  grid-based layouts, that we will cover lat
 
 ```{code-cell}
 ---
-hide_input: true
 slideshow:
   slide_type: slide
 tags: [hide-input]
@@ -342,7 +326,6 @@ tools.sample_from_strings({html: table_html, css: table_css})
 ## header tags `<h1>` .. `<h5>`
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 headers_fragment = `<h1> toplevel title </h1>

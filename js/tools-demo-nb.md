@@ -32,7 +32,7 @@ jupyter:
 delete require.cache[require.resolve('../js/tools')]
 ```
 
-```javascript hide_input=false
+```javascript
 // this will evaluate all cells, and inject the global css style
 tools = require('../js/tools'); tools.init()
 ```
@@ -74,20 +74,20 @@ by default, the `id` option is computed from `html` - be wary to specify differe
 ### select which source to display (html, css, js)
 
 
-```javascript hide_input=false
+```javascript
 // clean up and reload
 delete require.cache[require.resolve('../js/tools')]
 tools = require('../js/tools')
 undefined
 ```
 
-```javascript hide_input=false
+```javascript
 // by default, all 3 even if void
 
 tools.sample_from_strings({'html': 'HELLO'}, {id: 'id1'})
 ```
 
-```javascript hide_input=false
+```javascript
 // use the options to remove one of the 3
 // btw here the html is off so nothing shows up at all
 
@@ -96,7 +96,7 @@ tools.sample_from_strings({html: 'HELLO'}, {id: 'id2', html_show: false})
 
 ### start with another view
 
-```javascript hide_input=false
+```javascript
 // we can start on something else than html
 tools.sample_from_strings(
     {html: 'HELLO', js: 'console.log("Hi")'}, {id: 'id3', css_show: false, start_with: 'js'})
@@ -111,7 +111,7 @@ tools = require('../js/tools')
 undefined
 ```
 
-```javascript hide_input=false
+```javascript
 fragment1 = `<html>
   <head>
      <!-- various document-wide declarations -->
@@ -131,14 +131,14 @@ tools.sample_from_strings({html: fragment1})
 
 ## without the separate button
 
-```javascript hide_input=false
+```javascript
 // clean up and reload
 delete require.cache[require.resolve('../js/tools')]
 tools = require('../js/tools')
 undefined
 ```
 
-```javascript slideshow={"slide_type": ""} hide_input=false scrolled=true
+```javascript slideshow={"slide_type": ""} scrolled=true
 // in general, no need to worry about sizes, provided that the sources
 // take a reasonable space
 tools.sample_from_stem(
@@ -148,14 +148,14 @@ tools.sample_from_stem(
 
 ## with the separate button
 
-```javascript hide_input=false
+```javascript
 // clean up and reload
 delete require.cache[require.resolve('../js/tools')]
 tools = require('../js/tools')
 undefined
 ```
 
-```javascript slideshow={"slide_type": ""} hide_input=false scrolled=false
+```javascript slideshow={"slide_type": ""} scrolled=false
 // here the autosizing mode would pick a very high window
 // because the JS script is very large
 // so we keep this under control
@@ -166,14 +166,14 @@ tools.sample_from_stem(
 
 ## no code, just the result - with separate
 
-```javascript hide_input=false
+```javascript
 // clean up and reload
 delete require.cache[require.resolve('../js/tools')]
 tools = require('../js/tools')
 undefined
 ```
 
-```javascript slideshow={"slide_type": ""} hide_input=false scrolled=true
+```javascript slideshow={"slide_type": ""} scrolled=true
 // the default is separate_show = true
 
 tools.sample_from_stem(
@@ -189,14 +189,14 @@ tools.sample_from_stem(
 
 **beware** because we re-use the same stem twice, we need to provide our own id
 
-```javascript hide_input=false
+```javascript
 // clean up and reload
 delete require.cache[require.resolve('../js/tools')]
 tools = require('../js/tools')
 undefined
 ```
 
-```javascript scrolled=false hide_input=false
+```javascript scrolled=false
 // here because we use the same code exactly
 // we need to provide a unique id
 // otherwise we mess with the previous sample
@@ -208,14 +208,14 @@ tools.sample_from_stem(
 
 ## the calculator
 
-```javascript hide_input=false
+```javascript
 // clean up and reload
 delete require.cache[require.resolve('../js/tools')]
 tools = require('../js/tools')
 undefined
 ```
 
-```javascript slideshow={"slide_type": ""} hide_input=false scrolled=false
+```javascript slideshow={"slide_type": ""} scrolled=false
 tools.sample_from_stem(
     "../samples/46-calculator",
     {sources_show: false, separate_show: false, height: '500px'})
@@ -223,14 +223,14 @@ tools.sample_from_stem(
 
 # escaping
 
-```javascript hide_input=false
+```javascript
 // clean up and reload
 delete require.cache[require.resolve('../js/tools')]
 tools = require('../js/tools')
 undefined
 ```
 
-```javascript hide_input=false
+```javascript
 // NOT WORKING
 
 html_with_tags = `<b>NOT WORKING</b>

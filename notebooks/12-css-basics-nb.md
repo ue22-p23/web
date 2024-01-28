@@ -94,7 +94,6 @@ this is a detail, and for convenience only, so that unintentionally clicking on 
 
 ```{code-cell}
 ---
-hide_input: true
 slideshow:
   slide_type: slide
 tags: [hide-input]

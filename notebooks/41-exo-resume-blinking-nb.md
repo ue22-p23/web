@@ -59,7 +59,6 @@ something like this
 
 ```{code-cell}
 ---
-hide_input: true
 slideshow:
   slide_type: ''
 tags: [hide-input]

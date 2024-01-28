@@ -45,7 +45,6 @@ tools = require('../js/tools'); tools.init()
 ```{code-cell}
 ---
 cell_style: center
-hide_input: true
 slideshow:
   slide_type: ''
 tags: [hide-input]
@@ -79,7 +78,6 @@ the example below illustrates how to load and use them in your page
 
 ```{code-cell}
 ---
-hide_input: true
 slideshow:
   slide_type: slide
 tags: [hide-input]
@@ -154,7 +152,6 @@ tools.sample_from_stem("../samples/15-font-demo")
   as opposed, again, to using bitmap pictures
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 tools.sample_from_strings({
@@ -255,7 +252,6 @@ here e.g. padding and border
 click on 'Open in new window' and use inspector on the `<p>` element
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 box1_html = `<p class="box1">
@@ -283,12 +279,11 @@ tools.sample_from_strings({html: box1_html, css: box1_css}, { start_with: 'css' 
 
 ### atomic properties (2)
 
-+++ {"hide_input": true}
++++
 
 again with also margin and border-radius
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 box2_html = `<p class="box2">
@@ -368,7 +363,6 @@ same kind of shorthands are available for
 use the inspector from the devel tools to check the individual properties of the `<p>` elt, e.g. the `padding`
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 shorthand_html = `<p class="shorthand1">
@@ -504,7 +498,6 @@ also note that background
 ## `background` and margins (demo)
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 background_html = `<div>
@@ -548,7 +541,7 @@ tools.sample_from_strings({html: background_html, css: background_css})
 
 ![](media/backgrounds-and-margins.png)
 
-+++ {"hide_input": true}
++++
 
 <div class="note">
 

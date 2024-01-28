@@ -63,7 +63,6 @@ examples, as per [this article on MDN](https://developer.mozilla.org/en-US/docs/
 by default, direction = row, wrap = nowrap
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 flex1_html = `<div class="container">
@@ -103,7 +102,6 @@ identical except for `flex-wrap: wrap`
 
 ```{code-cell}
 ---
-hide_input: true
 slideshow:
   slide_type: slide
 tags: [hide-input]
@@ -196,7 +194,6 @@ tools.sample_from_strings({html: flex2_html, css: flex2_css}, {id: 'flex2', star
 1. mimick the layout below
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 tools.sample_from_stem("../samples/23-exo-flex", {sources_show: false})

@@ -56,7 +56,6 @@ that is to say, we could rewrite the above like so
 ```{code-cell}
 ---
 editable: true
-hide_input: true
 slideshow:
   slide_type: ''
 tags: [hide-input]
@@ -110,7 +109,6 @@ tools.sample_from_strings({html, css}, {id: 'without-nesting', separate_show: fa
 ```{code-cell}
 ---
 editable: true
-hide_input: true
 slideshow:
   slide_type: ''
 tags: [hide-input]

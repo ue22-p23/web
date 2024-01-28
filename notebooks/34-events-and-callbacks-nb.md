@@ -26,7 +26,6 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 # JavaScript events and callbacks
 
 ```{code-cell}
-:hide_input: true
 
 tools = require('../js/tools'); tools.init()
 ```
@@ -105,7 +104,6 @@ this is one of the reasons why JS is so flexible/lenient with respect to argumen
 ### events example
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 tools.sample_from_stem("../samples/34-events-and-callbacks-01",
@@ -223,7 +221,6 @@ window.addEventListener(
 ## previous example using arrow functions
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 tools.sample_from_stem("../samples/34-events-and-callbacks-02",

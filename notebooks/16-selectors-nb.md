@@ -73,7 +73,6 @@ here the <code>div</code> and the <code>p</code> parts are selectors themselves,
 
 ```{code-cell}
 ---
-hide_input: true
 slideshow:
   slide_type: slide
 tags: [hide-input]
@@ -122,7 +121,6 @@ two elements are siblings iff they have the same parent
 
 ```{code-cell}
 ---
-hide_input: true
 slideshow:
   slide_type: slide
 tags: [hide-input]
@@ -175,7 +173,6 @@ tools.sample_from_strings({html: sibling_html, css: sibling_css}, {start_with: '
 a first, not-quite-working example (at least on Chrome)
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 hover1_html = `<div id="part1">
@@ -214,7 +211,6 @@ to get it right, we can use the other pseudo-class `:link`
 that is set only on `<a>` tags that have a `href=` attribute
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 hover2_html = `<div id="part1">
@@ -269,7 +265,6 @@ note that here we build a selector that applies on elements that have <b>both</b
 ### `nth-child() example`
 
 ```{code-cell}
-:hide_input: true
 :tags: [hide-input]
 
 rank_html = `<ul>
