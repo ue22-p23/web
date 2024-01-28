@@ -154,3 +154,9 @@ div.CodeMirror-lines div.CodeMirror-code pre.CodeMirror-line {
 #bd-toc-nav {
     background-color: rgb(0 0 0 / 0);
 }
+
+.tools_codemirror {
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: #ddd solid 1px;
+}
