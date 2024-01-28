@@ -27,17 +27,15 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 tools = require('../js/tools'); tools.init()
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"cell_style": "split"}
 
 ## rules scope
 
-+++
-
 there is a need for more accurate / selective settings
 
-+++ {"cell_style": "split"}
+for example our first CSS clause was something like this:
 
-remember our first CSS clause
++++ {"cell_style": "split"}
 
 ```
 a {
@@ -48,10 +46,8 @@ a {
 
 +++ {"cell_style": "split"}
 
-it will apply both settings  
-*on ALL `<a>` elements*
-
-we need **more selective** mechanisms
+however it will apply the settings *on **ALL `<a>` elements***  
+and so we need **more selective** mechanisms
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -87,11 +83,8 @@ tools.sample_from_strings({html: id_html, css: id_css}, {start_with: 'css'})
 Note that in this case you do not really need to mention the element tag
 
 ```{code-cell}
----
-slideshow:
-  slide_type: ''
-tags: [hide-input]
----
+:tags: [hide-input]
+
 id2_html = `<div id="an-id">
 This div element has its id set to <code>an-id</code>
 <br>
@@ -273,11 +266,8 @@ tools.sample_from_strings({html: specificity1_html, css: specificity_css})
 ##### (2) then `id=` wins
 
 ```{code-cell}
----
-slideshow:
-  slide_type: ''
-tags: [hide-input]
----
+:tags: [hide-input]
+
 specificity2_html = `<!--
 if we drop the style=
 then id wins
@@ -297,11 +287,8 @@ tools.sample_from_strings({html: specificity2_html, css: specificity_css})
 ##### (3) then `class=` wins
 
 ```{code-cell}
----
-slideshow:
-  slide_type: ''
-tags: [hide-input]
----
+:tags: [hide-input]
+
 specificity3_html = `<!--
 if we further drop the id=
 then class wins
@@ -320,11 +307,8 @@ tools.sample_from_strings({html: specificity3_html, css: specificity_css})
 ##### (4) then the element's tag wins
 
 ```{code-cell}
----
-slideshow:
-  slide_type: ''
-tags: [hide-input]
----
+:tags: [hide-input]
+
 specificity4_html = `<!--
 finally there is no ambiguity
 -->
