@@ -89,14 +89,20 @@ tools.sample_from_strings({html: ol_fragment})
 
 * a handful of convenience tags for quick styling
   * like bold, italics, underline and similar
-* however there are **much more powerful** mechanisms
-  * so **don't use this at scale**, they are just conveniences
 
-```{code-cell}
-:hide_input: true
-:tags: [hide-input]
+```{admonition} warning: do not overuse !
+:class: warning
+
+however as we will see later on, there are **much more powerful** mechanisms  
+so **don't use this at scale**, they are just conveniences  
+the right way to go is often **to use classes**, that we study later on
+```
 
 styling_fragment = `<p>
+there are tags for direct styling but <b>please note that their usage is discouraged</b> as generally you will style your own classes instead
+</p>
+
+<p>
 tags for <b>bold</b> or <i>italics</i>
 or <u>underline</u> or <s>strike-through</s>
 <br>
@@ -104,12 +110,6 @@ that of course <u><b><i>can be combined</i></b></u>
 </p>`
 tools.sample_from_strings({html: styling_fragment})
 ```
-
-<p class="note">
-
-here again the right way to go is often to use classes, that we study later on
-
-<p>
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -218,10 +218,10 @@ tools.sample_from_strings({html: redirect_fragment})
 +++
 
 * one **very common** tag is `<div>`
- * it is used to group together elements inside a single tree
- * `<div>` stands for *division*
+  * it is used to group together elements inside a single tree
+  * `<div>` stands for *division*
 * there is also `<span>` that serves a similar purpose
- * except for the linebreaking behaviour
+  * except for the linebreaking behaviour
 * an **essential tool** in any page design
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -251,14 +251,16 @@ and for that use a &lt;span&gt; tag.</p>
 tools.sample_from_strings({html: group_html})
 ```
 
-<p class="note">
++++ {"slideshow": {"slide_type": ""}, "tags": []}
 
-this first example uses styling,
-that we have not studied yet,
-to outline the &lt;span&gt; and &lt;div&gt;
+```{admonition} note on styling
+:class: seealso
+
+this example uses styling - that we have not studied yet -  
+to outline the <code>&lt;span&gt;</code> and <code>&lt;div&gt;</code>
 elements by changing their background color
+```
 
-</p>
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
