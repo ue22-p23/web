@@ -42,7 +42,8 @@ tools = require('../js/tools'); tools.init()
 
 +++
 
-<div class="note">
+````{admonition} notes on using notebooks
+:class: warning
 
 **NOTE** on using **notebooks**  
 as mentioned earlier, all variables should be declared with either `let` or `const`  
@@ -51,8 +52,7 @@ one **cannot declare** the **same variable twice** in the same scope
 and so using `let` would prevent us from re-evaluating the same cell twice  
 in order to remind you of the necessity to declare everything  
 we will add commented-out `/*let*/` chunks when using a new variable    
-
-</div>
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -83,12 +83,12 @@ we will add commented-out `/*let*/` chunks when using a new variable
 s1 == s2
 ```
 
-<div class="note">
+````{admonition} attention
+:class: warning
 
 **beware** that `number` is similar to Python's `float` -- so **with imprecision !**  
-google for `bigint` for error-free calculus on integers - like Python's `int`
-
-</div>
+google for `bigint` for error-free calculus on integers - in much the same way as Python's `int`
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -309,11 +309,11 @@ for (let x of array1) {
 
 * also notice how to use `let` to define a variable **local** to the `for` loop
 
-<div class=note>
+````{admonition} for .. in
+:class: warning
 
 actually there is also a `for .. in` statement (see below), but it is **a little misleading**
-    
-</div>
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -322,12 +322,7 @@ actually there is also a `for .. in` statement (see below), but it is **a little
 +++ {"cell_style": "split"}
 
 * using `for .. in` iterates over **indices**
-
-<div class=note>
-
-but see also the warning on next slide
-    
-</div>
+  but see also the warning on next slide
 
 ```{code-cell}
 :cell_style: split
@@ -601,13 +596,13 @@ console.log(`my name is ${bond.last_name}`)
 'first_name' in bond
 ```
 
-<div class="note">
+````{admonition} JS objects vs Python dicts
+:class: attention
 
 the syntax for JavaScript objects, as well as the *key/value* vocabulary,  
 make them **look like** Python dictionaries  
 **do not get confused though**, JavaScript objects are much more like Python class instances.
-
-</div>
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -841,14 +836,14 @@ slideshow:
 console.log("vector = ", vector)
 ```
 
-<div class="note">
+````{admonition} practice
+:class: seealso
 
 try it out within the browser's console:  
 try to run `console.log(document)` or any other JS object  
 and observe that you can navigate the inner structure of the object  
 rather than a flat text representation that traditional languages have used us to
-
-</div>
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

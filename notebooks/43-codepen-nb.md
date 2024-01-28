@@ -17,8 +17,6 @@ nbhosting:
   title: 'practice : on codepen'
 ---
 
-+++
-
 Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++
@@ -35,8 +33,9 @@ tools = require('../js/tools'); tools.init()
 
 see a collection of assignments here <https://codepen.io/collection/YyapER?grid_type=list>
 
-<div class=note>
+````{admonition} reminder
+:class: tip
 
 do not forget to create an account and to log in `codepen.io` **for your progress to be saved**
 
-</div>
+````

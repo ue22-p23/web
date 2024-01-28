@@ -66,11 +66,11 @@ tags: [hide-input]
 tools.sample_from_stem("../samples/62-bootstrap", {height: "30em"})
 ```
 
-<div class="note">
+````{admonition} see also
+:class: tip
 
 many more effects are available - read the components page !
-
-</div>
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

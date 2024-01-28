@@ -26,7 +26,6 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 # JavaScript events and callbacks
 
 ```{code-cell}
-
 tools = require('../js/tools'); tools.init()
 ```
 
@@ -70,12 +69,12 @@ window.addEventListener("load", foo)
 
 +++
 
-<div class="note">
+````{admonition} see also
+:class: seealso
 
 see also the `DOMContentLoaded` event that is subtly different
 <https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event>
-
-</div>
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -92,12 +91,12 @@ see also the `DOMContentLoaded` event that is subtly different
 
 +++
 
-<div class="note">
+````{admonition} callback number of parameters
+:class: attention
 
 also note that we have seen already several examples of a **callback** that was a function that **takes no parameter**  
 this is one of the reasons why JS is so flexible/lenient with respect to argument passing
-
-</div>
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -133,13 +132,13 @@ notice from the example :
 
 +++
 
-<div class=note>
+````{admonition} global variables
+:class: note
 
 this code uses **global variables** like e.g. `onclick`  
 and so here, we'd be in trouble if our application used another library that defines a global with the same name  
 we will see in a moment how to rewrite this example into a code that **leaks no global variable**  
-    
-</div>
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -168,12 +167,11 @@ setInterval(foo, 3000) // call foo every 3000 ms
 
 +++
 
-<div class="note">
+````{admonition} see also
+:class: seealso
 
-* for more details and a more exhaustive list of available events  
-  see [this section in javascript.info](https://javascript.info/event-details)
-
-</div>
+for more details and a more exhaustive list of available events, see [this section in javascript.info](https://javascript.info/event-details)
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -196,13 +194,13 @@ const mylambda0 = (arg0, arg1) => { /* some code here */ }
 
 +++
 
-<div class=note>
+````{admonition} functions vs arrow functions
+:class: attention
 
 * /!\ Both variants are valid, even if the new one looks nicer
 * with the fat arrow, `{}` and `return` can be sometimes omitted
-* also, there are subtle differences about the `this` variable, not covered here  
-    
-</div>
+* also, there are subtle differences about the `this` variable, not covered here
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -240,12 +238,12 @@ tools.sample_from_stem("../samples/34-events-and-callbacks-02",
 * it is safe to use lexically-bound variables inside the callback
 * see the `context` variable in the example below
 
-<div class=note>
+````{admonition} use your browser console
+:class: tip
 
 the behaviour might be unexpected as we're moving outside of the notebook's comfort zone here  
 feel free to cut and paste the code into your web browser's console
-
-</div>
+````
 
 ```{code-cell}
 // here the 'context' variable is not visible

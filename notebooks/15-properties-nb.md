@@ -132,11 +132,11 @@ tools.sample_from_stem("../samples/15-font-demo")
   in particular can be safely scaled / colorized
   using CSS
 
-<div class=note>
+```{admonition} the names may change
+:class: warning
 
 **BEWARE** the names may change with the version of *fontawesome*, and so of course you must pick a name that is defined in the version of fontawesome that you have imported in your page
-
-</div>
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -430,11 +430,11 @@ several formats are supported to describe a color :
 
 +++
 
-<div class="note">
+```{admonition} tip
+:class: tip
 
 note that on colorhunt you can copy a color code by just clicking it
-
-</div>
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -553,7 +553,8 @@ tools.sample_from_strings({html: background_html, css: background_css})
 
 +++
 
-<div class="note">
+```{admonition} practice
+:class: seealso
 
 use the inspector to see how the space between the two and observe:  
 how the margin space gets filled by the parent  
@@ -561,5 +562,4 @@ how the space between inner borders (h1 and p)
 is actually the <b><i>max</i></b> of their margins  
 how the 2 other margins (the title's top-margin and the paragrapgh's bottom margin)  
 are inherited from the default user agent stylesheet (here this is chrome)
-
-</div>
+```

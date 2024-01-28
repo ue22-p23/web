@@ -83,13 +83,13 @@ to make it compatible with what the low-level tools expect
 
 +++
 
-<div class="note">
+````{admonition} note
+:class: note
 
 specifically with CSS variables, a preprocessor like `Sass`</code>` or
 `less`</code>` will offer its own extra syntax for defining and using
 variables, and will rewrite the human-written code into CSS
-
-</div>
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

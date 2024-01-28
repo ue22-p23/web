@@ -150,11 +150,11 @@ another way to use media rules is from the `<head>` tag
 
 +++
 
-<div class="note">
+````{admonition} reminder
+:class: note
 
 remember that `<html>` contains 2 sons, a `<head>` and a `<body>`
-
-</div>
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

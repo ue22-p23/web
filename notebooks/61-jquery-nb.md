@@ -45,11 +45,11 @@ so it is a **must know** component
 
 +++
 
-<div class="note">
+````{admonition} cross-browser meaning ?
+:class: tip
 
 *cross-browser* means it provides abstractions that will work everywhere, even if the user's browser is old and lacks some features
-
-</div>
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -93,17 +93,16 @@ it is easy to import the library from your own html documents
 real applications will use more sophisticated tools to deal with dependencies  
 most popular being essentially `npm` and/or `yarn`
 
-however `cdnjs` remains quite convenient  
-if you use only a handful of 3rd party tools
+however `cdnjs` remains quite convenient if you use only a handful of 3rd party tools
 
 +++
 
-<div class="note">
+````{admonition} not available in the notebook
+:class: tip
 
 jQuery being mostly **browser-oriented**,
 running jQuery examples right in the notebook is not possible at this time
-
-</div>
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -213,11 +212,11 @@ $(loaded)
 tools.sample_from_stem("../samples/61-jquery-colors", {start_with: 'js'})
 ```
 
-<div class="note">
+````{admonition} note
+:class: note
 
 for obscure security-related reasons, this example no longer works in the context of the notebook, but is otherwise valid
-
-</div>
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

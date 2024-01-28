@@ -29,13 +29,13 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 tools = require('../js/tools'); tools.init()
 ```
 
-<div class="note">
+````{admonition} use your browser console !
+:class: danger
 
 for various technical reasons, running asynchronous JS code is sometimes outside of the comfort zone for a Jupyter notebook environment
     
 if things do run run smoothly from within Jupyter, and/or if you are reading this in static HTML format, you may want to copy-paste the code and run it in **right in your browser console** instead
-
-</div>
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -66,18 +66,18 @@ if things do run run smoothly from within Jupyter, and/or if you are reading thi
 * the naive paradigm is: the browser sends a request to the server, and displays the result
 * this is not good enough ! - consider the case of pagination in an e-commerce website
   * if we had only that approach, would bring to permanent page changes (harsh pagination)
-* the client (JS side) needs to be able to sends its own http requests (+)
+* the client (JS side) needs to be able to sends its own http requests (♡)
   * and to receive results not as HTML, but as pure data (typically JSON, XML in the old days..)
 * so it can change the page content without reloading an entire page (soft pagination)
   * same thing for example to get information about the basket
 * this is [where the fetch() API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) comes in
 * see also: the TP on xkcd where we will practise this thoroughly
 
-<div class=note>
-    
-(+) typically the browser sends back API calls to its server over HTTP
+````{admonition}
+:class: note
 
-</div>
+(♡) typically the browser sends back API calls to its server over HTTP
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -152,8 +152,6 @@ slideshow:
 fetch(URL_small)
     .then((response) => console.log("DONE"))
 ```
-
-+++
 
 as you can see, this causes 2 things:
 
@@ -287,14 +285,13 @@ we need to be able to do something with what the server is sending us
 so as a first step (still not perfect, but a bit better) let us now see how to **display the size** of the returned content (remember, this is not a HTML document, actually it is some sort of bioinformatics ad-hoc standard...)
 
 
-<div class=note>
-    
-again it may make sense to run the code below in a browser console rather than in a notebook environment
-    
-</div>
+````{admonition} reminder
+:class: danger
+
+again it may make sense to run the code below in a browser console rather than in a notebook environment !
+````
 
 ```{code-cell}
-
 // this is a magic recipe to import fetch
 // useful **ONLY** if you're using node.js
 
@@ -496,14 +493,14 @@ with this model, we can now avoid the pyramid of doom, using chaining
 // .catch(failureCallback)
 ```
 
-<div class=note>
+````{admonition} nested vs linear
+:class: note
     
 observe that 
 
 * first form: the callback form is nested
 * second form: he chained form is linear, which reflects the actual workflow here
-    
-</div>
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -543,14 +540,14 @@ waitInverse = async (n) => {
 }
 ```
 
-<div class="note">
+````{admonition} old-style syntax
+:class: note
 
 the old-style syntax would read
 ```js
 async function waitInverse(n) {...}
 ```
-
-</div>
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -602,12 +599,6 @@ this time we return the plain text
 
 and it can be called like this 
 
-<div class=note>
-
-again you need to run this in your browser console; the notebook won't let you use `await` outside of an `async` function
-    
-</div>
-
 ```js
 // the addition will we done after the text shows up eventually
 url = URL_large
@@ -616,6 +607,12 @@ console.log(`the beginning of ${url} reads`)
 console.log((await get_url(url)).slice(0, 20) + '...')
 10 + 30
 ```
+
+````{admonition} won't work in the notebook
+:class: tip
+
+again you need to run this in your browser console, as the notebook won't let you use `await` outside of an `async` function
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -742,12 +739,12 @@ delayedInverseManual(0).then(console.log).catch((error) => console.log(error.mes
 
 +++ {"tags": ["level_advanced"]}
 
-<div class="note">
+````{admonition} user your browser console
+:class: note
 
 here again, there are limitations with the Jupyter environment; this time the code does run in the notebook  
 but the notebook *hangs* until the promise is complete, so here again you may want to run this in a browser console
-
-</div>
+````
 
 +++ {"tags": ["level_advanced"]}
 

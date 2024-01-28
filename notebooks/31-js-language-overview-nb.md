@@ -108,12 +108,12 @@ b = a * a
 */
 ```
 
-<div class="note">
+````{admonition} always declare variables
+:class: warning
 
 as we will see below, real code should **always** declare variables,  
 so this would read `let a = 10` instead, but let us keep it simple for now
-
-</span>
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -177,11 +177,11 @@ switch (a) {
 }
 ```
 
-<div class="note">
+````{admonition} more on the switch statement
+:class: note
 
 if the switch statement is new to you, please refer to this [full article on javascript.info](https://javascript.info/switch)
-
-</div>
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -227,11 +227,11 @@ typeof(s)
 // s += ' john'
 ```
 
-<div class="note">
+````{admonition} prefer const when relevant
+:class: note
 
 use `const` instead of `let` when declaring a constant variable
-
-</div>
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -297,15 +297,15 @@ foo()
 
 +++
 
-<div class="note">
+````{admonition} cannot use let twice
+:class: warning
 
 when declaring a variable with `let`,
 it cannot be declared a second time within the same block;  
 in the context of notebooks, a drawback of this is
 that you cannot run a cell twice if
 it uses a toplevel `let`
-
-</div>
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -331,11 +331,11 @@ let variable = "outermost"
 console.log("level 0", variable)
 ```
 
-<div class="note">
+````{admonition} note
+:class: note
 
 this is like in C/C++, and unlike Python where a variable's scope is the whole function
-
-</div>
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -353,14 +353,14 @@ this is like in C/C++, and unlike Python where a variable's scope is the whole f
 
 +++
 
-<div class="note">
+````{admonition} the kernel runs in nodejs, not the browser
+:class: warning
 
 surprising as it may be, the notebook's JavaScript engine is an instance of `node.js`,  
-and so is not **browser-related**, so we could not inspect 
+and so is not **browser-related**, so we could **not** inspect 
 the `document` or `window` variables here  
 of course you can do so from the browser's console though
-
-</div>
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -518,13 +518,13 @@ let vector = new Vector(10, 20)
 vector.display()
 ```
 
-<div class="note">
+````{admonition} cannot run this cell twice
+:class: warning
 
 here again, running this cell twice will cause an error; this is because  
 like with `let`, the language won't let you define  
 the same `Vector` class twice in the same scope
-
-</div>
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

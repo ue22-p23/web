@@ -337,9 +337,9 @@ headers_fragment = `<h1> toplevel title </h1>
 tools.sample_from_strings({html: headers_fragment}, {height: '18em'})
 ```
 
-<div class="note">
+```{admonition} these tags are old-school
+:class: note
 
 these tags are essentially <b>a legacy thing</b>; they are convenient, but not quite necessary,  
 you can easily write your own classes (more about classes later on) to get a similar outcome, with more control on the result.
-
-</div>
+```

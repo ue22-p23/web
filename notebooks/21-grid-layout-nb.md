@@ -136,11 +136,11 @@ tools.sample_from_strings({html: grid_html, css: grid1_css}, {id: 'grid-1', star
 
 +++
 
-<div class="note">
+````{admonition} note
+:class: note
 
 on this specific example, we could have omitted `grid-template-columns` altogether
-
-</div>
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -157,11 +157,11 @@ mostly the same, but :
 
 +++
 
-<div class="note">
+````{admonition} note
+:class: note
 
 **btw** we could have written `repeat(4, 1fr)` instead of `1fr 1fr 1fr 1fr`
-
-</div>
+````
 
 ```{code-cell}
 ---
@@ -279,11 +279,11 @@ tools.sample_from_strings({html: grid_html, css: grid3_css}, {start_with: 'css'}
 
 +++
 
-<div class="note">
+````{admonition} practice more in this game
+:class: note
 
 you may also complete this game  <https://cssgridgarden.com/> at home if you feel like it
-
-</div>
+````
 
 +++ {"slideshow": {"slide_type": "slide"}, "tags": ["level_intermediate"]}
 

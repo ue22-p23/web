@@ -96,12 +96,12 @@ but today, files are local on your laptop
 
 +++
 
-<div class="note">
+```{admonition} first practice
+:class: seealso
 
 for your first practice, you will save your code on your hard drive, and check the result locally <br>
 without the presence of a server, this is what the <code>file://</code> URLs are for
-
-</div>
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -139,12 +139,12 @@ tools.sample_from_strings(
     {id: 'fragment1', height: '12em', separate_show: false})
 ```
 
-<p class="note">
+```{admonition} check out the URL
+:class: note
 
 also observe the URL that the browser has used to fetch your file <br>
 it should look like <code>file:///the/path/to/your/current/directory/hello.html</code>
-
-</p>
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -167,13 +167,13 @@ it should look like <code>file:///the/path/to/your/current/directory/hello.html<
 
 +++ {"cell_style": "split"}
 
-<p class="note">
+```{admonition} devel tools
+:class: note
 
 this should open your browser's devel tools, which depending on your browser  
 may require additional preparation or  installation steps
 we recommend using Chrome in case it is not working as expected
-
-</p>
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -214,11 +214,11 @@ we recommend using Chrome in case it is not working as expected
 
 +++
 
-<p class="note">
+```{admonition} navigating the elements tree
+:class: note
 
 from that view you can navigate the elements tree, although in this case it is very simple, with just 3 nodes
-
-</p>
+```
 
 +++ {"slideshow": {"slide_type": "slide"}, "cell_style": "split"}
 

@@ -58,11 +58,11 @@ JavaScript
 
 +++
 
-<div class="note">
+````{admonition} note
+:class: note
 
 (♡) as mentioned earlier, one can also write "regular" programs in JS using the `node.js` &nbsp;runtime
-
-</div>
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -152,11 +152,11 @@ and is **still an open topic** because of:
 
 +++
 
-<div class="note">
+````{admonition} more on this later
+:class: note
 
 we will come back later on this topic, but for now let's keep it simple
-
-</div>
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -191,11 +191,11 @@ for our use case we only need to load one fragment of code
 
 +++
 
-<div class="note">
+````{admonition} reminder
+:class: note
 
 remember the slides on relative and absolute URLs
-
-</div>
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -209,11 +209,7 @@ remember the slides on relative and absolute URLs
 
 * which is a common practice
 
-<div class="note">
-    
-we will talk about that again later on  
-
-</div>
+we will talk about that again later on
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -294,12 +290,12 @@ tools.sample_from_stem("../samples/30-js-intro-01-on-off", {start_with: 'js'})
 
 +++
 
-<div class="note">
+````{admonition} not super clean
+:class: warning
 
 using `onclick` is the quick, but dirty, way to attach an event handler to an element  
 a cleaner way is to use `addEventListener` from the JS side, as we will see later on
-
-</div>
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

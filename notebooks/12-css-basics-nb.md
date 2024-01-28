@@ -85,16 +85,6 @@ tools = require('../js/tools'); tools.init()
 * we attach a CSS fragment to change its appearance
 * **warning** this changes **all the `<a>` elements** on that page
 
-+++
-
-<p class="note">
-
-here we use `target='_'`
-to tell the browser to open the link in another tab/window  
-this is a detail, and for convenience only, so that unintentionally clicking on the link will keep you on this page
-
-</p>
-
 ```{code-cell}
 ---
 slideshow:
@@ -117,6 +107,14 @@ a {
     text-decoration: none;
 }`
 tools.sample_from_strings({html: link_html, css: link_css})
+```
+
+```{admonition} setting the hyperlink target
+:class: note
+
+here we use `target='_'`
+to tell the browser to open the link in another tab/window  
+this is a detail, and for convenience only, so that unintentionally clicking on the link will keep you on this page
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}

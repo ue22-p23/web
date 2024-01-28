@@ -17,8 +17,6 @@ nbhosting:
   title: user tools
 ---
 
-+++
-
 Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++
@@ -28,8 +26,6 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 ```{code-cell}
 tools = require('../js/tools'); tools.init()
 ```
-
-+++
 
 ## there is a library for everything
 
@@ -47,11 +43,11 @@ in this notebook we see a selection of 2 libraries for visualzation that are rea
 
 +++
 
-<div class="note">
+````{admonition} disclaimer
+:class: attention
 
 this is a personal choice, there are **tons** of other interesting libraries available around
-
-</div>
+````
 
 +++
 

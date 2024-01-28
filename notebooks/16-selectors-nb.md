@@ -65,11 +65,11 @@ matches all `<p>` elements that are an **immediate child** of `<div>` element
 
 +++
 
-<p class="note">
+````{admonition} note
+:class: note
 
 here the <code>div</code> and the <code>p</code> parts are selectors themselves, they can be any more specific selector, of course
-
-</p>
+````
 
 ```{code-cell}
 ---
@@ -113,11 +113,11 @@ matches all `<p>` elements that are **some right sibling** of a `<div>` element
 
 +++
 
-<p class="note">
+````{admonition} what are siblings ?
+:class: note
 
 two elements are siblings iff they have the same parent
-
-</p>
+````
 
 ```{code-cell}
 ---
@@ -241,11 +241,11 @@ a {
 tools.sample_from_strings({html: hover2_html, css: hover2_css}, {start_with: 'css'})
 ```
 
-<p class="note">
+````{admonition} 2 pseudo-classes
+:class: note
 
-note that here we build a selector that applies on elements that have <b>both</b> pseudo classes, much like with regular classes
-
-</p>
+note that here we build a selector that applies on elements that have **both** pseudo classes, much like with regular classes
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -315,9 +315,8 @@ tools.sample_from_strings({html: rank_html, css: rank_css}, {start_with: 'css'})
 
 * [read more on this here](https://css-tricks.com/almanac/selectors/a/attribute/)
 
-<div class="note">
+```{admonition} on any attribute
+:class: seealso
 
-of course this technique applies to any attribute,
-not just `href=`
-
-</div>
+of course this technique applies to any attribute, not just `href=`
+```

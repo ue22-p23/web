@@ -35,12 +35,12 @@ tools = require('../js/tools'); tools.init()
 
 with this command (use the palette to reach it) you can ask vs-code to re-format the whole document
 
-<div class=note>
+```{admonition} tip
+:class: tip
     
-**tip**: it may be wise to stage your file first  
-you can also easily undo of course
-    
-</div>
+it may be wise to stage your file first  
+even if you can also undo of course, like always under vscode
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
