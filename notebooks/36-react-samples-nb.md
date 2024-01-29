@@ -29,8 +29,8 @@ tools = require('../js/tools'); tools.init()
 
 in this notebook we will see 2 small React apps
 
-* one that is a toy really, that show 2 counters; each counter has a pair of
-  buttons + / - to modify the counter
+* one that is a toy really, that displays 2 counters;  
+  each counter has a pair of + / - buttons to modify the counter
 
 * another a little more elaborate, that implements a calculator
 
@@ -46,7 +46,7 @@ the git repo for this app is <https://github.com/ue22-p23/web-react-counters>
 
 ### your assignment
 
-**Note:** read the section '**app #1: the dual counters app**' section entirely before you start anything
+**Note:** read the section "**app #1: the dual counters app**" section entirely before you start anything
 
 * clone the repo
 * get it to work in your laptop
@@ -60,14 +60,15 @@ the git repo for this app is <https://github.com/ue22-p23/web-react-counters>
 
 the simplest way to get started is (click the arrow to see the details of each step)
 
-<details><summary>you will need nodejs installed</summary>
+````{admonition} you will need nodejs installed
+:class: dropdown
 
 * you can for example leverage `conda` for that
 
   ```shell
-  # react-calc is just one arbitrary name
-  conda create -n react-calc -c conda-forge nodejs
-  conda activate react-calc
+  # react-sandbox is just one arbitrary name
+  conda create -n react-sandbox -c conda-forge nodejs
+  conda activate react-sandbox
   ```
 
 * this will give you the `node` and the `npm` commands
@@ -78,15 +79,17 @@ the simplest way to get started is (click the arrow to see the details of each s
   npm --version
   ```
 
-</details>
+````
 
-<details><summary>clone the repo, and <code>cd</code> in there</summary>
+````{admonition} clone the repo, and cd in there
+:class: dropdown
 
 * *you know how to do this, right ?*
 
-</details>
+````
 
-<details><summary>install the dependencies</summary>
+````{admonition} install the dependencies
+:class: dropdown
 
 * you need to run this only once, of course
 
@@ -94,11 +97,13 @@ the simplest way to get started is (click the arrow to see the details of each s
   npm install
   ```
 
-  which will fetch a whole bunch of libraries in the `node_modules` folder (expect several hundreds of MB..)
+  which will fetch a whole bunch of libraries in the `node_modules` folder  
+  **warning:** be patient, and expect several hundreds of MB..
 
-</details>
+````
 
-<details open><summary>start the development server</summary>
+````{admonition} start the development server
+:class: dropdown
 
 * to run the app in devel mode
 
@@ -106,7 +111,14 @@ the simplest way to get started is (click the arrow to see the details of each s
   npm start
   ```
 
-</details>
+  ```{admonition} authorization
+  :class: attention
+
+  you may be asked for your authorization to open a port on your laptop; answer yes
+
+  ```
+
+````
 
 <br>
 
@@ -151,8 +163,8 @@ you might expect with respect to html/css/js, that deserve to be outlined:
 
 #### no need to reload
 
-that's already a plus, as compared with the traditional page setup: just save
-your changes, and you see them right away; for people who code all day long,
+that's already a plus, as compared with the traditional page setup: **just save
+your changes**, and you see them right away; for people who code all day long,
 that is genuine relief !
 
 +++
@@ -160,21 +172,22 @@ that is genuine relief !
 #### the HTML is irrelevant
 
 there is no html file; or rather, there's just one in `public/index.html` and if
-you look into it, it's vastly empty; actually, the html skeleton is entirely
-built from the js code, so there's no need for html
+you look into it, it's vastly empty; actually, the html skeleton is **entirely
+built from the js code**, so there's no need for html
 
 +++
 
 #### not quite JS, but JSX
 
-The biggest surprises are in the JS code, which is actually written in so-called
-JSX; think of it as a preprocessor that will do a pass on the contents and
+the biggest surprises are in the JS code, which is actually **written in so-called
+JSX**; think of it as a preprocessor that will do a pass on the contents and
 create a plain JavaScript file from that.
 
-Let us start with a quick reading of the overview that can be found here:
+Let us start with a quick reading of the overview that can be found here:  
 <https://reactjs.org/docs/introducing-jsx.html>
 
-Then look at the 2 .js files in the repo; I am sure you can guess what they do !
+then look at these  2 files `App.js` and `Counter.js`  
+I am sure you can guess what they do !  
 You should notice at least things like
 
 * the way to import css right from the js side:
@@ -221,10 +234,13 @@ You should notice at least things like
 
 +++
 
+* you can also notice how **JS variables** can be used **right in the HTML**  
+  when mentioned between `{}`, like e.g. this line above  
+  `<span>{text} ({counter})</span>`
+
+
 #### sharing data with `useState`
 
-you can also notice in the code how JS variables can be used right in the HTML
-section when mentioned between `{}`, like in the fragment just above
 
 so another very useful feature of React is `useState`; this line
 
@@ -234,17 +250,33 @@ const [counter, setCounter] = useState(0)
 
 declares 2 JS variables:
 
-* the first one `counter` being a storage variable (here initialized to 0),
-* and the second one `setCounter` being the function to use for modifying this variable
+* the first one `counter` being a **storage variable** (here initialized to 0),
+* and the second one `setCounter` being the **function** to use for
+  **modifying** this variable
 
 and the magic here being that each time this function is called, all the places
 where it is used in the DOM will be updated; and indeed when e.g. the
 `increaseCounter` callback is called, you can see in the app the counter being
-updated in 2 separate locations, with one single call to `setCounter`.
+updated in 2 separate locations (in the title, and between the buttons), with
+one single call to `setCounter`.
 
 not only this is powerful, but it also efficient (under the hood React maintains
 a so-called virtual DOM, that allows it to compute the changes in memory, so it
-can only update the parts that need to be; but that's another story entirely)
+can only update the parts that need to be; but that's another story entirely...)
+
+### the assignment
+
+you can now get around to finish the assignment, which is to add a third counter in the app
+
+again in this development environment, there is no need to reload anything, just
+
+* organize your screen with the editor on the left and the browser on the right
+* do changes in the editor, and save them (or turn on vscode's auto-save feature)
+* the changes apply immediately in the browser
+
+the change should take you less than a minute  
+**if you're ahead** you can also add a logo on top of the page - check out `App.css`
+that already has provisions for that
 
 +++
 
@@ -259,19 +291,17 @@ about this app:
   <https://github.com/vasilykhromykh/React-Calculator-With-React-Hooks>
   with purely cosmetic changes
 
-* you can also [check out the live demo](https://vasilykhromykh.github.io/React-Calculator-With-React-Hooks/)
-
 +++
 
 ### your assignment
 
-* clone the repo
+* clone the (ue22-p23) repo
 * get it to work on your laptop (see above)
 * implement a new feature
   * for example: add a (global) 'Clear' button that is missing  
     (as the backspace-like icon only clears one character in the expression)
 
-  * or add more operations like // and %
+  * or add more operations like // and % (integer division and modulo)
   * or whatever you deem interesting
 
 +++
@@ -299,18 +329,13 @@ the new thing here is the use of SASS instead of CSS
 
 CSS is sometimes considered tedious and boring; so there are a few alternatives
 around, here we've picked SASS - see <https://sass-lang.com/guide> for more
-details (it could have been any other CSS preprocessor)
+details  
+one visible difference is that there's no `{` or `}` or `;` like with Python, it's the indentation that is meaningful  
+SASS has been popular for a long time as it supported variables and nesting,
+although these are now native in CSS
 
-the most visible differences are
-
-* there's no `{` or `}` or `;`, a bit like with Python, it's the indentation
-  that is meaningful
-
-* you can use nesting (see the 'Nesting' section in
-  <https://sass-lang.com/guide>), which makes the overall presentation easier to grasp
-
-* support for variables; it's also in plain CSS, but in the old days it was not
-* and a lot more; but on the other hand, that's not the point here that much
+anyway, the point here is that can easily use alternative / higher-level tools
+within the context of a React app.
 
 +++
 
@@ -324,10 +349,10 @@ creates the scaffolding for you:
 ### create project skeleton
 
 this requires a network connection and may take a while...
-it will also download a rather huge amount of libraries and dependencies, that go into the `node_modules` folder (close to 350 MB on my mac)
+it will also download a rather huge amount of libraries and dependencies, that go into the `node_modules` folder
 
 ```shell
-npx create-react-app react-calc
+npx create-react-app react-myapp
 ```
 
 +++
@@ -337,11 +362,11 @@ npx create-react-app react-calc
 you can then do as above:
 
 ```shell
-cd react-calc
+cd react-myapp
 npm start
 ```
 
 and, after a while again, you get a message that reads `Edit src/App.js and save
-to reload.` with a spinning react logo on top: you're ready to code; try it:
-change this message with vs-code (it appears in `src/App.js`) and save the file,
-you will see the changes have been taken into account
+to reload.` with a spinning react logo on top: you're ready to code !   
+try it: change this message with vs-code (it appears in `src/App.js`) and save
+the file, you will see the changes have been taken into account
