@@ -30,11 +30,7 @@ static-mappings:
   destination: media
 
 builds:
-  - id: handouts
+  - id: readthedocs
     name: intro html, css, js
-    description: HTML statique et cherchable
-    directory: notebooks
-    script: |
-      pip install jupyter-book
-      jupyter-book build .
+    description: HTML book
     external_url: https://ue22-p23-web.readthedocs.io/
