@@ -72,9 +72,11 @@ tools.sample_from_stem("../samples/41-resume-blinking", {sources_show: false})
 
 +++
 
-so, you want to start some code, say call function `start()`   
-right **after the page loads**  
-**BUT** it is **unsafe** to do something like
+so, you want to start some code - say call function `start()` - **right after the page loads**
+
+### the wrong way
+
+it is tempting, but **totally unsafe**, to do something like
 
 ```html
 <!-- DO NOT DO THIS -->
@@ -130,8 +132,9 @@ function one_step() {
         console.log("beep");
 }
 
-// make sure you use 'let'
-// and not 'var' in your code
+// we're using 'var' because in a notebook
+// but make sure you use 'const'
+// and not 'var' in your own code
 var interval = setInterval(one_step, 1000)
 ```
 
@@ -150,6 +153,7 @@ active = false
 // it's also possible to stop it
 // altogether
 active = true
+// clearInterval is a builtin function that will cancel setInterval
 clearInterval(interval)
 ```
 
@@ -172,7 +176,12 @@ while True:
 
 +++ {"cell_style": "split"}
 
-_Note:_ however with such an approach, the Python interpreter **can't do anything else** at the same time
+````{admonition} single tasking vs multi tasking
+:class: note
+
+however with such an approach, the Python interpreter **can't do anything else** at the same time  
+while here with JS, the browser is still able to **do other things** !
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -195,7 +204,7 @@ _Note:_ however with such an approach, the Python interpreter **can't do anythin
 as mentioned earlier already, you can
 
 * navigate the DOM
-* '*Inspect* ' an element (find an element from a position in the page)
+* *Inspect* an element (find an element from a position in the page)
 * see the CSS rules that apply to an element
 * find out where these styles come from
 * see the computed values for each property
@@ -223,13 +232,10 @@ as mentioned earlier already, you can
 
 * **and** that lets you **run JavaScript** on the fly  
   much like the Python interpreter does  
-
-* known as a REPL ( = Read Eval Print Loop)
+  (this is known as a REPL = Read Eval Print Loop)
 * illustrated in the following slides
 
 +++
-
-* REPL stands for Read, Eval, Print Loop
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -305,11 +311,12 @@ as mentioned earlier already, you can
 
 +++
 
-* the browser cache thingy (see CSS loading)
-* applies exactly the same  
-* in the case of JavaScript code
+* the browser cache thingy applies exactly the same
+* in the case of JavaScript code as what we had seen about CSS
 
-**Remember**
+````{admonition} the browser cache
+:class: warning
 
-* to use Shift-reload, or other cache-cleaning tool  
-* if changes in a file do not seem to kick in
+remember to **use Shift-reload**, or other cache-cleaning tool  
+if changes in a file do not seem to kick in
+````

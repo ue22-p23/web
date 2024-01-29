@@ -354,4 +354,4 @@ tools.sample_from_strings({html: fragment_closed}, {separate_show: false})
 * also make sure to know the keyboard shortcut  
   for your browser to reload a page
 
-  * typically `⌘-r` (or 'ctrl-r' ...)
+  * typically `⌘-r` (or `⌃-r` on Windows...)

@@ -29,6 +29,4 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 tools = require('../js/tools'); tools.init()
 ```
 
-see on github
-
-<https://github.com/ue22-p23/web-grid>
+see on github here: <https://github.com/ue22-p23/web-grid>

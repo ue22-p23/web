@@ -21,7 +21,7 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++
 
-# objectives of this course
+# web frontend pillars : HTML/CSS/JS
 
 ```{code-cell}
 tools = require('../js/tools'); tools.init()
@@ -31,7 +31,7 @@ make sure to evaluate this cell above !
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## why a course on web frontend pillars ?
+## why a course on web frontend pillars&nbsp;?
 
 +++
 
