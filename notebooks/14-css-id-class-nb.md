@@ -29,11 +29,10 @@ tools = require('../js/tools'); tools.init()
 
 +++ {"tags": ["gridwidth-1-2"]}
 
-## rules scope
+## the need for selectors
 
-there is a need for more accurate / selective settings
-
-for example our first CSS clause was something like this:
+there is a need for more accurate / selective settings  
+remember when we styled our first hyperlink ? our CSS clause was something like this:
 
 +++ {"tags": ["gridwidth-1-2"]}
 
@@ -44,16 +43,14 @@ a {
 }
 ```
 
-+++ {"tags": ["gridwidth-1-2"]}
++++ {"tags": []}
 
 however it will apply the settings *on **ALL `<a>` elements***  
-and so we need **more selective** mechanisms
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## `id=` : assign a unique identifier
+that may be what we want, but in some cases we also need **more selective** mechanisms
 
 +++
+
+## `id=` : assign a unique identifier
 
 * an element that is unique in your document
 * can be attached a unique identifier
@@ -67,20 +64,23 @@ id_html = `<p id="only-me">This paragraph has an id 'only-me'</p>
 
 <p id="another-id">this one has id 'another-id'</p>
 `
-id_css = `/* will apply ONLY to
- * elements that are tagged <p>
- * AND whose id is 'only-me'
+id_css = `/* will apply ONLY to elements that are tagged <p>
+ * AND whose id is 'only-me' - and actually there's only one 
  */
 
 p#only-me {
     background-color: pink;
 }`
-tools.sample_from_strings({html: id_html, css: id_css}, {start_with: 'css'})
+tools.sample_from_strings({html: id_html, css: id_css}, {start_with: 'html'})
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-Note that in this case you do not really need to mention the element tag
+````{admonition} no need for the tag
+:class: note admonition-small
+
+note that we have written `p#only-me`, but in this case `#only-me` would be quite enough
+````
 
 ```{code-cell}
 :tags: [remove-input]
@@ -103,17 +103,11 @@ id2_css = `/* applies to elements
 tools.sample_from_strings({html: id2_html, css: id2_css}, {start_with: 'css'})
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## `class=` : styling elements by class
-
-+++
 
 * it is also possible to create arbitrary groups of elements
 * so that they can be styled together
 * this is simply done by setting a `class` attribute
-
-+++
 
 * an element can - and often has - several classes
 * e.g. `class="one-class another-class"`
@@ -139,11 +133,7 @@ p.no {
 tools.sample_from_strings({html: class_html, css: class_css})
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## summary of basic selectors
-
-+++
 
 let's summarize
 
@@ -156,36 +146,23 @@ let's summarize
 | `h1.someclass#someid` | tagged `<h1>` **and** of class `someclass` **and** with `id='someid'` |
 | `.yes.no` | any element that has class `yes` **and** class `no` |
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ## cascading and inheritance
 
-+++
-
 * cascading : what happens if **several rules** define,  
   say, the 'color' property on one element ?
-
 * inheritance : what happens if **no rule** defines  
   the 'color' property on an element ?
-
 * in a nutshell :
 
-+++ {"tags": ["gridwidth-1-2"]}
-
-##### cascading 
-the **most specific** rule wins
-
-+++ {"tags": ["gridwidth-1-2"]}
-
-##### inheritance 
-take the value from  
-the **element's parent**
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## cascading  & specificity
+| cascading | inheritance |
+|-|-|
+| the **most specific** rule wins | if not set on me, take the value **from my parent** |
 
 +++
+
+## cascading  & specificity
 
 in a nutshell, the intuition behind the actual rules is that
 
@@ -195,11 +172,10 @@ in a nutshell, the intuition behind the actual rules is that
 * otherwise if the rule is based on the element's *tag*, it should apply
 * otherwise, if it is a wildcard rule (you can use `*` as the selector)
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## specificity
-
 +++
+
+````{admonition} how to compute  specificity
+:class: dropdown info
 
 selectors can be more convoluted than what we've seen so far,  
 (more on this later on) but the logic to compare  
@@ -211,12 +187,11 @@ specificity can be reasonably approximated as follows :
   * number of applicable `class`es in the selector
   * number of applicable `element`s in the selector
 * compare the tuples - like Python would do
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-### specificity example
+````
 
 +++
+
+## specificity example
 
 in the 4 examples below, the CSS is unchanged throughout; we will see
 
@@ -229,7 +204,7 @@ in the 4 examples below, the CSS is unchanged throughout; we will see
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-##### (1) embedded `style=` wins
+### #(1) embedded `style=` wins
 
 ```{code-cell}
 :tags: [remove-input]
@@ -263,7 +238,7 @@ tools.sample_from_strings({html: specificity1_html, css: specificity_css})
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-##### (2) then `id=` wins
+### #(2) then `id=` wins
 
 ```{code-cell}
 :tags: [remove-input]
@@ -284,7 +259,7 @@ tools.sample_from_strings({html: specificity2_html, css: specificity_css})
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-##### (3) then `class=` wins
+### #(3) then `class=` wins
 
 ```{code-cell}
 :tags: [remove-input]
@@ -304,7 +279,7 @@ tools.sample_from_strings({html: specificity3_html, css: specificity_css})
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-##### (4) then the element's tag wins
+### #(4) then the element's tag wins
 
 ```{code-cell}
 :tags: [remove-input]
@@ -326,7 +301,7 @@ tools.sample_from_strings({html: specificity4_html, css: specificity_css})
 
 ```{code-cell}
 :cell_style: center
-:tags: [remove-inputut]
+:tags: [remove-inputut, remove-input]
 
 inherit_html = `<div class="inheritance">
   <p> You can use inheritance to avoid setting</p>
@@ -344,11 +319,7 @@ inherit_css = `.inheritance {
 tools.sample_from_strings({html: inherit_html, css: inherit_css})
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
-### inheritance (continued)
-
-+++
+### inheritance - why
 
 the point is that
 
@@ -358,11 +329,9 @@ the point is that
   * that **is targetted** by our CSS rule
 * note that not all properties behave that way though
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ### inheritance & the `body` rule
-
-+++
 
 * however, it is common practice to create a rule  
   whose selector targets the `body` element  
@@ -375,19 +344,15 @@ body {
 }
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## references
-
 +++
+
+## see also
+
+here is some further reading on these topics
 
 * list of properties and terms
   * <https://www.w3schools.com/cssref/>
-
 * reference (hard to read) : detailed description of cascading and inheritance
   * <https://www.w3.org/TR/css-cascade-3/>
-
-+++
-
 * more readable explanations on specificity :
   * <https://pawelgrzybek.com/css-specificity-explained/>
