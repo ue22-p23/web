@@ -89,7 +89,7 @@ tools = require('../js/tools'); tools.init()
 ---
 slideshow:
   slide_type: slide
-tags: [hide-input]
+tags: [remove-input]
 ---
 link_html = `<a href="https://www.google.com" target="_">
 link to google

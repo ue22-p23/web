@@ -58,7 +58,7 @@ that is to say, we could rewrite the above like so
 editable: true
 slideshow:
   slide_type: ''
-tags: [hide-input]
+tags: [remove-input]
 ---
 html = `
 <div class="first">
@@ -111,7 +111,7 @@ tools.sample_from_strings({html, css}, {id: 'without-nesting', separate_show: fa
 editable: true
 slideshow:
   slide_type: ''
-tags: [hide-input]
+tags: [remove-input]
 ---
 html = `
 <div class="first">

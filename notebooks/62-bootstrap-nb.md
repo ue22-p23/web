@@ -61,7 +61,7 @@ tools = require('../js/tools'); tools.init()
 ---
 slideshow:
   slide_type: slide
-tags: [hide-input]
+tags: [remove-input]
 ---
 tools.sample_from_stem("../samples/62-bootstrap", {height: "30em"})
 ```

@@ -101,7 +101,7 @@ you can find a cheatsheet that summarizes most of this
 * from within this notebook: eval next cell
 
 ```{code-cell}
-:tags: [hide-input]
+:tags: [remove-input]
 
 tools.sample_from_stem("../cheatsheet/cheatsheet", {sources_show: false})
 ```

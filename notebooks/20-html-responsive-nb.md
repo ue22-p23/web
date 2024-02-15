@@ -152,7 +152,7 @@ we will study these 2 policies in separate notebooks
 ---
 slideshow:
   slide_type: ''
-tags: [hide-input]
+tags: [remove-input]
 ---
 display_none_html = `<p> an element can easily be 'hidden' from the output </p>
 

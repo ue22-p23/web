@@ -36,7 +36,7 @@ tools = require('../js/tools'); tools.init()
 write a tic-tac-toe game, something like this - there is a lot of room for improvement !
 
 ```{code-cell}
-:tags: [hide-input]
+:tags: [remove-input]
 
 tools.sample_from_stem("../samples/45-tic-tac-toe/tic-tac-toe",
                        {sources_show: false, separate_height: '400px', separate_width: '400px'})
@@ -49,7 +49,7 @@ tools.sample_from_stem("../samples/45-tic-tac-toe/tic-tac-toe",
 write a minesweeper game; again you can do better than this :)
 
 ```{code-cell}
-:tags: [hide-input]
+:tags: [remove-input]
 
 tools.sample_from_stem("../samples/45-minesweeper/minesweeper",
                        {sources_show: false, separate_height: '400px', separate_width: '400px'})

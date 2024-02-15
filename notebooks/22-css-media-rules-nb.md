@@ -50,7 +50,7 @@ as per [this article on w3schools](https://www.w3schools.com/cssref/css3_pr_medi
 ## example - width
 
 ```{code-cell}
-:tags: [hide-input]
+:tags: [remove-input]
 
 threshold = '500px'
 
@@ -101,7 +101,7 @@ tools.sample_from_strings({html: media_width_html, css: media_width_css}, {start
 ## example - print
 
 ```{code-cell}
-:tags: [hide-input]
+:tags: [remove-input]
 
 media_print_html = `<body class="media">
 It is often very useful to tweak the print
@@ -177,7 +177,7 @@ remember that `<html>` contains 2 sons, a `<head>` and a `<body>`
   * at least for viewports smaller and larger than 512px
 
 ```{code-cell}
-:tags: [hide-input]
+:tags: [remove-input]
 
 tools.sample_from_stem("../samples/22-exo-grid", {sources_show: false})
 ```

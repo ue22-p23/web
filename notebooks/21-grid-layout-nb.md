@@ -69,7 +69,7 @@ next slide demontrates this CSS:
 ---
 slideshow:
   slide_type: slide
-tags: [hide-input]
+tags: [remove-input]
 ---
 grid_html = `<div class="container">
   <div id="item-a">
@@ -167,7 +167,7 @@ mostly the same, but :
 ---
 slideshow:
   slide_type: slide
-tags: [hide-input]
+tags: [remove-input]
 ---
 grid2_css = `.container {
   display: grid;
@@ -222,7 +222,7 @@ in the previous examples :
 ---
 slideshow:
   slide_type: slide
-tags: [hide-input]
+tags: [remove-input]
 ---
 grid3_css = `.container {
   display: grid;
@@ -309,7 +309,7 @@ you may also complete this game  <https://cssgridgarden.com/> at home if you fee
 ## auto-sizing example
 
 ```{code-cell}
-:tags: [level_intermediate, hide-input]
+:tags: [level_intermediate, remove-input]
 
 autosize_html = `<div class="container">
   <section>

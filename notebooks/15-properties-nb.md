@@ -47,7 +47,7 @@ tools = require('../js/tools'); tools.init()
 cell_style: center
 slideshow:
   slide_type: ''
-tags: [hide-input]
+tags: [remove-input]
 ---
 text_html = `<p class="text">
 a sample text</p>`;
@@ -80,7 +80,7 @@ the example below illustrates how to load and use them in your page
 ---
 slideshow:
   slide_type: slide
-tags: [hide-input]
+tags: [remove-input]
 ---
 tools.sample_from_stem("../samples/15-font-demo")
 ```
@@ -152,7 +152,7 @@ tools.sample_from_stem("../samples/15-font-demo")
   as opposed, again, to using bitmap pictures
 
 ```{code-cell}
-:tags: [hide-input]
+:tags: [remove-input]
 
 tools.sample_from_strings({
     html : `<div>
@@ -258,7 +258,7 @@ here e.g. padding and border
 click on 'Open in new window' and use inspector on the `<p>` element
 
 ```{code-cell}
-:tags: [hide-input]
+:tags: [remove-input]
 
 box1_html = `<p class="box1">
 a box
@@ -290,7 +290,7 @@ tools.sample_from_strings({html: box1_html, css: box1_css}, { start_with: 'css' 
 again with also margin and border-radius
 
 ```{code-cell}
-:tags: [hide-input]
+:tags: [remove-input]
 
 box2_html = `<p class="box2">
 a second box
@@ -371,7 +371,7 @@ same kind of shorthands are available for
 use the inspector from the devel tools to check the individual properties of the `<p>` elt, e.g. the `padding`
 
 ```{code-cell}
-:tags: [hide-input]
+:tags: [remove-input]
 
 shorthand_html = `<p class="shorthand1">
 shorthand properties
@@ -506,7 +506,7 @@ also note that background
 ## `background` and margins (demo)
 
 ```{code-cell}
-:tags: [hide-input]
+:tags: [remove-inputut]
 
 background_html = `<div>
   <section>

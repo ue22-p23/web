@@ -52,7 +52,7 @@ the assignment is to write the **javascript companion** so that
 ---
 slideshow:
   slide_type: ''
-tags: [hide-input]
+tags: [remove-input]
 ---
 tools.sample_from_stem("../samples/46-calculator", {sources_show: false})
 ```

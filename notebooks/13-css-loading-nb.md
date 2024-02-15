@@ -58,7 +58,7 @@ tools = require('../js/tools'); tools.init()
 cell_style: center
 slideshow:
   slide_type: ''
-tags: [hide-input]
+tags: [remove-input]
 ---
 separate_html = `
 <html>
@@ -126,7 +126,7 @@ and the same goes with the <code>file:///</code> URL scheme
 ---
 slideshow:
   slide_type: ''
-tags: [hide-input]
+tags: [remove-input]
 ---
 embedded_html = `<div> CSS can be inlined right into the HTML
     as a &amp;lt;style&amp;gt; tag
@@ -154,7 +154,7 @@ tools.sample_from_strings({html: embedded_html})
 * and should be used in last resort
 
 ```{code-cell}
-:tags: [hide-input]
+:tags: [remove-input]
 
 embedded_html = `<div
 style="background-color: red;

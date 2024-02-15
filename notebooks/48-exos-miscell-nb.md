@@ -40,7 +40,7 @@ you are tasked to write a "graphical demonstration" for the Pythagorean Theorem,
 the sample app is not responsive, you will need to open it in a separate window
 
 ```{code-cell}
-:tags: [hide-input]
+:tags: [remove-input]
 
 tools.sample_from_stem("../samples/48-pythagore/pythagore",
                        {sources_show: false, separate_height: '1000px', separate_width: '800px'})
@@ -57,7 +57,7 @@ here again the sample app is not responsive, you will need to open it in a separ
 **HINT** the slope of the 2 fixed rules is of course the golden ratio and its inverse
 
 ```{code-cell}
-:tags: [hide-input]
+:tags: [remove-input]
 
 // the minified version somehow was not working...
 tools.sample_from_stem("../samples/48-fibonacci/fibonacci",

@@ -54,7 +54,7 @@ has been missing for a long time,
 although with a rather ugly syntax !
 
 ```{code-cell}
-:tags: [hide-input]
+:tags: [remove-input]
 
 cssvar_html = `<p>using a CSS variable</p>`;
 cssvar_css = `/* declaration */

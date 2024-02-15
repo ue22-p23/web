@@ -59,7 +59,7 @@ and so we need **more selective** mechanisms
 * can be attached a unique identifier
 
 ```{code-cell}
-:tags: [hide-input]
+:tags: [remove-input]
 
 id_html = `<p id="only-me">This paragraph has an id 'only-me'</p>
 
@@ -83,7 +83,7 @@ tools.sample_from_strings({html: id_html, css: id_css}, {start_with: 'css'})
 Note that in this case you do not really need to mention the element tag
 
 ```{code-cell}
-:tags: [hide-input]
+:tags: [remove-input]
 
 id2_html = `<div id="an-id">
 This div element has its id set to <code>an-id</code>
@@ -119,7 +119,7 @@ tools.sample_from_strings({html: id2_html, css: id2_css}, {start_with: 'css'})
 * e.g. `class="one-class another-class"`
 
 ```{code-cell}
-:tags: [hide-input]
+:tags: [remove-input]
 
 class_html = `<p class="yes">yes 1</p>
 <p class="no">no 1</p>
@@ -232,7 +232,7 @@ in the 4 examples below, the CSS is unchanged throughout; we will see
 ##### (1) embedded `style=` wins
 
 ```{code-cell}
-:tags: [hide-input]
+:tags: [remove-input]
 
 specificity1_html = `<!-- the style
      attribute trumps all -->
@@ -266,7 +266,7 @@ tools.sample_from_strings({html: specificity1_html, css: specificity_css})
 ##### (2) then `id=` wins
 
 ```{code-cell}
-:tags: [hide-input]
+:tags: [remove-input]
 
 specificity2_html = `<!--
 if we drop the style=
@@ -287,7 +287,7 @@ tools.sample_from_strings({html: specificity2_html, css: specificity_css})
 ##### (3) then `class=` wins
 
 ```{code-cell}
-:tags: [hide-input]
+:tags: [remove-input]
 
 specificity3_html = `<!--
 if we further drop the id=
@@ -307,7 +307,7 @@ tools.sample_from_strings({html: specificity3_html, css: specificity_css})
 ##### (4) then the element's tag wins
 
 ```{code-cell}
-:tags: [hide-input]
+:tags: [remove-input]
 
 specificity4_html = `<!--
 finally there is no ambiguity
@@ -326,7 +326,7 @@ tools.sample_from_strings({html: specificity4_html, css: specificity_css})
 
 ```{code-cell}
 :cell_style: center
-:tags: [hide-input]
+:tags: [remove-inputut]
 
 inherit_html = `<div class="inheritance">
   <p> You can use inheritance to avoid setting</p>
