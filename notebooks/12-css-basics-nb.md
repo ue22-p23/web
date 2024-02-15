@@ -27,11 +27,7 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 tools = require('../js/tools'); tools.init()
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## purpose of style sheet
-
-+++
 
 * keep contents and presentation separate
 * allow to adapt same contents
@@ -41,20 +37,16 @@ tools = require('../js/tools'); tools.init()
 
   * engineers *vs* designers
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ## what can be styled ?
-
-+++
 
 * short answer : virtually everything
 * let's start with the obvious
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ## text properties
-
-+++
 
 * `font-family` : e.g. Times
 * `font-size` : e.g. 12px
@@ -75,22 +67,17 @@ tools = require('../js/tools'); tools.init()
 :align: center
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"raw_mimetype": ""}
 
 ## first example
-
-+++
 
 * we create a hyperlink to google
 * we attach a CSS fragment to change its appearance
 * **warning** this changes **all the `<a>` elements** on that page
 
 ```{code-cell}
----
-slideshow:
-  slide_type: slide
-tags: [remove-input]
----
+:tags: [remove-input]
+
 link_html = `<a href="https://www.google.com" target="_">
 link to google
 </a>
@@ -98,38 +85,48 @@ link to google
 link_css = `/* change these properties
    on all <a> elements in the page */
 a {
-    color: red;
     font-family: times;
     font-size: large;
+    color: red;
     padding: 10px;
     border: 1px solid green;
     border-radius: 8px;
     text-decoration: none;
 }`
-tools.sample_from_strings({html: link_html, css: link_css})
+tools.sample_from_strings({html: link_html, css: link_css}, {start_with: "css"})
 ```
 
-```{admonition} setting the hyperlink target
-:class: note
+## vocabulary: properties
 
-here we use `target='_'`
-to tell the browser to open the link in another tab/window  
-this is a detail, and for convenience only, so that unintentionally clicking on the link will keep you on this page
-```
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## vocabulary
-
-+++
-
-* the names that appear  
-  on the left hand side of the `:` colon   
+* the names that appear on the left hand side of the `:` colon   
   like `color`, `font-family`, …
-
 * are called **properties**
-* also listed in the `Elements` tab of the devel tools,  
-  in the `Computed` pane
-
+* also listed in the `Elements` tab of the devel tools,  in the `Computed` pane
 * [several hundreds of them](https://css-tricks.com/how-many-css-properties-are-there/)
-* note that not all properties are relevant on all elements
+  * note that not all properties are relevant on all elements
+
+## how to locally override properties
+
+````{admonition} practice
+:class: seealso
+
+- open the example above in a new (separate) window
+- inspect the link
+- use the devel tools to manually set some properties
+  - try e.g. `background-color: red`, or
+  - `background-color: #ccc`
+````
+
+to do that you need to go in this area of the *Devel Tools*
+```{image} media/override-properties.png
+:align:center
+```
+
+````{admonition} volatile changes
+
+this way you can quickly decide what works best; note that these changes are volatile of course, so you will still need to put the change in your sources somewhere, if that deserves to remain permanent
+````
+
+```{code-cell}
+
+```
