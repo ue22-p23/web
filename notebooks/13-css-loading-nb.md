@@ -21,37 +21,29 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++
 
-# how to apply CSS
+# URLs and how to apply CSS
 
 ```{code-cell}
 tools = require('../js/tools'); tools.init()
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## 3 ways to apply CSS
 
-+++
-
-* located in a separate **CSS file** - via its own URL
-* embedded in html within a `<style>` html tag
+* located in a **separate CSS file** - via its own URL
+* embedded in HTML within a `<style>` tag
 * hard-attached to an element itself with `style=`
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## preferred method : a separate CSS
-
 +++
+
+## method 1 : a separate CSS
+
+this is the preferred method
 
 * write your CSS in a separate file, e.g. `mystyle.css`
 * which, assuming it is in the same directory as your `hello.html`
 * can be kind-of included in `hello.html`
 * by inserting the following <link> line
 * in the `<head>` part of your html
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-### separate CSS in action
 
 ```{code-cell}
 ---
@@ -79,48 +71,84 @@ separate_html = `
 tools.sample_from_strings({html: separate_html, css: separate_css})
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}, "tags": ["level_intermediate"]}
-
-##### notes on relative URLs
-
-the way we load a css from *the same folder* as the html  
-is a consequence of a general rule to build  
-so-called *relative* URLs, that work like this:
-
-if you have loaded a document as, say  
-<code>http://hostname.io/the/path/to.html</code>  
-then **from within that document**:
-
-* <code>href="to.css"</code> is interpreted as <code>href="http://hostname.io/the/path/to.css"</code></li>
-* <code>href="/to.css"</code> is interpreted as <code>href="http://hostname.io/to.css"</code></li>
-* <code>href="/other/path/to.css"</code> is interpreted as <code>href="http://hostname.io/other/path/to.css"</code></li>
-* <code>href="other/path/to.css"</code> is interpreted as <code>href="http://hostname.io/the/path/other/path/to.css"</code></li>
-
-and the same goes with the <code>file:///</code> URL scheme
-
 +++ {"slideshow": {"slide_type": "slide"}}
 
-##### notes on self-closing tags
+````{admonition} self-closing tags
+:class: warning
 
-* note also the absence of a `</link>`,
+* notice the absence of a `</link>` above
 * which may remind you of `<br>`
-* such elements are called **void** or **empty** elements
-* among others : `<br>`, `<hr>`, `<link>`, `<img>`,...
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## second method : inline in html
+* such elements are called **void** or **empty** elements; they **do not require a closing tag**
+* among others : `<br>`, `<hr>`, `<link>`, `<img>`, ...
+````
 
 +++
 
-* you can also insert a `<style>` tag in your html
+## URLs
+
+````{admonition} a typical URL looks like this
+:class: info
+
+`https://hostname.io/the/path/to/content`
+````
+
+where
+- `https://` is a indication of the **protocol** to use; it is very often `https://` indeed
+  ````{admonition} what does the s stand for ?
+  :class: info dropdown admonition-small
+
+  the final `s` in `https` stands for **secure**; indeed `https` is mostly `http`, 
+  but with 
+  * an encryption layer (to avoid man-in-the-middle attacks), 
+  * and also certificates to make sure that you really talk to whom you intend to
+  ````
+- `hostname.io` is a **hostname**; before the browser can actually send a packet to that host,
+  it first needs to find **its IP address** - and for that purpose it asks the DNS service (Domain Name System)
+
+- `/the/path/to/content` is a path relative to the web server root
+  it may represent an actual path in the server's file system (for static pages)  
+  but most often it is relative to virtual namespace, i.e. it is interpreted by the server as a way to identify what is requested; for example, `/book/52` could be a way to ask information about book number 52
+
++++
+
+````{admonition} lots of variants
+:class: tip dropdown admonition-smaller
+
+there are many variants in the way to build a URL, and we'll touch on that during the course, but for example
+
+- `mailto:someone@example.com` would use another protocol entirely - here it just opens a mail message
+- `https://hostname.io:999/the/path/to/content` would mean to use an alternative port number 999
+- `https://username:password@hostname.io/the/path/to/content` would specify an authentication method
+- `https://hostname.io/the/path/to/content#some-section` would allow to point to the named anchor `some-section` in the page, i.e. a `<a name="some-section"> element, instead of the top of the page
+````
+
++++ {"slideshow": {"slide_type": "slide"}, "tags": []}
+
+### relative URLs
+
+it is possible to omit some parts of the URL; 
+and that's exactly what we've done when we wrote `href="hello.css"` in our `<head>` above
+
+imagine if you have loaded a document as, say `https://hostname.io/the/path/to/content`  
+then **from within that document**:
+
+* `href="to.css"` is interpreted as `href="http://hostname.io/the/path/to.css"`
+* `href="/to.css"` is interpreted as `href="http://hostname.io/to.css"`
+* `href="/other/path/to.css"` is interpreted as `href="http://hostname.io/other/path/to.css"`
+* `href="other/path/to.css"` is interpreted as `href="http://hostname.io/the/path/other/path/to.css"`
+
+and the same goes with the <code>file:///</code> URL scheme
+
++++
+
+## method 2 : inline in html
+
+back to the topic of injecting CSS in the page
+
+* you can also insert a `<style>` tag in your HTML
 * and mention the CSS code there directly
 * it is **less recommended** as it kind of ruins the  
   **separation** between **contents** and **presentation**
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-### inline CSS in action
 
 ```{code-cell}
 ---
@@ -143,11 +171,7 @@ div {
 tools.sample_from_strings({html: embedded_html})
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## method 3: hardwired with `style=`
-
-+++
 
 * attach a `style=` attribute on a HTML tag
 * this method is by far **the worst**
@@ -174,29 +198,21 @@ more on this later on
 tools.sample_from_strings({html: embedded_html})
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## practice
 
-+++
-
+* we recommend you use a local git repo all along  
+  i.e. create a new folder and `git init`
 * copy `hello.html` into `mycv.html`
 * create a more realistic skeleton for a résumé
-  * with 4 sections 'experience', 'education', 'skills' and 'languages'
+  * with 4 sections *Experience*, *Education*, *Skills* and *Languages*
   * **keep it simple** for now, nothing too elaborate
-  * make sure all the text gets attached to  
-    adapted tags like `<div>` or `<li>`
-
-  * and **not** directly under `<body>`  
-    like it was done in `hello.html`
-
+  * make sure all the text gets attached to adapted tags like `<div>` or `<li>`
+  * and **not** directly under `<body>` - like it was done in `hello.html`
   * make sure to insert at least one `<a href=...>` hyperlink
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ### practice (continued)
-
-+++
 
 * create a CSS file `mycv.css`
   * with some settings that should apply to `mycv.html`
@@ -205,13 +221,10 @@ tools.sample_from_strings({html: embedded_html})
 * load `mycv.html` in a browser
   * change the CSS and reload the browser page
   * to see the effect of your changes
-* we recommend you use a local git repo all along
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## the browser cache
 
 +++
+
+## the browser cache
 
 for performance reasons primarily :
 
@@ -225,11 +238,9 @@ for performance reasons primarily :
 * reloading the html file
 * may **not reload** the css because it is cached
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## the browser cache (continued)
-
 +++
+
+### how to deal with it
 
 a couple hints and workarounds
 
