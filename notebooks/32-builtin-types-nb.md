@@ -65,7 +65,7 @@ we will add commented-out `/*let*/` chunks when using a new variable
 * `boolean` may be `true` or `false`
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // usual operators, here
 // ** is power and
@@ -74,7 +74,7 @@ we will add commented-out `/*let*/` chunks when using a new variable
 ```
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // strings with ' or "
 
@@ -103,7 +103,7 @@ google for `bigint` for error-free calculus on integers - in much the same way a
 * `NaN` is "Not a Number"
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // in anticipation
 /*let*/ object = { x: 10, y: 20}
@@ -115,7 +115,7 @@ console.log(object.z)
 ```
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // unlike Python
 
@@ -131,7 +131,7 @@ console.log(object.z)
 the syntax for boolean operators is here again inherited from C / C++ / Java
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 if (true && true) {
     console.log(
@@ -140,7 +140,7 @@ if (true && true) {
 ```
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 if (true || false) {
     console.log(
@@ -196,7 +196,7 @@ for a deeper study :
 * similar to Python's `list`s
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // arrays can be heterogeous
 
@@ -209,7 +209,7 @@ for a deeper study :
 ```
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // insert at the end
 array2.push(3)
@@ -219,7 +219,7 @@ console.log(array2)
 ```
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // and get it back
 array2.pop()
@@ -230,7 +230,7 @@ array2.pop()
 ### common operations on arrays
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // use the concat method
 
@@ -239,7 +239,7 @@ array
 ```
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // and NOT addition,
 // it does NOT work like in Python
@@ -248,7 +248,7 @@ array1 + array2
 ```
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // indexing starts at 0
 
@@ -256,7 +256,7 @@ array[2]
 ```
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // getting length is more OO than in Python
 
@@ -274,7 +274,7 @@ array.length
   (more on this right away)
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // searching; >=0 means it is found
 
@@ -282,7 +282,7 @@ console.log(array.indexOf(3))
 ```
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // otherwise -1
 
@@ -293,12 +293,12 @@ console.log(array.indexOf("absent"))
 
 ### iterating over values of an array
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 * it is possible to iterate through an array like in Python:
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 for (let x of array1) {
     console.log(x)
@@ -319,13 +319,13 @@ actually there is also a `for .. in` statement (see below), but it is **a little
 
 ### iterating using indices, aka. `enumerate` in python
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 * using `for .. in` iterates over **indices**
   but see also the warning on next slide
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 for (let i in array) {
     console.log(i)
@@ -380,14 +380,14 @@ that we'll see in the next chapter, but it's worth outlining this already
 * so you need to shallow- or deep-copy depending on your needs
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 /*let*/ ref1 = [["shared", "data"], "unshared"]
 ref1
 ```
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // slice() works like Python's [:]
 // so it's a shallow copy
@@ -397,7 +397,7 @@ ref2
 ```
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // changing data from ref2
 
@@ -407,7 +407,7 @@ ref2
 ```
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // impacts ref1 but not on first level
 // because it is a shallow copy
@@ -461,14 +461,14 @@ function foo(x, y, z) {
 ```
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // works fine, of course
 foo(1, 2, 3)
 ```
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // works fine TOO !
 foo(1, 2)
@@ -540,7 +540,7 @@ foo(...L)
 * like in Python, **make sure to use them** whenever you need fast searching and indexing
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 /*let*/ map = new Map()
 
@@ -551,7 +551,7 @@ map.get(1000)
 ```
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // iterating over map
 
@@ -578,7 +578,7 @@ for (let k of map.keys()) {
   * that in JavaScript are called key-value pairs
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 /*let*/ bond = {
     first_name: "James",
@@ -589,7 +589,7 @@ console.log(`my name is ${bond.last_name}`)
 ```
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // check for a key
 
@@ -609,7 +609,7 @@ make them **look like** Python dictionaries
 **more examples**
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // how to write an object's keys
 
@@ -633,7 +633,7 @@ make them **look like** Python dictionaries
 ```
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 /*let*/ x = 10
 
@@ -651,7 +651,7 @@ make them **look like** Python dictionaries
 **more examples (2)**
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // how to concatenate objects
 
@@ -664,7 +664,7 @@ make them **look like** Python dictionaries
 ```
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // how to shallow-copy
 
@@ -703,15 +703,13 @@ for (let key in bond) {
 and also, because there is no difference between
 
 ```{code-cell}
-:cell_style: split
-:tags: [level_advanced]
+:tags: [level_advanced, gridwidth-1-2]
 
 /* const */ with_quotes = {'a': 1}
 ```
 
 ```{code-cell}
-:cell_style: split
-:tags: [level_advanced]
+:tags: [level_advanced, gridwidth-1-2]
 
 /* const */ without_quotes = {a: 1}
 ```
@@ -793,15 +791,15 @@ function foo(mandatory, options) {
 
 ```{code-cell}
 ---
-cell_style: split
 slideshow:
   slide_type: ''
+tags: [gridwidth-1-2]
 ---
 foo("something")
 ```
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 foo("else", {height: 800})
 ```
@@ -816,9 +814,9 @@ foo("else", {height: 800})
 
 ```{code-cell}
 ---
-cell_style: split
 slideshow:
   slide_type: ''
+tags: [gridwidth-1-2]
 ---
 vector = {x: 1, y: 2}
 
@@ -828,9 +826,9 @@ console.log(`vector = ${vector}`)
 
 ```{code-cell}
 ---
-cell_style: split
 slideshow:
   slide_type: ''
+tags: [gridwidth-1-2]
 ---
 // but it is a lot better like this
 console.log("vector = ", vector)
@@ -850,7 +848,7 @@ rather than a flat text representation that traditional languages have used us t
 ### class instances are objects
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 class Person {
     constructor(first, last) {
@@ -866,9 +864,9 @@ typeof(person)
 
 ```{code-cell}
 ---
-cell_style: split
 slideshow:
   slide_type: ''
+tags: [gridwidth-1-2]
 ---
 // objects are passed by reference too
 // so this function can modify its object argument

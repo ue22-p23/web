@@ -276,9 +276,9 @@ try {
 
 ```{code-cell}
 ---
-cell_style: split
 slideshow:
   slide_type: ''
+tags: [gridwidth-1-2]
 ---
 {
   let context = {a:1, b:2};
@@ -287,7 +287,7 @@ slideshow:
 }
 ```
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 * `context` is created in a block
 * that is **long gone** at the time the callback triggers
@@ -323,7 +323,7 @@ slideshow:
   * while the one with `let` behaves as expected
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 function ko() {
   // DO NOT USE var IN YOUR CODE !
@@ -337,7 +337,7 @@ ko()
 ```
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 function ok() {
   // use let instead

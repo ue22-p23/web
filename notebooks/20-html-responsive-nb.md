@@ -47,7 +47,7 @@ tools = require('../js/tools'); tools.init()
 
 this means for example :
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 wide viewport
 
@@ -55,7 +55,7 @@ wide viewport
 :align: center
 ```
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 narrow viewport
 
@@ -80,7 +80,7 @@ narrow viewport
 
 ## default layout policy
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 * if you do not override  
   the `display:` property,  
@@ -96,7 +96,7 @@ narrow viewport
 * **not at all suited**  
   for a responsive design
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 ```{image} media/css-display-block-inline.png
 :align: center

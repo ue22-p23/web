@@ -171,11 +171,11 @@ tools.sample_from_strings({
 })
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}, "cell_style": "split"}
++++ {"slideshow": {"slide_type": "slide"}, "tags": ["gridwidth-1-2"]}
 
 ### Unicode - the easy way
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 if you need to insert e.g. the ℃
 symbol, you can do it several ways :
@@ -183,11 +183,11 @@ symbol, you can do it several ways :
 easiest way : just cut-and-paste it right into the html as-is  
 (provided that your html file is utf8-encoded)
 
-+++ {"slideshow": {"slide_type": "slide"}, "cell_style": "split", "tags": ["level_intermediate"]}
++++ {"slideshow": {"slide_type": "slide"}, "tags": ["level_intermediate", "gridwidth-1-2"]}
 
 ### Unicode - the less easy way
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 each Unicode character has a unique codepoint
 
@@ -197,13 +197,13 @@ you can use that in a pure-ASCII source, and  write either
 * `&#x2103;`  
   the `x` stands for hexa
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 ```{image} media/unicode-celsius.png
 :align: center
 ```
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 ```{image} media/convert-unicode.png
 :align: center
@@ -234,13 +234,13 @@ some characters can be inserted with the same `&...;` notation using nicknames i
 each visible element can be styled according to the box model,  
 as shown in the browser devel tools
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 ```{image} media/box-model.png
 :align: center
 ```
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 * padding is **inside the border**
 * margin is **outside the border**
@@ -336,11 +336,11 @@ that allow to set **several** atomic properties in one line
 
 ### shorthand order
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 the trick is to remember this figure
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 ```{image} media/box-sides-order.png
 :align: center

@@ -88,11 +88,11 @@ JavaScript
 
 ### a simple page
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 when loading the simplest possible page, contents get scattered into packets, so it does not arrive all at once
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 ```{image} media/loading-1-simple.png
 :align: center
@@ -102,14 +102,14 @@ when loading the simplest possible page, contents get scattered into packets, so
 
 ### a page and a nested page
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 in the case of a page  
 that has **a nested page**  
 (e.g. a CSS style)  
 there are 2 HTTP requests at work
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 ```{image} media/loading-2-nested.png
 :align: center
@@ -215,7 +215,7 @@ we will talk about that again later on
 
 ### `<script>` with inline code
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 * quite simply, you can inject some JS code
 * right into your HTML document
@@ -223,7 +223,7 @@ we will talk about that again later on
 * this is **not** the usual way to do it  
   (for reusability, primarily)
 
-+++ {"incorrectly_encoded_metadata": "cell_style=\"center", "cell_style": "split"}
++++ {"incorrectly_encoded_metadata": "cell_style=\"center", "tags": ["gridwidth-1-2"]}
 
 ```html
 <script>

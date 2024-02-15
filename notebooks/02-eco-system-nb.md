@@ -27,7 +27,7 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 tools = require('../js/tools'); tools.init()
 ```
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 ## backend *vs* frontend
 

@@ -122,7 +122,7 @@ at a time where you can be sure the document is entirely **loaded**
 implementing a cyclic task was done in example 2 already as a reminder: based on `setInterval()`. You may use clearInterval to cancel.
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // so that we can stop the running loop
 active = true;
@@ -139,7 +139,7 @@ var interval = setInterval(one_step, 1000)
 ```
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // note that our JS interpreter
 // is still responsive
@@ -148,7 +148,7 @@ active = false
 ```
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // it's also possible to stop it
 // altogether
@@ -165,7 +165,7 @@ clearInterval(interval)
 
 in a Python language one would maybe consider writing something like
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 ```python
 while True:
@@ -174,7 +174,7 @@ while True:
     sleep 1
 ```
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 ````{admonition} single tasking vs multi tasking
 :class: note
@@ -265,11 +265,11 @@ as mentioned earlier already, you can
 
 ### Devel Tools : *Sources*
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 * occasionnally useful to browse the code actually loaded
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 ```{image} media/devel-tools-sources.png
 :align: center
@@ -279,11 +279,11 @@ as mentioned earlier already, you can
 
 ### Devel Tools : debugger
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 * the *Sources* tab has buit-in debugging features
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 ```{image} media/devel-tools-debugging.png
 :align: center

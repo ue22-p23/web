@@ -240,7 +240,7 @@ here's the gist of how to use promises
 all this allows for *chaining*, like e.g.
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // the easiest way to create a promise
 // (it takes no time and always succeed)
@@ -251,7 +251,7 @@ Promise.resolve(5)
    .then(res => res * 2)
 ```
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 ```{image} media/promise-chaining.png
 :align: center
@@ -354,9 +354,9 @@ let us observe this code running with a valid URL, and then an invalid URL
 
 ```{code-cell}
 ---
-cell_style: split
 slideshow:
   slide_type: ''
+tags: [gridwidth-1-2]
 ---
 // a valid URL
 
@@ -376,7 +376,7 @@ console.log(p)
 ```
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // an invalid URL
 
@@ -388,7 +388,7 @@ p = get_url1(URL_broken)
 ```
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // if you waited a bit, and show p again
 // you would see it as <rejected>
@@ -461,7 +461,7 @@ get_url2(URL_broken)
 with this model, we can now avoid the pyramid of doom, using chaining
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // which means that this code
 //  (not runnable of course)
@@ -476,7 +476,7 @@ with this model, we can now avoid the pyramid of doom, using chaining
 ```
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // becomes this
 
@@ -554,14 +554,14 @@ async function waitInverse(n) {...}
 because it is a sync function, it returns a promise (no need to create one ourselves)
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 waitInverse(2)
   .then((result) => console.log(result))
 ```
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // and any exception thrown will result
 // in the promise ending up 'rejected'
@@ -772,7 +772,7 @@ but the notebook *hangs* until the promise is complete, so here again you may wa
 }
 ```
 
-+++ {"cell_style": "split", "tags": ["level_advanced"]}
++++ {"tags": ["level_advanced", "gridwidth-1-2"]}
 
 ```js
 // a successful promise
@@ -781,7 +781,7 @@ p1
 // wait a bit to inspect p1 again
 ```
 
-+++ {"cell_style": "split", "tags": ["level_advanced"]}
++++ {"tags": ["level_advanced", "gridwidth-1-2"]}
 
 ```js
 // a rejected promise

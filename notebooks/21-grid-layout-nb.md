@@ -46,11 +46,11 @@ tools = require('../js/tools'); tools.init()
 
 ## example (1)
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 next slide demontrates this CSS:
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 ```{image} media/grid-areas.png
 :align: center
@@ -115,12 +115,12 @@ grid1_css = `.container {
 tools.sample_from_strings({html: grid_html, css: grid1_css}, {id: 'grid-1', start_with: 'css'})
 ```
 
-+++ {"cell_style": "split", "slideshow": {"slide_type": "slide"}}
++++ {"slideshow": {"slide_type": "slide"}, "tags": ["gridwidth-1-2"]}
 
 * note the usage of a  
   *grid-specific* length unit :
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 ```{image} media/grid-columns.png
 :align: center
@@ -289,7 +289,7 @@ you may also complete this game  <https://cssgridgarden.com/> at home if you fee
 
 ## auto-sizing
 
-+++ {"cell_style": "split", "tags": ["level_intermediate"]}
++++ {"tags": ["level_intermediate", "gridwidth-1-2"]}
 
 * a nice feature of grid display
 * is its ability to auto-organize the grid
@@ -298,7 +298,7 @@ you may also complete this game  <https://cssgridgarden.com/> at home if you fee
   * `auto-fit`
   * `minmax`
 
-+++ {"cell_style": "split", "tags": ["level_intermediate"]}
++++ {"tags": ["level_intermediate", "gridwidth-1-2"]}
 
 * that we illustrate in the next example  
 * see [this doc about minmax()](https://developer.mozilla.org/en-US/docs/Web/CSS/minmax)

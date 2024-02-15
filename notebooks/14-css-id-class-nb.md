@@ -27,7 +27,7 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 tools = require('../js/tools'); tools.init()
 ```
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 ## rules scope
 
@@ -35,7 +35,7 @@ there is a need for more accurate / selective settings
 
 for example our first CSS clause was something like this:
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 ```
 a {
@@ -44,7 +44,7 @@ a {
 }
 ```
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 however it will apply the settings *on **ALL `<a>` elements***  
 and so we need **more selective** mechanisms
@@ -170,12 +170,12 @@ let's summarize
 
 * in a nutshell :
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 ##### cascading 
 the **most specific** rule wins
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 ##### inheritance 
 take the value from  

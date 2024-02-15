@@ -125,7 +125,7 @@ so this would read `let a = 10` instead, but let us keep it simple for now
 * `for` are a little more awkward - we'll come back to that
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 // conditional if
 if (a == 10) {
@@ -138,7 +138,7 @@ if (a == 10) {
 ```
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 while (a >= 5) {
     console.log(a)
@@ -150,7 +150,7 @@ while (a >= 5) {
 
 ###   switch
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 the switch statement in JavaScript
 is similar to the ones in C++ and Java  
@@ -160,7 +160,7 @@ location that depends on the subject's value
 **do not forget** the `break` statements !
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 switch (a) {
     case 0:
@@ -211,7 +211,7 @@ for (let i=0; i<3; i++) {
 * variables should be declared using one of the keywords
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 let n = 10;
 console.log(typeof(n))
@@ -219,7 +219,7 @@ n += 20
 ```
 
 ```{code-cell}
-:cell_style: split
+:tags: [gridwidth-1-2]
 
 const s = "hello world"
 typeof(s)
@@ -560,8 +560,7 @@ the same `Vector` class twice in the same scope
 ### property example
 
 ```{code-cell}
-:cell_style: split
-:tags: [level_intermediate]
+:tags: [level_intermediate, gridwidth-1-2]
 
 class Temperature {
     constructor(temperature) {
@@ -594,22 +593,19 @@ class Temperature {
 ```
 
 ```{code-cell}
-:cell_style: split
-:tags: [level_intermediate]
+:tags: [level_intermediate, gridwidth-1-2]
 
 let temp = new Temperature(10)
 ```
 
 ```{code-cell}
-:cell_style: split
-:tags: [level_intermediate]
+:tags: [level_intermediate, gridwidth-1-2]
 
 temp.kelvin = -10
 ```
 
 ```{code-cell}
-:cell_style: split
-:tags: [level_intermediate]
+:tags: [level_intermediate, gridwidth-1-2]
 
 temp
 ```
