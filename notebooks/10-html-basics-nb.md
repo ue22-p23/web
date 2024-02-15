@@ -20,40 +20,33 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++
 
-# HTML basics
+# HTML & devel tools
 
 ```{code-cell}
 tools = require('../js/tools'); tools.init()
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## HTML is based on tags
-
-+++
 
 the HTML language structures the content of a web page
 in terms of sections, headers, paragraphs, lists of items, images ...
 
-the language is based on tags written between `<` and `>`  
-for example <code>&lt;head&gt;</code>
+the language is based on **tags** written between `<` and `>` - for example **`<head>`**
 
-an element (a section, a header) is composed by
+an **element** (a section, a header, ...) is composed by
 
-* an opening tag e.g. <code>&lt;head&gt;</code>
+* an opening tag e.g. `<head>`
 * a content that can be empty
-* a closing tag e.g. <code>&lt;/head&gt;</code>
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## HTML document structure
+* a closing tag e.g. `</head>`
 
 +++
+
+## HTML document structure
 
 the overall structure of a HTML document is composed of two parts, a **header** and a **body**, like this:
 
 ```{code-cell}
-:tags: [hide-input]
+:tags: [remove-input]
 
 fragment1 = `<html>
   <head>
@@ -72,22 +65,24 @@ tools.sample_from_strings({html: fragment1}, {separate_show: false})
 
 ## browser and server
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 ### regular setup
 
-files are on the Internet
+usually the content gets fetched on the Internet  
+with the `http://` protocol (or https..)
 
 ```{image} media/client-server.svg
 :height: 300px
 :align: center
 ```
 
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 ### our setup today
 
-but today, files are local on your laptop
+but today, we will instruct the browser to get files from our laptop  
+hence the use of the `file://` protocol
 
 ```{image} media/local-file.svg
 :height: 300px
@@ -103,11 +98,9 @@ for your first practice, you will save your code on your hard drive, and check t
 without the presence of a server, this is what the <code>file://</code> URLs are for
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"tags": ["gridwidth-1-2"]}
 
 ## practice
-
-+++
 
 * start from an empty folder
 * open vs-code and create a file named `hello.html`  
@@ -118,19 +111,12 @@ without the presence of a server, this is what the <code>file://</code> URLs are
   * or directly type a URL like  
     `file:///the/complete/path/to/hello.html`
 
-* you will see something like shown on the next slide
-
-+++ {"slideshow": {"slide_type": "slide"}, "cell_style": "split"}
-
-your `hello.html` should look like this
-
-+++ {"cell_style": "split"}
-
-and in the browser  
-it will look like this
+you need to reproduce this:
+- your `hello.html` should look like this (left hand side)  
+- and in the browser it will look like this (right hand side)
 
 ```{code-cell}
-:tags: [hide-input]
+:tags: [remove-input]
 
 // need to set an id as the default is to hash the html content
 // and we will reuse this later down the page
@@ -143,73 +129,61 @@ tools.sample_from_strings(
 :class: note
 
 also observe the URL that the browser has used to fetch your file <br>
-it should look like <code>file:///the/path/to/your/current/directory/hello.html</code>
+it should look like `file:///the/path/to/your/current/directory/hello.html`
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"tags": ["gridwidth-1-2"]}
 
 ## accessing your browser's devel tools
 
-+++ {"cell_style": "split"}
-
 * all browsers come with development tools for debugging
-* as a first contact with these,  
-  let us inspect the content of our HTML document
+* as a first contact with these,  let us inspect the content of our HTML document
+* for that, the simplest way is to
+  * **right-click** on the `Hello` text
+  * and choose *Inspect*
 
-* for that, the simplest way is to right-click on the 'Hello' text
-* and choose 'Inspect'
-
-+++ {"cell_style": "split"}
++++ {"tags": ["gridwidth-1-2"]}
 
 ```{image} media/inspect-element-menu.png
 :align: center
 ```
 
-+++ {"cell_style": "split"}
++++ {"tags": []}
 
 ```{admonition} devel tools
 :class: note
 
-this should open your browser's devel tools, which depending on your browser  
-may require additional preparation or  installation steps
+this should open your browser's **devel tools**, which depending on your browser, may require additional preparation or installation steps  
 we recommend using Chrome in case it is not working as expected
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ## check for devel tools
-
-+++
 
 * if you cannot see the devel tools (see next slide for a glimpse)
   it means your browser may need additional installation (google for how to do that)
 
 * here's how to check your browser (all this on mac at least)
 
- * on Safari: you should have a ***Develop*** menu in the main menubar:  
+ * on ***Safari***: you should have a ***Develop*** menu in the main menubar:  
     * *File Edit View History Bookmarks **Develop** Window*
- * on Chrome: you should have a ***Developer*** submenu  
+ * on ***Chrome***: you should have a ***Developer*** submenu  
    in the *View* menu in the main menubar
 
- * on Firefox: you should have a ***Web Developer*** entry  
+ * on ***Firefox***: you should have a ***Web Developer*** entry  
    in the *Tools* menu in the main menubar
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"tags": []}
 
-## *Elements* navigator
-
-+++ {"cell_style": "split"}
+## the *Elements* tab
 
 ```{image} media/inspect-element-elements.png
 :align: center
 ```
 
-+++ {"cell_style": "split"}
-
 * left pane, navigate the elements
-* right pane, visualize the  
-  selected element's applicable  
-  *Styles* and *Computed* properties  
+* right pane, visualize the selected element's applicable *Styles* and *Computed* properties
   (more on this later)
 
 +++
@@ -220,52 +194,38 @@ we recommend using Chrome in case it is not working as expected
 from that view you can navigate the elements tree, although in this case it is very simple, with just 3 nodes
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}, "cell_style": "split"}
++++ {"tags": []}
 
-* another interesting part is the   
-(JavaScript) ***Console*** tab  
+## the *Console* tab
 
-* this is where **debug messages**  
-  end up (if any; here of course  
-  there are none)
-
-+++ {"cell_style": "split"}
+another interesting part is the (JavaScript) ***Console*** tab  
+this is where **debug messages** end up (if any; here of course there are none)
 
 ```{image} media/inspect-element-console.png
 :align: center
 ```
 
-+++ {"cell_style": "split", "slideshow": {"slide_type": "slide"}}
++++ {"slideshow": {"slide_type": "slide"}, "tags": []}
 
-* the area with the `> ` is the REPL  
-  i.e. Read, Eval, Print Loop
+### the REPL
 
-* (juste like the `>>> ` with Python)
-
-
-where you can type and run
-your first JavaScript code
-
-+++ {"cell_style": "split"}
+the area with the `> ` is the REPL (i.e. Read, Eval, Print Loop)  - juste like the `>>> ` with Python  
+where you can type and run your first JavaScript code
 
 ```{image} media/inspect-element-console-code.png
 :align: center
 :width: 600px
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ## DOM = Document Object Model
 
-+++
-
 * the `<tag> ... </tag>` notation
-* unambiguously maps to a tree structure  
-  known as an Abstract Syntax Tree (AST)
-
+* unambiguously maps to a tree structure known as an Abstract Syntax Tree (AST)
 * referred to in all documentation as "*the DOM* "
 
-+++ {"cell_style": "split", "slideshow": {"slide_type": "slide"}}
++++ {"slideshow": {"slide_type": "slide"}, "tags": ["gridwidth-1-2"]}
 
 this HTML fragment
 ```html
@@ -280,24 +240,23 @@ this HTML fragment
 </html>
 ```
 
-+++ {"cell_style": "split"}
++++ {"cell_style": "center", "tags": ["gridwidth-1-2"]}
 
 will result in this tree
 ```{image} media/abstract-syntax.svg
 :align: center
 ```
 
-+++ {"cell_style": "center"}
++++ {"cell_style": "center", "tags": []}
 
-nodes in this tree are called **Elements**  
-it is the basis for navigating the document  
-in the ***Elements*** devel tools tab
+```{admonition} elements
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## be rigourous
+nodes in this tree are called **Elements**; it is the basis for navigating the document in the ***Elements*** devel tools tab
+```
 
 +++
+
+## be rigourous
 
 * browsers tend to be as tolerant as possible
 * e.g. omitting a closing tag may render just fine
@@ -307,11 +266,14 @@ in the ***Elements*** devel tools tab
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-**do not do this !!**
+### do not do this !!
 
 ```{code-cell}
-:tags: [raises-exception, hide-input]
-
+---
+slideshow:
+  slide_type: ''
+tags: [remove-input]
+---
 fragment_unclosed = `<p> do not do this
 <ul>
 <li> unclosed tags <b>look like</b> they work
@@ -323,10 +285,10 @@ tools.sample_from_strings({html: fragment_unclosed}, {separate_show: false})
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-**do this instead**
+### do this instead
 
 ```{code-cell}
-:tags: [hide-input]
+:tags: [remove-input]
 
 fragment_closed = `<p> do this instead </p>
 <ul>
@@ -338,11 +300,7 @@ fragment_closed = `<p> do this instead </p>
 tools.sample_from_strings({html: fragment_closed}, {separate_show: false})
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## a few tips
-
-+++
 
 * vs-code has great support for editing `html` documents
   * even with no extension installed
@@ -350,8 +308,7 @@ tools.sample_from_strings({html: fragment_closed}, {separate_show: false})
   * and [in particular emmet snippets](https://code.visualstudio.com/docs/languages/html#_emmet-snippets)
 * you often need to switch from editor to browser and back
   * use keyboard shortcuts to switch between apps
-  * typically with `⌘-tab` (or alt-tab or control-tab depending on your environment)
+  * typically with `⌘-tab` (or `⌥-tab` or `⌃-tab` depending on your environment)
 * also make sure to know the keyboard shortcut  
   for your browser to reload a page
-
   * typically `⌘-r` (or `⌃-r` on Windows...)
