@@ -27,11 +27,7 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 tools = require('../js/tools'); tools.init()
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## `Format Document`
-
-+++
 
 with this command (use the palette to reach it) you can ask vs-code to re-format the whole document
 
@@ -42,11 +38,9 @@ it may be wise to stage your file first
 even if you can also undo of course, like always under vscode
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ## `Indent Line` and `Outdent Line`
-
-+++
 
 bound to `⌘ [` et `⌘ ]` respectively
 
@@ -85,29 +79,23 @@ you get
 </div>
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ## `emmet wrap`
-
-+++
 
 with `Emmet: wrap with abbreviation` (use the palette)  
 you can easily wrap a piece of html inside a newly-created tag
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ## matching tags
-
-+++
 
 check out the extensions named "`Auto Rename Tags`"  
 with that in place, when you change e.g. a `<div>` into a `<span>`, the matching `</div>` gets renamed automatically as well
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ## multiple cursors
-
-+++
 
 you can set multiple cursors, and then everything you type is done multiple times at once
 
@@ -122,11 +110,9 @@ for more info, check out this page <https://code.visualstudio.com/docs/editor/co
 
 and/or on youtube, search for `vscode multiple cursor`
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ## keyboard shortcuts
-
-+++
 
 it is easy to assign these functions to a keyboard shortcut
 
