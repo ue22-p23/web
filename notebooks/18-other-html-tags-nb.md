@@ -27,11 +27,7 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 tools = require('../js/tools'); tools.init()
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## multimedia
-
-+++
 
 * [`<img>`](https://www.w3schools.com/tags/tag_img.asp)
 * [`<audio>`](https://www.w3schools.com/html/html5_audio.asp)
@@ -39,11 +35,9 @@ tools = require('../js/tools'); tools.init()
 
 find out more on these by yourselves
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ## graphics and `<svg>`
-
-+++
 
 * SVG is a complete subsystem to deal with vector graphics
 * [learn more about SVG at w3schools](https://www.w3schools.com/graphics/svg_intro.asp) (basic)
@@ -84,11 +78,7 @@ circle {
 tools.sample_from_strings({html: svg_html, css: svg_css})
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## form-oriented
-
-+++
 
 for building forms :
 
@@ -98,11 +88,9 @@ for building forms :
 
 out of scope for this course though, as it involves a backend
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ## sectioning
-
-+++
 
 * `<h1>` .. `<h6>` are only meaningful for the title line
 * but are too poor to actually convey sectioning information
@@ -121,11 +109,7 @@ out of scope for this course though, as it involves a backend
 tools.sample_from_stem("../samples/18-sections")
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## miscell others
-
-+++
 
 in a jumble :
 
@@ -135,22 +119,24 @@ in a jumble :
 * `<canvas>` is a more recent alternative to SVG for graphics,  
   [see more on css-tricks](https://css-tricks.com/learn-canvas-snake-game/)
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"cell_style": "center"}
 
 ## practice
 
-+++ {"cell_style": "center"}
-
-* as a conclusion of this first basic course
-  * with all the knowledge you now have about HTML and CSS,
-* write your complete resume; you should have 2 files
+* before you start, make sure to read **next section on vs-code tricks**
+* and then, as a conclusion of this first basic course, write your complete resume; you should have 2 files
   * `resume.html`
   * `resume.css`
 * at this point, you may think of it as (if it were) a word document
   * with a header that has your details and photo
   * and the 4 well structured sections,
-  * again 'experience', 'education', 'skills' and 'languages'
+  * again *Experience*, *Education*, *Skills* and *Languages*
 * try to print it in a PDF file, to evaluate how it fits with respect to an A4 page
-* **NOTE** that next course will address overall layout in greater details  
-  (i.e. the relative place of all pieces wrt one another)  
-  so do not spend too much time on trying to make best usage of space at this point
+
+````{admonition} do not worry about the layout for now
+:class: tip
+
+our next course will address overall layout in greater details  
+(i.e. the relative place of all pieces wrt one another)  
+so do not spend too much time on trying to make best usage of space at this point
+````
