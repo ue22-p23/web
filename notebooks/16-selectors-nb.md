@@ -27,35 +27,18 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 tools = require('../js/tools'); tools.init()
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## selectors are very powerful
-
-+++
 
 generally speaking, selectors can be combined to create more and more selective ones; for example
 
-`p.class1.class2`  
-  matches elements that are tagged with `<p>` and have **both** classes
+- **AND**:  
+  `p.class1.class2 {...}` matches elements that are tagged with `<p>` and have **both** classes
+- **OR**:  
+  `p.class1, p.class2 {...}` will apply to `<p>` elements that have **either** one of the classes
 
 +++
-
-also note that you can write a single rule for several selectors 
-
-```css
-p.class1, p.class2 {
-   font-size: larger;
-}
-```
-
-will apply the `font-size` property to `<p>` elements  
-that have class `class1` **or** class `class2` - or both, naturally
-
-+++ {"slideshow": {"slide_type": "slide"}}
 
 ## selecting X under Y
-
-+++
 
 `div p`  
 matches all `<p>` elements that are **below** a `<div>` element **at any depth**
@@ -63,12 +46,10 @@ matches all `<p>` elements that are **below** a `<div>` element **at any depth**
 `div>p`  
 matches all `<p>` elements that are an **immediate child** of `<div>` element
 
-+++
-
 ````{admonition} note
 :class: note
 
-here the <code>div</code> and the <code>p</code> parts are selectors themselves, they can be any more specific selector, of course
+here the `div` and the `p` parts are selectors themselves, they can be any more specific selector, of course
 ````
 
 ```{code-cell}
@@ -99,19 +80,13 @@ div > p {
 tools.sample_from_strings({html: under_html, css: under_css}, {start_with: 'css'})
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## selecting X as a sibling of Y
-
-+++
 
 `div + p`  
 matches all `<p>` elements that are **immediate right sibling** of a `<div>` element
 
 `div ~ p`  
 matches all `<p>` elements that are **some right sibling** of a `<div>` element
-
-+++
 
 ````{admonition} what are siblings ?
 :class: note
@@ -152,23 +127,16 @@ div ~ p {
 tools.sample_from_strings({html: sibling_html, css: sibling_css}, {start_with: 'css', id: 'sibling'})
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## pseudo-class selectors
-
-+++
 
 * pseudo-classes are set by the browser to expose  
   the status of some elements
-
 * e.g. `a:hover` allows to match `<a>` links  
   but only when the mouse is hovering above them
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ### `:hover` pseudo-class
-
-+++
 
 a first, not-quite-working example (at least on Chrome)
 
@@ -201,11 +169,7 @@ a {
 tools.sample_from_strings({html: hover1_html, css: hover1_css}, {start_with: 'css'})
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ### `:hover` and `:link`
-
-+++
 
 to get it right, we can use the other pseudo-class `:link`  
 that is set only on `<a>` tags that have a `href=` attribute
@@ -241,17 +205,17 @@ a {
 tools.sample_from_strings({html: hover2_html, css: hover2_css}, {start_with: 'css'})
 ```
 
++++ {"tags": []}
+
 ````{admonition} 2 pseudo-classes
 :class: note
 
 note that here we build a selector that applies on elements that have **both** pseudo classes, much like with regular classes
 ````
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ### rank of element amongst its siblings
-
-+++
 
 * `:first-child`, `:last-child` : pseudo-classes  
   for what you think they do
@@ -297,11 +261,9 @@ tools.sample_from_strings({html: rank_html, css: rank_css}, {start_with: 'css'})
 * see also [more detailed list of pseudo-class selectors](https://css-tricks.com/pseudo-class-selectors/)
 * in particular `:not()` for negations
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## attribute selectors
-
 +++
+
+## attribute selectors (advanced)
 
 * HTML elements can have arbitrary attributes,  
   not just `id`, `class`, `href`, ...
