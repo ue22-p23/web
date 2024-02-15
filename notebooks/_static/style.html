@@ -2,24 +2,20 @@
 <style>
 
 
-.rendered_html *+ol,
-.rendered_html *+ul {
-    margin-top: initial !important;
-}
+ .myst * + ol,
+ .myst * + ul {
+     margin-top: initial !important;
+ }
 
+ .myst :where(p):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    margin-bottom: 0.5em !important
+ }
 
+ 
 
-
+.jp-OutputArea-output,
 div.cell div.cell_output .output pre {
-    background-color: rgb(255, 248, 248);
-}
-
-div.output_area pre {
-    padding: 5pt;
-    border-width: 1px;
-    border-radius: 4px;
-    border-style: double;
-    border-color: #335;
+    background-color: #f8f8ff;
 }
 
 div.prompt.input_prompt, div.prompt.output_prompt {
@@ -30,9 +26,7 @@ div.prompt.input_prompt, div.prompt.output_prompt {
 
 
 
-.rendered_html img.inline {
-    display: inline;
-}
+
 
 
 
