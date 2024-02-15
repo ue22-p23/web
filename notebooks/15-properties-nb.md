@@ -27,15 +27,9 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 tools = require('../js/tools'); tools.init()
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## too many to be listed
 
-+++
-
-* more than 100 properties defined  
-  in the standard ([see full list here](https://www.w3schools.com/cssref/))
-
+* more than 100 properties defined in the standard ([see full list here](https://www.w3schools.com/cssref/))
 * we just mention the most obviously needed
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -43,12 +37,9 @@ tools = require('../js/tools'); tools.init()
 ## text properties
 
 ```{code-cell}
----
-cell_style: center
-slideshow:
-  slide_type: ''
-tags: [remove-input]
----
+:cell_style: center
+:tags: [remove-input]
+
 text_html = `<p class="text">
 a sample text</p>`;
 text_css = `.text {
@@ -57,22 +48,18 @@ text_css = `.text {
     font-weight: bold;
     font-style: italic;
     text-decoration: underline;
+    color: darkolivegreen;
 }
 `;
 tools.sample_from_strings({html: text_html, css: text_css})
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## many fonts available
-
-+++
 
 * see for example [a collection of google fonts](https://fonts.google.com/)
 * note also some less traditional fonts
   * that come with usual symbols
-  * see [in particular *fontawesome*](https://fontawesome.com/icons?d=gallery&m=free)  
-    who offer a decent collection for free
+  * see [in particular *fontawesome*](https://fontawesome.com/icons?d=gallery&m=free) who offer a decent collection for free
 
 the example below illustrates how to load and use them in your page
 
@@ -85,39 +72,15 @@ tags: [remove-input]
 tools.sample_from_stem("../samples/15-font-demo")
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ### notes on the fonts example (1)
 
+* observe **the single CSS** rule here, that allows to apply the font **to the whole document**  
+  this is an example of *inheritance*
+* btw, it is strongly recommended to avoid mixing fonts in a document
+
 +++
-
-* for cosmetic reasons, the example is a bit simplified  
-  use something like this to import a font  
-  in all variants of bold/italic
-
-```html
-<link rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Raleway:200,200i,400,400i,500,500i,600,600i,700,700i">
-```
-
-+++ {"slideshow": {"slide_type": "slide"}}
 
 ### notes on the fonts example (2)
-
-+++
-
-* the single CSS rule here allows to apply  
-  the font **to the whole document**  
-  we will see in a moment how that actually works  
-
-* btw, it is strongly recommended to avoid  
-  mixing fonts in a document
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-### notes on the fonts example (3)
-
-+++
 
 * also observe the import and use of *fontawesome*  
   to display custom symbols before address and phone number, like  
@@ -129,8 +92,7 @@ tools.sample_from_stem("../samples/15-font-demo")
   that I found [browsing the fontawesome catalog](https://fontawesome.com/v6/icons)
 
 * these symbols are more convenient than bitmap pictures  
-  in particular can be safely scaled / colorized
-  using CSS
+  in particular can be safely scaled / colorized using CSS
 
 ```{admonition} the names may change
 :class: warning
@@ -138,17 +100,26 @@ tools.sample_from_stem("../samples/15-font-demo")
 **BEWARE** the names may change with the version of *fontawesome*, and so of course you must pick a name that is defined in the version of fontawesome that you have imported in your page
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
-## Unicode characters
+### notes on the fonts example (3)
+
+* for cosmetic reasons, the example is a bit simplified  
+  use something like this to import a font in all variants of bold/italic
+
+```html
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway:200,200i,400,400i,500,500i,600,600i,700,700i">
+```
 
 +++
 
-* also remember there are more than 140.000 characters defined in the Unicode standard; so without the need to switch to another font, you can just write things like these  
+## Unicode characters
+
+* also remember there are more than 150.000 characters defined in the Unicode standard; so without the need to switch to another font, you can just write things like these  
   ︙→ ⇀ « » ❯ × ∑ ∀α ∃ε ∈ x² © …
 
-* being part of a text, these can also be safely styled  
-  i.e. scaled, coloured&hellip;  
+* being part of a text, these can also be safely styled - i.e. scaled, coloured&hellip;  
   as opposed, again, to using bitmap pictures
 
 ```{code-cell}
@@ -171,51 +142,17 @@ tools.sample_from_strings({
 })
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}, "tags": ["gridwidth-1-2"]}
-
 ### Unicode - the easy way
 
-+++ {"tags": ["gridwidth-1-2"]}
+if you need to insert e.g. the ℃ symbol, you can do it several ways :
 
-if you need to insert e.g. the ℃
-symbol, you can do it several ways :
-
-easiest way : just cut-and-paste it right into the html as-is  
-(provided that your html file is utf8-encoded)
-
-+++ {"slideshow": {"slide_type": "slide"}, "tags": ["level_intermediate", "gridwidth-1-2"]}
-
-### Unicode - the less easy way
-
-+++ {"tags": ["gridwidth-1-2"]}
-
-each Unicode character has a unique codepoint
-
-you can use that in a pure-ASCII source, and  write either
-
-* `&#8451;` (decimal) or
-* `&#x2103;`  
-  the `x` stands for hexa
-
-+++ {"tags": ["gridwidth-1-2"]}
-
-```{image} media/unicode-celsius.png
-:align: center
-```
-
-+++ {"tags": ["gridwidth-1-2"]}
-
-```{image} media/convert-unicode.png
-:align: center
-```
-
-+++ {"slideshow": {"slide_type": "slide"}, "tags": ["level_intermediate"]}
-
-### Unicode - epilogue
+**easiest way** : just cut-and-paste it right into the html as-is (provided that your html file is utf8-encoded)
 
 +++
 
-some characters can be inserted with the same `&...;` notation using nicknames instead of a codepoint, examples
+### Unicode - shortnames
+
+some characters can be inserted with the `&...;` notation using nicknames, like e.g.
 
 * `&lt;` for &lt; and `&gt;` for &gt;  
   sometimes useful to actually insert brackets like in &lt;code&gt;
@@ -223,16 +160,38 @@ some characters can be inserted with the same `&...;` notation using nicknames i
 * `&nbsp;` for a non-breaking&nbsp;space
   which is more explicit/readable
 
-* `&hellip;` for &hellip;
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## the box model
+* `&hellip;` for ellipsis &hellip;
 
 +++
 
-each visible element can be styled according to the box model,  
-as shown in the browser devel tools
+### Unicode - the less easy way (advanced)
+
+each Unicode character has a unique codepoint  
+you can use that in a pure-ASCII source, and  write either
+* `&#8451;` (decimal) or
+* `&#x2103;` the `x` stands for hexa
+
++++ {"tags": ["gridwidth-1-2"]}
+
+```{image} media/unicode-celsius.png
+:align: center
+:width: 300px
+```
+
++++ {"tags": ["gridwidth-1-2"]}
+
+```{image} media/convert-unicode.png
+:align: center
+:width: 300px
+```
+
++++
+
+## the box model
+
+so much about fonts and text, now for something completely different:  
+
+each visible element can be styled according to the box model, as shown in the browser devel tools
 
 +++ {"tags": ["gridwidth-1-2"]}
 
@@ -242,20 +201,21 @@ as shown in the browser devel tools
 
 +++ {"tags": ["gridwidth-1-2"]}
 
+````{admonition} padding, border, and margin
+as you can see
+
 * padding is **inside the border**
 * margin is **outside the border**
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## atomic properties (1)
+````
 
 +++
 
-each side (top, right, bottom, left) of the box  
-has its own individual properties  
-here e.g. padding and border
+### atomic properties (1)
 
-click on 'Open in new window' and use inspector on the `<p>` element
+each side (top, right, bottom, left) of the box has its own individual properties  
+here e.g. we illustrate this with *padding* and *border*
+
+click on *Open in new window* and use inspector on the `<p>` element
 
 ```{code-cell}
 :tags: [remove-input]
@@ -281,13 +241,9 @@ box1_css = `p.box1 {
 tools.sample_from_strings({html: box1_html, css: box1_css}, { start_with: 'css' })
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ### atomic properties (2)
 
-+++
-
-again with also margin and border-radius
+again with also *margin* and *border-radius* - nothing really new, but you can see the combinations are likely to be numerous ...
 
 ```{code-cell}
 :tags: [remove-input]
@@ -321,35 +277,25 @@ box2_css = `p.box2 {
 tools.sample_from_strings({html: box2_html, css: box2_css}, { start_with: 'css' })
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
+### shorthand properties
 
-## shorthand properties
+of course this can become quite tedious, so there also are so-called *shorthand properties*  
+that allow to set **several** atomic properties in one line  
+for dealing with paddings, margins, borders and fonts, among others  
 
 +++
 
-of course this can become quite tedious,  
-so there also are so-called *shorthand properties*  
-for dealing with paddings, margins, borders and fonts, among others  
-that allow to set **several** atomic properties in one line
+### box-related shorthands order
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
-### shorthand order
-
-+++ {"tags": ["gridwidth-1-2"]}
-
-the trick is to remember this figure
-
-+++ {"tags": ["gridwidth-1-2"]}
+one trick is to remember this figure
 
 ```{image} media/box-sides-order.png
 :align: center
+:width: 400px
 ```
 
-+++
-
 * `padding: 10px 20px 30px 40px` will assign the 4 padding properties in the order above
-* `padding: 10px;` will set all 4 *padding* properties
+* `padding: 10px` will set all 4 *padding* properties
 * `margin: 10px 20px` will set top *and bottom* to `10px`, and *both* sides to `20px`
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -362,11 +308,9 @@ same kind of shorthands are available for
 * `border: xxx` [see details here](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties#background_properties)
 * for a more complete list, [see this page on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties)
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ### shorthand example
-
-+++
 
 use the inspector from the devel tools to check the individual properties of the `<p>` elt, e.g. the `padding`
 
@@ -388,47 +332,39 @@ shorthand_css = `p.shorthand1 {
 tools.sample_from_strings({html: shorthand_html, css: shorthand_css}, {start_with: 'css'})
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## unit lengths
 
-+++
-
-a great many deal of units are available to express lengths  
-[see more details on this page](https://css-tricks.com/the-lengths-of-css/) , e.g. :
+a great many deal of units are available to express lengths - [see more details on this page](https://css-tricks.com/the-lengths-of-css/) , e.g. :
 
 * `10px`
 * `1in`, `2.54cm`, `25mm`
 * `20pt` (1pt = 1/72 inch)
 * `2em`, `1ex`, `20ch`, relative to current font size
 * `80%` typically for width and height, relative to parent element
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## colors
+* `90vh` means 90% of the viewport height - try it out ! and there is `vw` for the viewport width
 
 +++
+
+## colors
 
 several formats are supported to describe a color :
 
 * common colors by name, like `red` ([see full list](https://www.w3schools.com/colors/colors_names.asp))
 * RGB components like `#8000ff` that means
   * red = 0x80 = 128, green = 0x00 = 0, blue = 0xff = 255
-  * all three of course are in the [0-255] range
-* same in decimal:
-  * `rgb(128 0 255)`
-* opacity (in the [0-1.] range can be given as a fourth argument
-  * `rgb(128 0 255 / 20%)` will be only 20% opaque, i.e. almost transparent
+* same in decimal - the recommended way:
+  * **`rgb(128 0 255)`**
+* **opacity** (in the [0-1.] range can be given as a fourth argument  
+  * **`rgb(128 0 255 / 20%)`** will be only 20% opaque, i.e. almost transparent
+ 
+you can read [more on this on css-tricks](https://css-tricks.com/almanac/properties/c/color/)
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ### colors: online resources
 
 * like always, many online sites can help pick a decent color palette
-* personnally I like this one  
-  <https://colorhunt.co/palette>
-
-+++
+  * personnally I like this one <https://colorhunt.co/palette>
 
 ```{admonition} tip
 :class: tip
@@ -436,40 +372,9 @@ several formats are supported to describe a color :
 note that on colorhunt you can copy a color code by just clicking it
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## `box-sizing`
-
 +++
-
-the `box-sizing` property affects the way `width` and `height` properties are computed:
-
-* `box-sizing: content-box` : only take content into account
-* `box-sizing: padding-box` : account for content + padding
-* `box-sizing: border-box` : content + padding + border
-
-margins are **always excluded**
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## `box-sizing` (continued)
-
-+++
-
-not often needed, but typical use case is
-
-* you want a given component to take 500px **in total**
-* so the borders and paddings *push content inside*
-* then use `box-sizing: border-box`
-
-see also <https://css-tricks.com/box-sizing/>
-that has a live demo
-
-+++ {"slideshow": {"slide_type": "slide"}}
 
 ## `background`
-
-+++
 
 there are 8 elementary properties that make an element's background
 
@@ -482,17 +387,13 @@ there are 8 elementary properties that make an element's background
 * `background-clip`
 * `background-color`
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## `background` (continued)
-
 +++
+
+### `background` shorthand
 
 most often this is set through a unique shorthand property `background`
 
-https://css-tricks.com/almanac/properties/b/background/
-
-+++
+<https://css-tricks.com/almanac/properties/b/background/>
 
 also note that background
 
@@ -503,10 +404,10 @@ also note that background
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## `background` and margins (demo)
+### `background` and margins (demo)
 
 ```{code-cell}
-:tags: [remove-inputut]
+:tags: [remove-inputut, remove-input]
 
 background_html = `<div>
   <section>
@@ -545,7 +446,7 @@ tools.sample_from_strings({html: background_html, css: background_css})
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## `background` and margins - demo explained
+### `background` - demo explained
 
 ```{image} media/backgrounds-and-margins.png
 :align: center
@@ -563,3 +464,24 @@ is actually the <b><i>max</i></b> of their margins
 how the 2 other margins (the title's top-margin and the paragrapgh's bottom margin)  
 are inherited from the default user agent stylesheet (here this is chrome)
 ```
+
++++
+
+## `box-sizing`
+
+the `box-sizing` property affects the way `width` and `height` properties are computed:
+
+* `box-sizing: content-box` : only take content into account
+* `box-sizing: padding-box` : account for content + padding
+* `box-sizing: border-box` : content + padding + border
+
+(note that margins are **always excluded**)
+
+not often needed, but typical use case is
+
+* you want a given component to take 500px **in total**
+* so the borders and paddings *push content inside*
+* then use `box-sizing: border-box`
+
+see also <https://css-tricks.com/box-sizing/>
+that has a live demo
