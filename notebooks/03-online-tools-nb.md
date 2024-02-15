@@ -27,11 +27,7 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 tools = require('../js/tools'); tools.init()
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## many great online tools
-
-+++
 
 * it is sometimes unconvenient to deal with  
   the 3 formalisms HTML - CSS - JavaScript
@@ -55,8 +51,6 @@ for great examples
 ```{image} media/tooling-codepen-picks.png
 :align: center
 ```
-
-+++ {"slideshow": {"slide_type": "slide"}}
 
 each snippet can be edited online and rendered as you work on it
 

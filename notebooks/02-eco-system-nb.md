@@ -21,30 +21,31 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++
 
-# introduction to web frontend
+# ecosystem
 
 ```{code-cell}
 tools = require('../js/tools'); tools.init()
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"cell_style": "split"}
 
-## Web ecosystem (frontend)
+## backend *vs* frontend
+
+* Web server :  
+  * operated by the application provider (i.e. in *the cloud*, i.e. a datacenter)
+  * runs **backend** code
+* Web browser :   
+  * runs on your laptop
+  * runs **frontend** code (even though that code is fetched at the backend)
+
+```{image} media/client-server.svg
+:width: 270px
+:align: center
+```
 
 +++
-
-* crash course on how to write web pages  
-* just scratch the surface, a whole lot is **not even mentioned**  
-* focus on the core technological bricks
-  * HTML (HyperText Markup Language)
-  * CSS (Cascading Style Sheets)
-  * JavaScript (a.k.a. ECMAScript)
-
-+++ {"slideshow": {"slide_type": "slide"}}
 
 ## evolution speed
-
-+++
 
 * all this started in a very awkward way
   * early versions were always quick and dirty
@@ -60,49 +61,23 @@ tools = require('../js/tools'); tools.init()
   * tools for mobile depl. [expo](https://expo.io),
     [svelte](https://svelte.dev), [ionic](https://ionicframework.com) …
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ##  focus on HTML - CSS - JavaScript
 
-+++
-
-* we will only focus on **grassroots level**
-  * that will likely remain valid for a while
+* again, we will only focus on **grassroots level**
+  * that will likely remain valid for a while - even if they do evolve too
 * versions for our focus
   * HTML-5, CSS-3, ECMAScript-6
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## backend and frontend
-
-+++ {"cell_style": "split"}
-
-* Web server :  
-  * operated by the application provider
-  * runs **backend** code
-* Web browser :   
-  * runs on your laptop
-  * runs **frontend** code  
-    (even though that code  
-    is fetched at the backend)
-
-+++ {"cell_style": "split"}
-
-```{image}  media/client-server.svg
-:width: 300px
-:align: center
-```
-
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ## you may have heard of
 
-+++
-
-* typical backend technologies
+* typical **backend** technologies
   * PHP, django or flask (Python), Ruby/on rails, SQL databases
   * apache, nginx, load balancing
-* typical frontend technologies
+* typical **frontend** technologies
   * **HTML, CSS, JavaScript**
   * react, angular, vue, ...
 * in between

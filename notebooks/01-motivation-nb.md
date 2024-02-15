@@ -27,13 +27,18 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 tools = require('../js/tools'); tools.init()
 ```
 
-make sure to evaluate this cell above !
+```{admonition} running locally ?
+:class: admonition-small
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## why a course on web frontend pillars&nbsp;?
+the most comfortable way to read this content is on 
+<https://ue12-p23-web.readthedocs.io>  
+it is also possible to run the notebooks locally, even if it does require a more complex setup than the usual Python notebooks (the notebook here use a node.js kernel)  
+anyway, if you do run this locally, make sure to always evaluate the initialization cells
+```
 
 +++
+
+## why a course on web frontend pillars&nbsp;?
 
 * with traditional languages like Python, C++, and Java  
   building a decent UI quickly becomes awkward
@@ -44,11 +49,9 @@ make sure to evaluate this cell above !
 * as of 202x, **everything** runs on the Web
 * so this simply **cannot be ignored**
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ## vocabulary
-
-+++
 
 * web technologies are heavily **client-server** based
 * **server**-side (think, **cloud**) is often called ***backend***  
@@ -70,41 +73,29 @@ for instance
 
 ## scope
 
-+++
-
-* due to time constraints
-* we will restrict ourselves to the ***frontend*** side
+* for this course, we will restrict ourselves to the ***frontend*** side
 * objective is to give you **some grip**
 * on the **core** technologies supported in a browser  
   * namely **HTML**, **CSS** and **JavaScript**
 * so that you can assess their enormous potential
-* ignoring the fast-moving over-layers  
+* mostly ignoring the fast-moving over-layers  
   * like *e.g.* react, angular, ...  
   * way too numerous to list at this point
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ## the root trio
 
-+++
-
 * `HTML`: ***content***
-  * suitable to create content
-  * everything that is visible on a web page  
-    has been created as an HTML fragment
-
+  * everything that is visible on a web page has been created as an HTML fragment
 * `CSS`: ***styling***
-  * how the document gets rendered
-  * suitable to customize visible aspect
+  * how the document gets rendered, suitable to customize visible aspect
 * `JavaScript`: ***behaviour***
-  * full-fledged programming language
-  * suitable to customize, well, everything really
+  * full-fledged programming language, suitable to customize, well, everything really
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ## excluded
-
-+++
 
 this means that we will **not** address :
 
@@ -112,7 +103,7 @@ this means that we will **not** address :
   * like e.g. apache, nginx, django, REST apis, …
 * nor the network protocols involved  
   * like http(s), websockets, and similar
-* those will be touched on briefly later this year
+* those will be touched on briefly later this year in a separate course
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -133,50 +124,32 @@ this means that we will **not** address :
 * as a bonus, super-portable with **zero installation**
   * across the whole range of **computers** and **mobile devices**
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ## wider than just the browser
 
-+++
-
 * keep in mind that web frontend techologies
   * go way beyond the browsers per se
-* there are many options to build a **standalone** app  
-  (that runs **outside of the browser**)  
-
-  * leveraging the same core technos  
-    (again, HTML, CSS and JavaScript)
-
+* there are many options to build a **standalone** app (that runs **outside of the browser**)  
+  * leveraging the same core technos (again, HTML, CSS and JavaScript)
   * as a native mobile app (IOS or Android)
-  * and/or on traditional computers  
-    i.e. build a native MacOS or Windows  
-    traditional application, powered by e.g. [WebKit](https://webkit.org/)
+  * and/or on traditional computers - **like e.g. vs-code**
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ## even wider than just the frontend
 
-+++
-
-* also be aware that JavaScript
+* also be aware that JavaScript (node.js)
   * that is primarily famous for powering frontends
-  * is becoming more and more popular  
-    as a traditional programming tool (see node.js)
-
-  * so it can be, and actually is, more and more  
-    used for writing backends as well
-
+  * is becoming more and more popular  as a traditional programming tool (see node.js)
+  * so it can be, and actually is, more and more used for writing backends as well
   * and even for traditional computing
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ## objectives
 
-+++
-
 * make sure you are aware of the **enormous potential**
 * outline some specific problems  
-  esp. **asynchroneous** / non-sequential nature  
-  of user interaction and network activity
-
+  esp. **asynchroneous** / non-sequential nature of user interaction and network activity
 * start to build a **mental map** where you can place the current buzzwords
