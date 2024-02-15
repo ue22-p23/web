@@ -88,7 +88,7 @@ tools.sample_from_strings({html: ol_fragment})
   * like bold, italics, underline and similar
 
 ```{admonition} warning: do not overuse !
-:class: warning
+:class: warning admonition-small
 
 however as we will see later on, there are **much more powerful** mechanisms  
 so **don't use this at scale**, they are just conveniences  
@@ -135,47 +135,35 @@ plt.plot(X, Y)
 tools.sample_from_strings({html: code_fragment})
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## hyperlinks, and the anchor tag `<a>`
 
+the anchor tag `<a>` serves two purposes :
+
+* → create a **hyperlink** that can bring users to another location
+* ← create a **name** locally so that this particular location can be **the target of** a hyperlink
+
 +++
-
-the anchor tag serves two purposes :
-
-* create a **hyperlink** that can bring users to another location
-* create a **name** locally so that this particular location can be the target of a hyperlink
-
-+++ {"slideshow": {"slide_type": "slide"}}
 
 ### hyperlink `<a href="some-url">`
 
-+++
-
 typical **hyperlink** reads like this  
-**NOTE** that clicking the link will cause you to leave the present notebook !
+
+````{admonition} opening in another tab
+:class: note
+
+here we also set `target="_"` so that the link opens in another tab (or window)
+````
 
 ```{code-cell}
 :tags: [remove-input]
 
-hyperlink_fragment = `<a href="https://www.google.com/">the hyperlink</a>`;
+hyperlink_fragment = `<a href="https://www.google.com/" target="_">the hyperlink</a>`;
 tools.sample_from_strings({html: hyperlink_fragment})
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ### name anchor `<a name="some-name">`
 
-+++
-
 if you need a hyperlink to point, not at the beginning of this page, but somewhere in the middle, then create an anchor at that location
-
-```{code-cell}
-:tags: [hide-input]
-
-anchor_fragment = `<a name="the-anchor-name">the magic location</a>`;
-tools.sample_from_strings({html: anchor_fragment})
-```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -190,19 +178,33 @@ tools.sample_from_strings({html: anchor_fragment})
 
 ### local URL
 
+here's an example of a page that has a named anchor (below the gray area) and a hyperlink to that location
+
+````{admonition} do not worry about that gray blob for now
+:class: admonition-small
+
+we have not yet seen how to create this gray thingy, please admit it for now
+````
+
 ```{code-cell}
 :tags: [remove-input]
 
-redirect_fragment = `<p>it is easy to craft a local URL
-<br>
-when clicked, the hyperlink below would bring you
-<br>to the location of
-<a href="#the-anchor-name">the anchor named
-<code>the-anchor-name</code></a>
-<br>in the same document
-<br>
-(but not in this notebook though,
-because of the page structure)
+redirect_fragment = `
+<p>let us simulate a page with some content (the gray area below)<br>
+we have put <b>a named anchor right below this area</b></p>
+
+<p> it is easy to craft 
+<a href="#the-anchor-name">a local URL: click me</a>
+and the hyperlink below will bring you right down to the anchor</p>
+
+<div style="height:500px; border-radius:10px; background-color: #ddd;"></div>
+
+<p>
+<a name="the-anchor-name">
+<b>here is the named anchor</b>
+</a>
+and then some more text
+</p>
 `
 tools.sample_from_strings({html: redirect_fragment})
 ```
@@ -229,7 +231,8 @@ tools.sample_from_strings({html: redirect_fragment})
 
 group_html = `<p> a paragraph may  
 <span style="background-color: #ddd;">
-      contain a fragment</span>
+      contain a fragment
+</span>
 that we want to keep together,
 typically for styling purposes,
 but that is inline (no linebreak),
@@ -238,7 +241,7 @@ and for that use a &lt;span&gt; tag.</p>
 <div style="background-color: #ddd;">
   <p> when you need to create a group that
       contain several paragraphs</p>
-  <p> then a &lt;div&gt; tag is more suitable</p>
+  <p> then a "div" tag is more suitable</p>
 </div>`
 tools.sample_from_strings({html: group_html})
 ```
@@ -246,8 +249,7 @@ tools.sample_from_strings({html: group_html})
 ```{admonition} note on styling
 :class: seealso
 
-this example uses styling - that we have not studied yet -  
-to outline the <code>&lt;span&gt;</code> and <code>&lt;div&gt;</code>
+this example uses styling - that we have not studied yet - to outline the <code>&lt;span&gt;</code> and <code>&lt;div&gt;</code>
 elements by changing their background color
 ```
 
