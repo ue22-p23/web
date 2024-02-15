@@ -160,3 +160,17 @@ div.CodeMirror-lines div.CodeMirror-code pre.CodeMirror-line {
     margin-right: 10px;
     border-right: #ddd solid 1px;
 }
+
+/* custom sizes for admonitions */
+.admonition-smaller {
+    font-size: smaller;
+    line-height: 1.2;
+}
+.admonition-small {
+    font-size: small;
+    line-height: 1.2;
+}
+.admonition-x-small {
+    font-size: x-small;
+    line-height: 1.2;
+}
