@@ -26,44 +26,41 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 tools = require('../js/tools'); tools.init()
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## purpose
 
-+++
-
 * create grid-based layouts, obviously
-* historically a challenging task
-  * the `<table>` tag has long been overused  
-    to address that sort of needs
-
-  * twitter's `bootstrap` has been used for this too at some point
-  * **do not use** these tools for that in 202x !
-  
 * `grid` is now available in [all popular modern browsers](https://caniuse.com/#feat=css-grid)
+
+````{admonition} historical note
+
+creating this kind of layout has been historically a challenging task
+* the `<table>` tag has long been overused to address that sort of needs
+* twitter's `bootstrap` has been used for this too at some point
+* **do not use** these tools for that in 202x !
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## example (1)
+## ex1 - proportional columns
+
++++ {"cell_style": "center", "tags": ["gridwidth-1-2"]}
+
+next slide demontrates:
+
+* a proportional grid of [3 rows ⨉ 4 columns]
+* with 4 areas defined, based on that tiling
+  `header`, `main`, `sidebar`, and `footer`
+* and 4 `<div>`s that are mapped on these areas
+  *e.g.*  `grid-area: header`
 
 +++ {"tags": ["gridwidth-1-2"]}
 
-next slide demontrates this CSS:
-
-+++ {"tags": ["gridwidth-1-2"]}
+all this in one property:
 
 ```{image} media/grid-areas.png
 :align: center
+:width: 400px
 ```
-
-+++ {"cell_style": "center"}
-
-* a proportional grid of [3 rows ⨉ 4 columns]
-* with 4 areas defined, based on that tiling  
-  `header`, `main`, `sidebar`, and `footer`
-
-* and 4 `<div>`s that are mapped on these areas  
-  *e.g.*  `grid-area: header`
 
 ```{code-cell}
 ---
@@ -112,56 +109,42 @@ grid1_css = `.container {
     grid-area: footer;
     background-color: #7fa998;
 }`
-tools.sample_from_strings({html: grid_html, css: grid1_css}, {id: 'grid-1', start_with: 'css'})
+tools.sample_from_strings({html: grid_html, css: grid1_css}, {id: 'grid-1', start_with: 'css', height: "16em"})
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}, "tags": ["gridwidth-1-2"]}
+````{admonition} notes
+:class: tip
 
-* note the usage of a  
-  *grid-specific* length unit :
-
-+++ {"tags": ["gridwidth-1-2"]}
-
-```{image} media/grid-columns.png
-:align: center
-```
-
-+++ {"cell_style": "center"}
-
+* the areas must be rectangular (no T- or L-shape)  
+* each child is assigned an area in the grid through the `grid-area` property  
+* note the mention of a *grid-specific* length unit `1fr`
   * `fr` stands for 'free space'
-  * so we can allocate fixed or proportional space  
-    to some columns (or rows, for that matter)
+* so on this specific example, we could have omitted `grid-template-columns` altogether  
+  but wait for the next example...
 
-  * and split the rest proportionally
+```{admonition} and by the way
+:class: note admonition-small
 
-+++
-
-````{admonition} note
-:class: note
-
-on this specific example, we could have omitted `grid-template-columns` altogether
+we could have written `repeat(4, 1fr)` instead of `1fr 1fr 1fr 1fr`
+```
 ````
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## example (2)
-
 +++
+
+## ex2 - partially fixed columns
 
 mostly the same, but :
 
 * we can specify fixed size for some columns
 * only change is to replace
   * `grid-template-columns: 1fr 1fr 1fr 1fr` with
-  * `grid-template-rows: 100px 1fr 5% 1fr;`
+  * `grid-template-columns: 100px 1fr 5% 1fr;`
+ 
+and now
 
-+++
-
-````{admonition} note
-:class: note
-
-**btw** we could have written `repeat(4, 1fr)` instead of `1fr 1fr 1fr 1fr`
-````
+* the first column has a fixed size
+* the third column has a size proportional to the page width
+* and columns 2 and 4 equally share whatever is left in width
 
 ```{code-cell}
 ---
@@ -196,23 +179,17 @@ grid2_css = `.container {
     background-color: #7fa998;
 }`
 
-tools.sample_from_strings({html: grid_html, css: grid2_css}, {id: 'grid-2', start_with: 'css'})
+tools.sample_from_strings({html: grid_html, css: grid2_css}, {id: 'grid-2', start_with: 'css', height: "16em"})
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## example (3)
-
-+++
+## ex3 - on rows too
 
 in the previous examples :
 
 * we have **not imposed** anything on **the height** of the result
 * each box gets its height based on its content
-
 * it is also possible - although less often needed  
   to fix a height globally and arrange the rows accordingly
-
 * only change is to add on the grid:
   * `height: 100vh` to say we want to use all viewport height
   * `grid-template-rows: 50px 1fr 100px;`  
@@ -252,126 +229,48 @@ grid3_css = `.container {
     background-color: #7fa998;
 }
 `
-tools.sample_from_strings({html: grid_html, css: grid3_css}, {start_with: 'css'})
+tools.sample_from_strings({html: grid_html, css: grid3_css}, {start_with: 'css', height: "16em"})
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
+## assignment: the css-tricks page
 
-## and much more…
+browse quickly - but entirely - the very good introduction to grids
+[that can be found on css-tricks.com](https://css-tricks.com/snippets/css/complete-guide-grid/)
+so as to get a good grip of what's achievable
 
-+++
-
-* a very good introduction to Grids  
-  [can be found on css-tricks.com](https://css-tricks.com/snippets/css/complete-guide-grid/)
-
-* with many illustrations and examples
-
-+++
-
-### assignment
-
-+++
-
-* **strongly recommended**
-  * to **bookmark that page**
-  * and browse it (but entirely)  
-    to get a grip of what's achievable
-
-+++
-
-````{admonition} practice more in this game
-:class: note
+````{admonition} optional game
+:class: seealso
 
 you may also complete this game  <https://cssgridgarden.com/> at home if you feel like it
 ````
 
-+++ {"slideshow": {"slide_type": "slide"}, "tags": ["level_intermediate"]}
-
-## auto-sizing
-
-+++ {"tags": ["level_intermediate", "gridwidth-1-2"]}
-
-* a nice feature of grid display
-* is its ability to auto-organize the grid
-* using an idiom based on
-  * `repeat`
-  * `auto-fit`
-  * `minmax`
-
-+++ {"tags": ["level_intermediate", "gridwidth-1-2"]}
-
-* that we illustrate in the next example  
-* see [this doc about minmax()](https://developer.mozilla.org/en-US/docs/Web/CSS/minmax)
-* see also [this blogpost on css-tricks.com](https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/)
-
-+++ {"slideshow": {"slide_type": "slide"}, "tags": ["level_intermediate"]}
-
-## auto-sizing example
-
-```{code-cell}
-:tags: [level_intermediate, remove-input]
-
-autosize_html = `<div class="container">
-  <section>
-    <h1>Section 1</h1>
-    <p>Here we say that we want 3 same-width
-       columns in the viewport width,
-       provided that they are at least 250px wide.
-    </p>
-  </section>
-  <section>
-    <h1>Section 2</h1>
-    <p>It all plays best in a new window
-       that you can resize at will.
-    </p>
-  </section>
-  <section>
-    <h1>Section 3</h1>
-  </section>
-</div>`
-
-autosize_css = `section {
-  border: 1px solid blue;
-  border-radius: 5px;
-  margin: 2px;
-}
-
-.container {
-  display: grid;
-  grid-template-columns:
-    repeat(auto-fit, minmax(250px, 1fr));
-}`
-
-tools.sample_from_strings({html: autosize_html, css: autosize_css}, {start_with: 'css'})
-```
-
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ## devel tools and multi-device
 
-+++
-
-* the devel tools - on chrome at least
-* allow to simulate other devices
-* like popular phones and tablets
+* the devel tools - on chrome at least allow to simulate other devices - like popular phones and tablets
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 ```{image} media/devel-tools-devices.png
 :align: center
+:width: 500px
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 ```{image} media/devel-tools-phone.png
 :align: center
+:width: 500px
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## other tricks
+## more vs-code tricks
 
 +++
+
+### insert a wrapping tag
 
 when using these technologies, you are often in a position to **add wrapping tags** in your html
 
@@ -380,50 +279,53 @@ to do this easily under vs-code :
 * select the text you want to wrap
 * enter the palette - the swiss knife in vs-code  
   (mac: ⌘-⇧-p - Windows ⌃-⇧-p - in doubt, ask google)
-
 * type `Emmet wrap with abbreviation`
 * enter the tag name
 
-+++
-
-it is easy to bind a keyboard shortcut to functions that you use often
-
 +++ {"slideshow": {"slide_type": "slide"}}
 
-if you need to add a wrapping `<div>` / `</div>` around some text, select it
+in pictures: if you need to add a wrapping `<div>` / `</div>` around some text, select it
 
 ```{image} media/vs-code-0.png
 :align: center
-```
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-```{image} media/vs-code-1.png
-:align: center
+:width: 500px
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 then activate the palette and search for 'emmet: wrap with abbreviation'
 
+```{image} media/vs-code-1.png
+:align: center
+:width: 500px
+```
+
++++ {"slideshow": {"slide_type": "slide"}}
+
 select that function, you will be prompted for the name of the wrapping tag
 
 ```{image} media/vs-code-2.png
 :align: center
+:width: 500px
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-it is rather straightforward to attach a custom keybinding to that function if you use it often
+### custom keybinding
+
+it is rather straightforward to attach a custom keybinding to that function if you use it often  
+start with .. the palette, of course
 
 ```{image} media/vs-code-3.png
 :align: center
+:width: 500px
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-for example here, for now we can type 'Alt-o' to call that function
+for example here, we just type 'Alt-o' and the shortcut gets recorded from now on
 
 ```{image} media/vs-code-4.png
 :align: center
+:width: 500px
 ```
