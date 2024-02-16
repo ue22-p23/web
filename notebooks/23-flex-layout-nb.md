@@ -27,40 +27,33 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 tools = require('../js/tools'); tools.init()
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## purpose
 
-+++
-
-* `flex` is another modern layout engine  
-* that tries to solve or at least alleviate  
-* the obvious deficiencies of the old-school  
- `block` model and related tools
+`flex` is another modern layout engine that tries to solve or at least alleviate  
+the obvious deficiencies of the old-school `block` model and related tools
 
 * as opposed to grids, it is concerned with **1-dimension** flow of data
 * it **complements nicely** what is doable with grids
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-examples, as per [this article on MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
+````{admonition} as per MDN
+:class: admonition-small
 
-<div style="font-size: 70%;">
+as per [this article on MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox):
 
 > The following simple layout requirements are either difficult or impossible to achieve with such tools, in any kind of convenient, flexible way:
 
 > * Vertically centering a block of content inside its parent.
 > * Making all the children of a container take up an equal amount of the available width/height, regardless of how much width/height is available.
 > * Making all columns in a multiple column layout adopt the same height even if they contain a different amount of content.
-    
-
-</div>
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## flex example (1)
+## ex1 - default behaviour
 
-by default, direction = row, wrap = nowrap
+by default, `direction: row`, `wrap: nowrap`
 
 ```{code-cell}
 :tags: [remove-input]
@@ -96,9 +89,9 @@ tools.sample_from_strings({html: flex1_html, css: flex1_css}, {id: 'flex1', star
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## flex example (2)
+## ex2 - wrap mode
 
-identical except for `flex-wrap: wrap`
+identical except that we specify `flex-wrap: wrap`
 
 ```{code-cell}
 ---
@@ -138,45 +131,24 @@ tools.sample_from_strings({html: flex2_html, css: flex2_css}, {id: 'flex2', star
 ## assignment
 
 * [this page on css-trick.com](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) is an easy, and very complete, read on flex
-* it is again **strongly recommended**
-  * to bookmark it
-  * and to browse it but thoroughly
+* it is again **strongly recommended** that you browse it thoroughly
     to get a perception of what is doable with this layout
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ## use cases
 
-+++
-
-* the `flex` display is an extremely powerful tool  
+* [supported in all modern browsers](https://caniuse.com/#feat=flexbox)
+* the `flex` display is an extremely powerful tool
   for fine-grained control over your layout
-
-* it could clearly be the default behaviour  
+* it could clearly be the default behaviour
   (but is not just for **legacy**)
-
-* when writing a new page from scratch,  
+* when writing a new page from scratch,
   using `flex` is almost always a good idea
 
-* rather recent (circa 2017) but [supported in all modern browsers](https://caniuse.com/#feat=flexbox)
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## no longer bottom-up only
-
 +++
-
-* let us outline that the flex display model
-  * is disruptive as compared to its predecessors
-* in the sense that older models were essentially bottom up
-  * i.e. an element had a size and the container was to deal with that size
-  * now, a flex container can influence the size of its contained items
-
-+++ {"slideshow": {"slide_type": "slide"}}
 
 ## grid's and flex's
-
-+++
 
 * as mentioned earlier, both display policies have their own pros and cons
 * you should not think in terms or one **or** the other
@@ -191,7 +163,7 @@ tools.sample_from_strings({html: flex2_html, css: flex2_css}, {id: 'flex2', star
 
 ## practice
 
-1. mimick the layout below
+mimick the layout below
 
 ```{code-cell}
 :tags: [remove-input]
@@ -201,7 +173,6 @@ tools.sample_from_stem("../samples/23-exo-flex", {sources_show: false})
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## see also
+### optional activity
 
-- Flexbox Froggy <https://flexboxfroggy.com/>  
-  a game to practice the flexbox properties
+Flexbox Froggy <https://flexboxfroggy.com/> is a game to practice the flexbox properties
