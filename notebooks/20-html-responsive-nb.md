@@ -27,29 +27,17 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 tools = require('../js/tools'); tools.init()
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## responsive, meaning ?
 
-+++
-
 * as opposed to a Word document - designed for a fixed page size
-  * a web page gets displayed on **many**   
-    different devices (computer, phone, tablet)
-
-  * even on the computer, windows  
-    can be **resized** arbitrarily
-
+  * a web page gets displayed on **many** different devices (computer, phone, tablet)
+  * even on the computer, windows can be **resized** arbitrarily
 * a responsive page **adapts** its layout to the **device size**
   * technically the visible area is called the **viewport**
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
-this means for example :
-
 +++ {"tags": ["gridwidth-1-2"]}
 
-wide viewport
+this means for example that, on a wide viewport you would see this
 
 ```{image} media/responsive-wide.svg
 :align: center
@@ -57,44 +45,29 @@ wide viewport
 
 +++ {"tags": ["gridwidth-1-2"]}
 
-narrow viewport
+while on a narrower viewport it would turn into this
 
 ```{image} media/responsive-narrow.svg
 :align: center
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ### logical zoom
 
-+++
-
-* be aware also that all browsers have a feature   
-  that let users artificially zoom in and out
-
-* e.g. on Chrome on the mac, this is activated with `⌘ +` and `⌘ -`
+* be aware also that **all browsers** have a feature that let users artificially zoom in and out
+  * e.g. on Chrome on the mac, this is activated with `⌘ +` and `⌘ -`
 * this also triggers changes, to which  
   **responsive** pages are expected to **react** properly
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"tags": []}
 
 ## default layout policy
 
-+++ {"tags": ["gridwidth-1-2"]}
-
-* if you do not override  
-  the `display:` property,  
-  you use a **historical** layout policy
-
-* very well summarized  
-  in [this document on MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)  
-  (MDN = Mozilla Developer Network)
-
-* mostly fits a written document flow  
-  (think, a **Word document**)
-
-* **not at all suited**  
-  for a responsive design
+* if you do not override the `display:` property, you use a **historical** layout policy
+* very well summarized in [this document on MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow) (MDN = Mozilla Developer Network)
+* mostly fits a written document flow (think, a **Word document**)
+* **not at all suited** for a responsive design
 
 +++ {"tags": ["gridwidth-1-2"]}
 
@@ -102,42 +75,31 @@ narrow viewport
 :align: center
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ##  `display` property : basic policies
 
-+++
-
-* layout policy is primarily materialized  
-  in the **`display` property**
-
-* values `inline`, `block` and `inline-block`  
-  account for these legacy "document-oriented" policies
-
+* layout policy is primarily materialized in the **`display` property**
+* values `inline`, `block` and `inline-block` account for these legacy "document-oriented" policies
   * have been supported from the very beginning of the Web
   * well illustrated [on this page on css-tricks.com](https://css-tricks.com/almanac/properties/d/display/)
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ## `display` - modern alternatives
 
-+++
-
 more modern values include :
 
-* `grid` (**2-dimensional**)  like the name suggests,  
+* `grid` (**2-dimensional**) like the name suggests,  
   allows to define a **rectangular area** as an array of rows and columns
-
-* `flex` (**1-dimensional**)  a flexible layout, with more control  
-  on how children will **fill the available space**
+* `flex` (**1-dimensional**) a flexible layout,  
+  with more control on how children will **fill the available space**
 
 we will study these 2 policies in separate notebooks
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ## `display: none`
-
-+++
 
 * as an aside,
 * one specific value for the `display` property is `none`
