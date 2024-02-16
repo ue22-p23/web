@@ -27,11 +27,7 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 tools = require('../js/tools'); tools.init()
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## purpose
-
-+++
 
 as per [this article on w3schools](https://www.w3schools.com/cssref/css3_pr_mediaquery.asp) :
 
@@ -79,21 +75,15 @@ media_width_css = `body {
 tools.sample_from_strings({html: media_width_html, css: media_width_css}, {start_with: 'css'})
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## common pitfall
-
-+++
 
 * in this first example, note that
   * either the default `body` rule **must come first**
   * or the second rule must be **more specific**
 * the reason is that when the `@media` rule applies
   * the browser sees **TWO RULES** for `body`
-  * and if they have the **same specificity**
-  * then the last one wins
-* so it is a good practice to use  
-  more specific rules in a media clause  
+  * and if they have the **same specificity**, then the last one wins
+* so it is a good practice to use **more specific rules** in a media clause  
   hence our `html>body` (for instance)
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -128,15 +118,9 @@ body {
 tools.sample_from_strings({html: media_print_html, css: media_print_css}, {start_with: 'css'})
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## `<link>` examples
 
-+++
-
 another way to use media rules is from the `<head>` tag
-
-+++
 
 ```html
 <link rel="stylesheet"
@@ -160,20 +144,16 @@ remember that `<html>` contains 2 sons, a `<head>` and a `<body>`
 
 ## see also
 
-* [this w3schools page](https://www.w3schools.com/cssref/css3_pr_mediaquery.asp) has more details  
+* [this w3schools page](https://www.w3schools.com/cssref/css3_pr_mediaquery.asp) has more details 
   on the admissible **syntax for media rules**
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## practice
 
 +++
 
-1. open the example below in a separate window
+## practice
 
+1. open the example below in a separate window
   * observe behaviour on narrow, mid-size, and large viewport
 1. write an HTML document and related CSS that mimicks it
-
   * at least for viewports smaller and larger than 512px
 
 ```{code-cell}
