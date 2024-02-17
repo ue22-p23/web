@@ -1,11 +1,11 @@
 .frame {
-/*  here we define a variable
-    as the name starts with --
+    /* here we define a variable
+     * because the name starts with --
     ↓↓↓↓↓↓ */
     --size: 10px;
     --color: blue;
 
-/* and we use it thanks to var()
+    /* and we use it thanks to var()
              ↓↓↓↓↓↓↓↓↓↓↓ */
     padding: var(--size);
     margin: var(--size);
@@ -14,7 +14,8 @@
 }
 
 #custom {
-/* and here we redefine it locally
+    /* and here we redefine it locally
+       for this element
     ↓↓↓↓↓↓ */
     --size: 0px;
     --color: red;

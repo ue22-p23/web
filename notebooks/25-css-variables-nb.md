@@ -21,9 +21,9 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++
 
-# CSS custom properties
+# CSS variables
 
-*aka* **CSS variables**
+the official name for this feature is ***CSS custom properties***, but we'll call them variables because that's the closest thing CSS has to offer that looks like variables in a traditional language
 
 ```{code-cell}
 tools = require('../js/tools'); tools.init()
@@ -54,18 +54,17 @@ let's see how that can be done
 ---
 slideshow:
   slide_type: slide
-tags: [remove-input]
 ---
 tools.sample_from_stem('../samples/25-simple-vars', {'start_with': 'css'})
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## example 2
+## example 2 (advanced)
 
 imagine you'd like to define a custom header class:
 
-* &lt;h1&gt; elements with the `dashed` class appear with a dashed underline
+* `<h1>` elements with the `dashed` class appear with a dashed underline
 * this underline has default attributes (width, height, color)
 * here again you want to be able to customize this on specific elements
 
@@ -86,7 +85,7 @@ tools.sample_from_stem('../samples/25-dashed-headers', {'start_with': 'css', hei
 
 ## how it works
 
-* properties whose name starts with `--` are *custom* properties
+* properties **whose name starts with `--`** are *custom* properties
   * this naming convention should resonate (a bit) with the *dunder* names in Python
 * the way to 'solve' the value of such properties  
   * is the same as for regular properties
@@ -99,10 +98,5 @@ tools.sample_from_stem('../samples/25-dashed-headers', {'start_with': 'css', hei
 
 * CSS-tricks' excellent summary on custom properties  
   <https://css-tricks.com/a-complete-guide-to-custom-properties/>
-
 * the original codepen that implements parametrized underlined headers  
   <https://codepen.io/t_afif/pen/bGYEMgG>
-
-+++
-
-****
