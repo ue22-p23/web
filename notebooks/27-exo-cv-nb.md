@@ -27,18 +27,15 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 tools = require('../js/tools'); tools.init()
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## assignment
-
-+++
 
 * as a conclusion of this overview on CSS,
 * review your resume to create fancier layouts
-* and so it becomes responsive
+* and so it **becomes responsive**
   * it should display properly on a phone, tablet, and laptop
-* hint : each section of course remains untouched no matter the device
-  * but the arrangement of the sections on the page changes
+* of course this implies that
+  * the **content** is always the same
+  * but the arrangement of the various pieces changes with the viewport width
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -68,9 +65,7 @@ tools.sample_from_stem("../samples/26-monarque/resume", {sources_show: false})
 * previous example can be found together with the course   
   in the git repo
   <https://github.com/ue22-p23/web>
-
 * specifically in the `samples/26-monarque` folder
-
 * note that some of the other examples of the course  
   can be found in the `samples/` folder
 
@@ -79,10 +74,8 @@ tools.sample_from_stem("../samples/26-monarque/resume", {sources_show: false})
 ## publishing
 
 * once you're satisfied
-* and provided that you have no problem  
-  with your resumé being **publicly available**
-
-* you can easily publish it on `github.io` (see next slide)
+* and provided that you have no problem with your resumé being **publicly available**
+* you can **easily publish it on `github.io`** (see next slide)
 * plus tons of other opportunities around as well
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -92,15 +85,13 @@ tools.sample_from_stem("../samples/26-monarque/resume", {sources_show: false})
 * this is simple and free
 * only supports **public pages** though
 
-assuming your github is `myid`
+assuming your github slug is `myid`
 
 * create a repo on github `myid/myid.github.io`
 * make it public
 * name the entry point as `index.html`
-* your resume will be available at  
-  `https://myid.github.io/`
-
-* simply push changes to have them published
+* your resume will be shortly available at `https://myid.github.io/`
+* and simply push changes to have them published
 
 see <https://pages.github.com/> for details
 
@@ -108,6 +99,6 @@ see <https://pages.github.com/> for details
 
 ## another example
 
-see a **much more** elaborated example below ;)
+and finally, for fun, see a **much more** elaborated example below ;)
 
 <http://www.rleonardi.com/interactive-resume/>
