@@ -57,7 +57,7 @@ while on a narrower viewport it would turn into this
 
 * be aware also that **all browsers** have a feature that let users artificially zoom in and out
   * e.g. on Chrome on the mac, this is activated with `⌘ +` and `⌘ -`
-* this also triggers changes, to which  
+* this also triggers changes, to which
   **responsive** pages are expected to **react** properly
 
 +++ {"tags": []}

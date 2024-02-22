@@ -45,7 +45,7 @@ creating this kind of layout has been historically a challenging task
 
 +++ {"cell_style": "center", "tags": ["gridwidth-1-2"]}
 
-next slide demontrates:
+next snippet demontrates:
 
 * a proportional grid of [3 rows ⨉ 4 columns]
 * with 4 areas defined, based on that tiling
@@ -243,26 +243,6 @@ so as to get a good grip of what's achievable
 
 you may also complete this game  <https://cssgridgarden.com/> at home if you feel like it
 ````
-
-+++
-
-## devel tools and multi-device
-
-* the devel tools - on chrome at least allow to simulate other devices - like popular phones and tablets
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-```{image} media/devel-tools-devices.png
-:align: center
-:width: 500px
-```
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-```{image} media/devel-tools-phone.png
-:align: center
-:width: 500px
-```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

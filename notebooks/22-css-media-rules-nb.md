@@ -75,7 +75,7 @@ media_width_css = `body {
 tools.sample_from_strings({html: media_width_html, css: media_width_css}, {start_with: 'css'})
 ```
 
-## common pitfall
+### common pitfall
 
 * in this first example, note that
   * either the default `body` rule **must come first**
@@ -139,6 +139,26 @@ another way to use media rules is from the `<head>` tag
 
 remember that `<html>` contains 2 sons, a `<head>` and a `<body>`
 ````
+
++++
+
+## devel tools and multi-device
+
+* the devel tools - on chrome at least allow to simulate other devices - like popular phones and tablets
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+```{image} media/devel-tools-devices.png
+:align: center
+:width: 500px
+```
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+```{image} media/devel-tools-phone.png
+:align: center
+:width: 500px
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
