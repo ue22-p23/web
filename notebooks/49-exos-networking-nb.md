@@ -44,11 +44,11 @@ clone the repo below, and follow the instructions
 
 +++
 
-## pixel-war
+## pixels-war
 
 
 build a small app that will let us paint a commonly shared image one pixel at a time
 
 clone the repo below, and follow the instructions
 
-<https://github.com/ue22-p23/web-pixelwar>
+<https://github.com/ue22-p23/web-pixels-war>
