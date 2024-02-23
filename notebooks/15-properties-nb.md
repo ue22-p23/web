@@ -445,7 +445,6 @@ note that on colorhunt you can copy a color code by just clicking it
 the `box-sizing` property affects the way `width` and `height` properties are computed:
 
 * `box-sizing: content-box` : only take content into account
-* `box-sizing: padding-box` : account for content + padding
 * `box-sizing: border-box` : content + padding + border
 
 margins are **always excluded**
