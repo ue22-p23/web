@@ -54,14 +54,14 @@ tools.sample_from_strings({html: text_fragment})
 ```{code-cell}
 :tags: [hide-input]
 
-ul_fragment = `<p> a typical bullet list with a &amp;lt;ul&amp;gt; tag
+ul_fragment = `<div><p> a typical bullet list with a &amp;lt;ul&amp;gt; tag</p>
 <br> <code>ul</code> stands for "unordered list"
 <br> <code>li</code> stands for "list item"
 <ul>
 <li> the first bullet </li>
 <li> the second bullet </li>
 </ul>
-</p>
+</div>
 `;
 tools.sample_from_strings({html: ul_fragment})
 ```
@@ -69,13 +69,13 @@ tools.sample_from_strings({html: ul_fragment})
 ```{code-cell}
 :tags: [hide-input]
 
-ol_fragment = `<p> the same with a &amp;lt;ol&amp;gt; tag instead
+ol_fragment = `<div><p> the same with a &amp;lt;ol&amp;gt; tag instead</p>
 <br> <code>ol</code> stands for "ordered list"
 <ol>
 <li> the first bullet </li>
 <li> the second bullet </li>
 </ol>
-</p>
+</div>
 `;
 tools.sample_from_strings({html: ol_fragment})
 ```
