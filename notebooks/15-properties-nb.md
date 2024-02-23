@@ -483,4 +483,4 @@ not often needed, but typical use case is
 * then use `box-sizing: border-box`
 
 see also <https://css-tricks.com/box-sizing/>
-that has a live demo
+that has a live demo, as well as <https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing#browser_compatibility>
