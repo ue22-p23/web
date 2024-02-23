@@ -75,7 +75,6 @@ ol_fragment = `<div><p> the same with a &amp;lt;ol&amp;gt; tag instead</p>
 <li> the first bullet </li>
 <li> the second bullet </li>
 </ol>
-</p>
 </div>
 `;
 tools.sample_from_strings({html: ol_fragment})
