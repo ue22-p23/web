@@ -165,6 +165,12 @@ tools.sample_from_strings({html: flex2_html, css: flex2_css}, {id: 'flex2', star
 
 mimick the layout below
 
+````{admonition} tip
+:class: tip
+
+in addition to using a `flex` display, you will probably need to set `width: 100%` on some elements to achieve this
+````
+
 ```{code-cell}
 :tags: [remove-input]
 
