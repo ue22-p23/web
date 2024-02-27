@@ -168,6 +168,7 @@ some characters can be inserted with the `&...;` notation using nicknames, like 
 
 each Unicode character has a unique codepoint  
 you can use that in a pure-ASCII source, and  write either
+
 * `&#8451;` (decimal) or
 * `&#x2103;` the `x` stands for hexa
 
@@ -356,7 +357,7 @@ several formats are supported to describe a color :
   * **`rgb(128 0 255)`**
 * **opacity** (in the [0-1.] range can be given as a fourth argument  
   * **`rgb(128 0 255 / 20%)`** will be only 20% opaque, i.e. almost transparent
- 
+
 you can read [more on this on css-tricks](https://css-tricks.com/almanac/properties/c/color/)
 
 +++
