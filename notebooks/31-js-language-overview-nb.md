@@ -47,10 +47,7 @@ tools = require('../js/tools'); tools.init()
 +++
 
 * FYI, JavaScript is not restricted to being used in a browser
-* among others, the [`node.js` runtime](https://nodejs.org/en/about/)
-  * e.g. to power a backend web server
-  * or simply from a regular terminal
-
+* among others, the [`node.js` runtime](https://nodejs.org/en/about/) can be used e.g. to power a backend web server, or simply from a regular terminal:
 
 ```bash
 $ node
@@ -59,35 +56,26 @@ Type ".help" for more information.
 > console.log("hello world")
 hello world
 > process.exit()
+$ 
 ```
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## `console.log()` function
 
 +++
 
-* a function to show output
-* very similar to Python's `print()` function
-  * of course from a browser it ends up in the devel tools area
-  * but under `node` it will just print
+## `console.log()` function
+
+* a function to show output - quite similar to Python's `print()` function
 * accepts any number of arguments
+* of course from a browser it ends up in the devel tools area (under `node` it will just print)
 
 ```{code-cell}
 console.log(1, "two", [3, "four"])
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## syntax
-
-+++
 
 * the syntax is similar to C, C++ and Java
 * unlike Python, indentation does not matter
-* `;` is commonly used at the end of each statement  
-  (**but not mandatory**)
-
+* `;` is commonly used at the end of each statement (although this is **not mandatory**)
 * 2 styles of comments
 
 ```{code-cell}
@@ -97,10 +85,10 @@ console.log(1, "two", [3, "four"])
 // but must be repeated on each line
 
 // you may end all statements with a ;
-a = 10
+let a = 10;
 
 // but that's not mandatory
-b = a * a
+let b = a * a
 
 /* this is another comment
    everything including newlines
@@ -108,18 +96,7 @@ b = a * a
 */
 ```
 
-````{admonition} always declare variables
-:class: warning
-
-as we will see below, real code should **always** declare variables,  
-so this would read `let a = 10` instead, but let us keep it simple for now
-````
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ### tests and loops
-
-+++
 
 * `if` and `while` statements are similar to C
 * `for` are a little more awkward - we'll come back to that
@@ -146,11 +123,9 @@ while (a >= 5) {
 }
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"tags": []}
 
 ###   switch
-
-+++ {"tags": ["gridwidth-1-2"]}
 
 the switch statement in JavaScript
 is similar to the ones in C++ and Java  
@@ -160,7 +135,7 @@ location that depends on the subject's value
 **do not forget** the `break` statements !
 
 ```{code-cell}
-:tags: [gridwidth-1-2]
+:tags: []
 
 switch (a) {
     case 0:
@@ -183,14 +158,11 @@ switch (a) {
 if the switch statement is new to you, please refer to this [full article on javascript.info](https://javascript.info/switch)
 ````
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ### C-style `for` loop
 
-+++
-
-* C- or Java-like iteration loops are supported
-* although seldom needed
+* C- or Java-like iteration loops are supported - although seldom needed
 * more on that about container types (arrays, …)
 
 ```{code-cell}
@@ -199,22 +171,30 @@ for (let i=0; i<3; i++) {
 }
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## variables ([link in tuto](https://javascript.info/variables))
+## variables
 
 +++
+
+### declaration
 
 * as usual, variables are **names** that refer to **data in memory**
 * like in Python, any such data is **typed** (although the name is not)
 * core language has some **basic types**
 * variables should be declared using one of the keywords
 
+````{admonition} link in tuto
+:class: admonition-small
+
+see more on this topic on javascript.info at this link <https://javascript.info/variables>
+````
+
 ```{code-cell}
 :tags: [gridwidth-1-2]
 
-let n = 10;
+let n = 10
 console.log(typeof(n))
+
+// possible since declared with let
 n += 20
 ```
 
@@ -223,7 +203,8 @@ n += 20
 
 const s = "hello world"
 typeof(s)
-// we could not do this
+
+// we could not do this because declared with const
 // s += ' john'
 ```
 
@@ -233,7 +214,7 @@ typeof(s)
 use `const` instead of `let` when declaring a constant variable
 ````
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ### Python-style unpacking assignment
 
@@ -246,18 +227,33 @@ let [py, thon] = [10, 20]
 py + thon
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
+### object unpacking
+
+anticipating a bit, but there's a very handy construction that looks a bit like the one above
+
+```{code-cell}
+// you receive some data from the outside
+const data = {height: 100, width: 200, radius: 20, linewidth: 5} // possibly much richer
+
+// and you're interested in extracting width and height
+// in two variables of the same name; easy !
+const {height, width} = data
+
+console.log(height, width)
+```
 
 ## variable scope
 
-+++
+* like in all other languages, there is a need to limit the scope of a variable  
+  so that variable `x` in 2 distinct functions do not clash
+* JS uses **lexical nested scope**:
+  a variable is visible only within its **code block** (the stuff within `{}`)
 
-* like in all other languages
-  * need to limit the scope of a variable
-  * so that variable `x` in 2 distinct functions do not clash
-* use **lexical nested scope**
-  * a variable is visible only within its code block
-* a very common strategy, like in Python, C++, Java, …
+````{admonition} unlike Python
+:class: admonition-x-small
+
+this is unlike Python, where a variable scope is the **function**
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -270,65 +266,50 @@ slideshow:
 tags: [raises-exception]
 ---
 // this is a global variable
-let a = "global"
+let variable = "global"
 
 function foo() {
     // this local declaration
     // hides the global variable
-    let a = "local"
-    console.log("in foo():", a)
+    let variable = "local"
+    console.log("in foo():", variable)
 }
 
-console.log("in global context:", a)
+console.log("in global context:", variable)
 foo()
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ### declaring variables with `let`
 
-+++
-
-* (a lot of) legacy code uses the ~~`var`~~ construct  
-  to declare variables - but **this is dangerous !!**
-
-* you should **always** declare your variables  
-  with **`let`** or **`const`**
-
-+++
+* (a lot of) legacy code uses the ~~`var`~~ construct to declare variables - but **this is dangerous !!**
+* you should **always** declare your variables with **`let`** or **`const`** 
 
 ````{admonition} cannot use let twice
 :class: warning
 
-when declaring a variable with `let`,
-it cannot be declared a second time within the same block;  
-in the context of notebooks, a drawback of this is
-that you cannot run a cell twice if
-it uses a toplevel `let`
+when declaring a variable with `let`, it cannot be declared a second time within the same block  
+so in the context of notebooks, a drawback of this is that you cannot run a cell twice if it uses a toplevel `let`
 ````
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-### blocks are delimited by `{}`
 
 +++
 
-* the elementary unit for scope is the **block**
-* which is materialized by `{}`
+### blocks are delimited by `{}`
+
+the elementary unit for scope is the **block** - which is materialized by `{}`
 
 ```{code-cell}
 :tags: [raises-exception]
 
-let variable = "outermost"
+let variable2 = "outermost"
 {
-    letvariabley = "intermediate"
+    let variable2 = "intermediate"
     {
-        let variable = "innermost"
-        console.log("level 2", variable)
+        let variable2 = "innermost"
+        console.log("level 2", variable2)
     }
-    console.log("level 1", variable)
+    console.log("level 1", variable2)
 }
-console.log("level 0", variable)
+console.log("level 0", variable2)
 ```
 
 ````{admonition} note
@@ -337,34 +318,39 @@ console.log("level 0", variable)
 this is like in C/C++, and unlike Python where a variable's scope is the whole function
 ````
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ## globals
 
-+++
+context (browser components mostly) is exposed to programer through a set of **global variables**, e.g.
+* `document` to access the DOM
+* `window`, remember `setTimeout()`
+* `console` like in `console.log()`
+* `this` - a tricky one
 
-* context (browser components mostly) is exposed to programer
-* through a set of **global variables**, e.g.
-  * `document` to access the DOM
-  * `window`, remember `setTimeout()`
-  * `console` like in `console.log()`
-  * `this` - a tricky one
-* may depend on the runtime
+
+````{admonition} depends on the runtime
+:class: admonition-small
+
+of course there is for example no `window` global in the context of the `node.js` interpreter !
+````
 
 +++
 
 ````{admonition} the kernel runs in nodejs, not the browser
 :class: warning
 
-surprising as it may be, the notebook's JavaScript engine is an instance of `node.js`,  
+and it turns out, the notebook's JavaScript engine is an instance of `node.js`,  
 and so is not **browser-related**, so we could **not** inspect 
 the `document` or `window` variables here  
-of course you can do so from the browser's console though
+but of course you can do so from the browser's console though
 ````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## formatting
+## formatting with backticks
+
+in JS, the backticks <code>&#96;&#96;</code> feature reminds of Python's f-strings
 
 ```{code-cell}
 let [x, y] = [100, 200]
@@ -378,14 +364,9 @@ let [x, y] = [100, 200]
 console.log(`x = ${x} and x+y = ${x+y}`)
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## functions
 
-+++
-
-* like in other languages
-* we have seen examples already
+like in other languages, and we have seen examples already
 
 ```{code-cell}
 // the old way
@@ -398,7 +379,7 @@ foo(10, 20)
 ```
 
 ```{code-cell}
-// a more fashionable way
+// a more fashionable way - similar to Python's lambdas
 
 const bar = (x, y) => console.log(`${x} + ${y} = ${x+y}`)
 
@@ -408,16 +389,9 @@ const bar2 = (x, y) => { console.log(`${x} + ${y} = ${x+y}`) }
 bar(10, 20)
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ### duck typing
 
-+++
-
-like in Python:
-
-* **objects** are typed
-* but **variables** are not bound to a given type
+like in Python, **objects** are typed, but **variables** are not bound to a given type
 
 ```{code-cell}
 function foo(x, y) {
@@ -425,19 +399,13 @@ function foo(x, y) {
     console.log(`${x} + ${y} = ${x+y}`)
 }
 
-// like in Python, function arguments
-// are not statically typed
+// like in Python, function arguments are not statically typed
 foo('abc', 'def')
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ### loose binding
 
-+++
-
-* JavaScript is **very permissive**
-* for example, number of args is not checked
+* JavaScript is **very permissive**; for example, number of args is not checked
 
 ```{code-cell}
 function fuzzy(x, y, z) {
@@ -448,20 +416,16 @@ fuzzy(10, 20)
 fuzzy("abc", "def", "ghi")
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ### `this`
 
-+++
-
-* a very specific feature of JavaScript
-* is that the implicit variable `this` is always defined
+* a very specific feature of JS is that the implicit variable `this` is always defined
 * the content of `this` depends on the context
 * useful and relevant **only** for
   * methods (more on this later)
   * and some callbacks
 
 ```{code-cell}
+// for example in this context, it's unclear what 'this' refers to
 function show_this() {
     console.log(typeof(this))
 }
@@ -469,16 +433,10 @@ function show_this() {
 show_this()
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## exceptions
 
-+++
-
-* JavaScript supports exceptions, just like Python
-* same bubbling mechanism
-  * that scans the call stack
-  * until a `catch` statement is found
+JavaScript supports exceptions, just like Python, with the same bubbling mechanism  
+that scans the call stack until a `catch` statement is found
 
 ```{code-cell}
 try {
@@ -489,15 +447,15 @@ try {
 }
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## classes
-
-+++
 
 as of ES2015, the language has a proper `class` statement
 
-_Note:_ older JavaScript does not have class and use other ways to create pseudo-classes
+````{admonition} no classes in JS before ES6
+:class: admonition-small
+
+older JavaScript did not have a builtin class mechanism, and used other - quite cryptic - ways to create pseudo-classes
+````
 
 ```{code-cell}
 class Vector {
@@ -521,36 +479,29 @@ vector.display()
 ````{admonition} cannot run this cell twice
 :class: warning
 
-here again, running this cell twice will cause an error; this is because  
-like with `let`, the language won't let you define  
-the same `Vector` class twice in the same scope
+here again, running this cell twice will cause an error; this is because like with `let`,  
+the language won't let you define the same `Vector` class twice in the same scope
 ````
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-### notes on classes
 
 +++
 
-**NOTICE** the following from that first class example :
+### notes on classes
+
+**NOTICE** the following facts from that first class example :
 
 * `constructor` is very much alike `__init__` in Python
 * the **implicit** `this` variable refers to the current object
-* it is very much alike the traditional `self` argument in Python
-* except that it is **not mentioned** as a method parameter
-* objects get created with `new Vector()` - Java and C++ style
-  * not just plain Python-style `Vector()`
-
-+++ {"slideshow": {"slide_type": "slide"}, "tags": ["level_intermediate"]}
-
-### properties
+* it is very much alike the traditional `self` argument in Python, except that it is **not mentioned** as a method parameter
+* objects get created with `new Vector()` - Java and C++ style  
+  and **not** just plain Python-style `Vector()`
 
 +++ {"tags": ["level_intermediate"]}
+
+### properties (advanced)
 
 * modern JavaScript has a native notion of properties
 * i.e. expose an apparently mundane access  
   to an instance attribute
-
 * through **getter** and **setter** functions
 * that intercept read/write attempts  
   on the attribute
@@ -610,11 +561,9 @@ temp.kelvin = -10
 temp
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}, "tags": ["level_intermediate"]}
++++ {"tags": ["level_intermediate"]}
 
 ### old-school classes
-
-+++ {"tags": ["level_intermediate"]}
 
 * you may come across older-school code that uses other techniques
 * typically involving a `prototype` thingy
