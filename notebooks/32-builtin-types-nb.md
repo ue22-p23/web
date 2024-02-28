@@ -29,23 +29,16 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 tools = require('../js/tools'); tools.init()
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## nothing but the usual
-
-+++
 
 * set of builtin types similar to Python's offering
 * atomic : numbers, strings, booleans
 * containers : arrays (lists), maps (dicts) and sets
 * objects
 
-+++
-
 ````{admonition} notes on using notebooks
-:class: warning
+:class: warning admonition-small
 
-**NOTE** on using **notebooks**  
 as mentioned earlier, all variables should be declared with either `let` or `const`  
 however, in a notebook this is inconvenient because  
 one **cannot declare** the **same variable twice** in the same scope  
@@ -54,11 +47,9 @@ in order to remind you of the necessity to declare everything
 we will add commented-out `/*let*/` chunks when using a new variable    
 ````
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ## atomic types
-
-+++
 
 * `number` is the default type for numeric values  
 * `string`
@@ -90,11 +81,9 @@ s1 == s2
 google for `bigint` for error-free calculus on integers - in much the same way as Python's `int`
 ````
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ### atomic types (continued)
-
-+++
 
 * `null` is similar to Python's `None`
 * `undefined` 
@@ -105,12 +94,12 @@ google for `bigint` for error-free calculus on integers - in much the same way a
 ```{code-cell}
 :tags: [gridwidth-1-2]
 
-// in anticipation
+// in anticipation: let's create an object
 /*let*/ object = { x: 10, y: 20}
 
-// in Python this would
-// trigger an exception
+// in Python this would trigger an exception
 // but not is JS
+
 console.log(object.z)
 ```
 
@@ -122,20 +111,25 @@ console.log(object.z)
 3 * "abc"
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ### boolean operators
 
-+++
+the syntax for boolean operators is here again inherited from C / C++ / Java:
 
-the syntax for boolean operators is here again inherited from C / C++ / Java
+```{list-table}
+
+* - and
+  - `&&`
+  - or
+  - `||`
+  - not
+  - `!`
+```
 
 ```{code-cell}
 :tags: [gridwidth-1-2]
 
 if (true && true) {
-    console.log(
-        "logical and is &&")
+    console.log("logical and is &&")
 }
 ```
 
@@ -143,8 +137,7 @@ if (true && true) {
 :tags: [gridwidth-1-2]
 
 if (true || false) {
-    console.log(
-        "logical or is ||")
+    console.log("logical or is ||")
 }
 ```
 
@@ -152,15 +145,10 @@ if (true || false) {
 if ( ! false) console.log("not is ! ")
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ### strings
 
-+++
-
-* very much alike in Python
-* note about **formatting**
-  * the equivalent of *f-strings* is <i>&#96;built with `${}` inside backticks&#96;</i>
+* very much alike Python
+* note about **formatting**: the equivalent of *f-strings* is <code><i>&#96;made with ${expression} inside backticks&#96;</i></code>
 
 ```{code-cell}
 /*let*/ x = 10
@@ -168,30 +156,27 @@ if ( ! false) console.log("not is ! ")
 s
 ```
 
-which would correspond in Python to
 ```python
+# which in Python would be
+
 x = 10
 
 s = f"format expression like {x*x} in a string"
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ### see also
 
-+++
-
-for a deeper study :
+for a deeper study, see javascript.info:
 
 * [on numbers](https://javascript.info/number)
 * [on strings](https://javascript.info/string)
 * [operators on booleans](https://javascript.info/logical-operators)
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ## arrays
-
-+++
 
 * similar to Python's `list`s
 
@@ -211,7 +196,8 @@ for a deeper study :
 ```{code-cell}
 :tags: [gridwidth-1-2]
 
-// insert at the end
+// insert at the end: push (not append)
+
 array2.push(3)
 array2.push("four")
 array2.push(5)
@@ -222,6 +208,7 @@ console.log(array2)
 :tags: [gridwidth-1-2]
 
 // and get it back
+
 array2.pop()
 ```
 
@@ -263,15 +250,10 @@ array[2]
 array.length
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ### searching in array
 
-+++
-
 * like with Python lists, searching in an array is **linear** in its length
-* so like in Python if you need fast access, use a *Map* instead  
-  (more on this right away)
+* so like in Python if you need fast access, use a *Map* instead (more on this right away)
 
 ```{code-cell}
 :tags: [gridwidth-1-2]
@@ -289,30 +271,27 @@ console.log(array.indexOf(3))
 console.log(array.indexOf("absent"))
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"tags": []}
 
 ### iterating over values of an array
 
-+++ {"tags": ["gridwidth-1-2"]}
-
-* it is possible to iterate through an array like in Python:
+* using **`for .. of`** it is possible to iterate through an array like in Python:
 
 ```{code-cell}
-:tags: [gridwidth-1-2]
+:tags: []
 
 for (let x of array1) {
     console.log(x)
 }
 ```
 
-* make sure to use `for .. of` instead of ~~`for .. in`~~ to iterate over each **value**  
-
-* also notice how to use `let` to define a variable **local** to the `for` loop
+* notice the use of `let` to define a variable **local** to the `for` loop
 
 ````{admonition} for .. in
-:class: warning
+:class: warning admonition-small
 
-actually there is also a `for .. in` statement (see below), but it is **a little misleading**
+actually there is also a ~~`for .. in`~~ statement (see below), but beware that it is **a little misleading**,  
+and for this reason we recommend against it for beginners 
 ````
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -327,56 +306,47 @@ actually there is also a `for .. in` statement (see below), but it is **a little
 ```{code-cell}
 :tags: [gridwidth-1-2]
 
-for (let i in array) {
+for (let i in array1) {
     console.log(i)
 }
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
+````{admonition} WARNING about for .. in
 
-### beware about `for .. in`
-
-+++
-
-**WARNING** comparing `for .. in` with `enumerate()` is an oversimplification  
+comparing `for .. in` with `enumerate()` is an oversimplification  
 with some data structures, `for (x in obj)` will iterate over more than the natural indices !
 
-in fact, the indexes that `for .. in` will iterate over are *strings* !  
-which is, well, insane...
+in fact, the indexes that `for .. in` will iterate over are *strings* ! which is, well, insane...
 
-```{code-cell}
-/*let*/ tab = [10, 20]
+```js
+tab = [10, 20]
 
 for (let i in tab)
     console.log(`value=${i} type=${typeof i}`)
+->     
+value=0 type=string
+value=1 type=string
 ```
 
-a notable example is e.g. when iterating over the result of `element.querySelectorAll()`  
-that we'll see in the next chapter, but it's worth outlining this already  
-(and see the cheatsheet also)
+and a notable example is e.g. when iterating over the result of `element.querySelectorAll()`  
+that we'll see in the next chapter, but it's worth outlining this already (and see also the cheatsheet)
+````
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ### more on arrays
 
-+++
-
-* as you expect, there are many more methods available, like  
+* like always, there are many more methods available, like  
   `.sort()`, `.reverse()`  
   `.join()`, `.slice()`, `.splice()`,  
   `.shift()`, `.unshift()`
-
-* for more details, see on *javascript.info*
-  * [this article on Arrays](https://javascript.info/array)
-  * and [this one on related methods](https://javascript.info/array-methods)
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-### shared references
+* for more details, see on *javascript.info* [this article on Arrays](https://javascript.info/array) and [this one on related methods](https://javascript.info/array-methods)
 
 +++
 
-* **exactly like in Python**, objects can be access from several references  
+### shared references (advanced)
+
+* **exactly like in Python**, objects can be accessed from several references  
 * so you need to shallow- or deep-copy depending on your needs
 
 ```{code-cell}
@@ -422,18 +392,12 @@ ref1
 :align: center
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## args are passed by reference
-
 +++
 
-* like in Python, when passing a composite object  
-  (array, map, object, …) to a function
+## args are passed by reference (advanced)
 
-* you pass a **reference** (not a copy),  
-  so the function can alter its parameter
-
+* like in Python, when passing a composite object   (array, map, object, …) to a function
+* you pass a **reference** (not a copy), so the function can alter its parameter
 * so this means **shared references** and possible side effects
 
 ```{code-cell}
@@ -479,14 +443,10 @@ foo(1, 2)
 foo(1, 2, 3, 4)
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
-### more on arguments
-
-+++
+### more on arguments (advanced)
 
 * unlike Python there is no named arguments  ~~`foo(arg0=10)`~~
-* nor of arguments with default values
+* and no argument with default values
 * there is however a way to deal with a **variable number of arguments**
 
 ```{code-cell}
@@ -528,11 +488,7 @@ L = [1, 2, 3]
 foo(...L)
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## hash-based data types
-
-+++
 
 * `Map` and `Set` are JavaScript builtin types
   * that match Python's `dict` and `set` respectively
@@ -566,11 +522,9 @@ for (let k of map.keys()) {
 
 * read the [section on maps and sets on javascript.info](https://javascript.info/map-set)
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ## objects
-
-+++
 
 * as the name suggests, objects are the building block for OOP
 * they are similar to Python's class instances
@@ -579,6 +533,9 @@ for (let k of map.keys()) {
 
 ```{code-cell}
 :tags: [gridwidth-1-2]
+
+// notice that, unlike in Python
+// we don't need to put quotes around key names
 
 /*let*/ bond = {
     first_name: "James",
@@ -599,14 +556,13 @@ console.log(`my name is ${bond.last_name}`)
 ````{admonition} JS objects vs Python dicts
 :class: attention
 
-the syntax for JavaScript objects, as well as the *key/value* vocabulary,  
-make them **look like** Python dictionaries  
-**do not get confused though**, JavaScript objects are much more like Python class instances.
+the syntax for JavaScript objects, as well as the *key/value* vocabulary, make them **look like** Python dictionaries  
+**do not get confused though**, JavaScript objects are much more alike Python class instances
 ````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-**more examples**
+### more examples
 
 ```{code-cell}
 :tags: [gridwidth-1-2]
@@ -648,7 +604,7 @@ make them **look like** Python dictionaries
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-**more examples (2)**
+### more examples (2)
 
 ```{code-cell}
 :tags: [gridwidth-1-2]
@@ -674,11 +630,7 @@ copy.add = 'more'
 copy
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ### accessing object keys & iterations
-
-+++
 
 * you can access an attribute with either of these 2 forms
   * `object.first_name`
@@ -694,11 +646,9 @@ for (let key in bond) {
 }
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}, "tags": ["level_advanced"]}
++++ {"tags": ["level_advanced"]}
 
 #### building objects (advanced)
-
-+++ {"tags": ["level_advanced"]}
 
 and also, because there is no difference between
 
@@ -729,12 +679,7 @@ and also, because there is no difference between
 
 there are a lot of fancy ways to deal with objects; this is also known as deconstructing / reconstructing
 
-and these are truly all over the place in modern JavScript code  
-so you'd better have heard of these
-
-+++
-
-reminder : we had already seen array-based assignment which is a Python-style idiom
+and these are truly all over the place in modern JavScript code, so you'd better have heard of these
 
 ```{code-cell}
 // here let is mandatory
@@ -747,7 +692,7 @@ reminder : we had already seen array-based assignment which is a Python-style i
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-there a similar destructuring assignement on objects
+there a similar destructuring assignment on objects
 
 ```{code-cell}
 function demo() {
@@ -804,11 +749,7 @@ foo("something")
 foo("else", {height: 800})
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ### `console.log()` and objects
-
-+++
 
 **TIP** about debugging JS objects :
 
