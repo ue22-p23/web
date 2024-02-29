@@ -34,28 +34,32 @@ tools = require('../js/tools'); tools.init()
 ## events
 
 * due to the specificity of the browser and the network, JavaScript within the browser is not driven like other languages
-  * there is no main() function that runs forever
-  * it is not either driven like a video game  
-    by an infinite loop that eats all the CPU
-
-  * instead JavaScript is driven by **events**
-* events can have different natures:
+  * there is no `main()` function that runs forever
+  * it is not either driven like a video game, i.e. by an infinite loop that eats all the CPU
+* instead JavaScript is driven by **events**, which can be of different kinds:
   * can come from the **user activity** such as mouse click
   * can be **time-bound**
   * can be linked to **network** activity
-* mostly `load` that is rather crucial
-* there are also builtin events for keyboard / mouse interaction illustrated on the next example (we use `click` and `keydown`)
+ 
+````{admonition} examples
+:class: tip admonition-small
+
+* we have already seen the `load` event, that is rather crucial
+* there are also builtin events for keyboard / mouse interaction, illustrated on the next example (we use `click` and `keydown`)
 * for more details, see [this section in javascript.info](https://javascript.info/event-details) on all the available events
-<!-- #endregion -->
+````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 ## callbacks
 
-* events are handled using callbacks,
-* callbacks are functions that are called when an event occur
+events are handled using **callbacks**
+* callbacks are functions that are triggered when an event occur
 * to get a function to be called on a given event,  
   you have to use the `addEventListener`
+
+`````{admonition} for example
+:class: tip
 
 for exemple, to have function `foo` called when the page is loaded, you can use the following code:
 
@@ -64,43 +68,41 @@ for exemple, to have function `foo` called when the page is loaded, you can use 
 window.addEventListener("load", foo)
 ```
 
-* where `"load"` is the name of the event (here the end of the page load)
+* where `"load"` is the name of the event - here the end of page loading  
+  (see also [the `DOMContentLoaded` event](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) that is subtly different)
+
 * and `foo` is a (variable that denotes) a *function* object
 
-+++
+````{admonition} what if foo takes arguments ?
+:class: tip dropdown admonition-x-small
 
-````{admonition} see also
-:class: seealso
-
-see also the `DOMContentLoaded` event that is subtly different
-<https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event>
+assuming `foo` is to be called with some argument, you can do something like this instead
+```js
+window.addEventListener("load", () => foo(arg))
+```
 ````
+`````
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ### `addEventListener`
 
-+++
-
 * a fundamental tool to record a callback with an event
-* available on most objects
-* observe on the example how the callback **receives the event** in parameter
+* available on most objects (not only `window`, often used on a DOM element)
+* observe, on the example below, how the callback **receives the event** in parameter
 * and because we use `console.log(event)`  
-  we have the option to inspect the event object in the console  
-  and see all its attributes
-
-+++
+  we have the option to inspect the event object in the console, and see all its attributes
 
 ````{admonition} callback number of parameters
-:class: attention
+:class: attention admonition-x-small
 
-also note that we have seen already several examples of a **callback** that was a function that **takes no parameter**  
-this is one of the reasons why JS is so flexible/lenient with respect to argument passing
+also note, we have seen several examples, a **callback** can be a function that **takes no parameter**  
+this is possible because JS is so flexible/lenient with respect to argument passing
 ````
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-### events example
+### example: `load`, `click` and `keydown`
 
 ```{code-cell}
 :tags: [remove-input]
@@ -111,6 +113,8 @@ tools.sample_from_stem("../samples/34-events-and-callbacks-01",
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
+
+here's a timeline of what is going on
 
 ```{image} media/callbacks-chain.svg
 :align: center
@@ -125,15 +129,13 @@ tools.sample_from_stem("../samples/34-events-and-callbacks-01",
 notice from the example :
 
 * how `addEventListener()` are cascaded,
-* how we display the events with `console.log()`  
-  this is useful technique for debugging / inspecting data
-
+* we display the event with `console.log()` - this is useful technique for inspecting data
 * in particular we could inspect the event object to display meaningful data
 
 +++
 
 ````{admonition} global variables
-:class: note
+:class: note admonition-smaller
 
 this code uses **global variables** like e.g. `onclick`  
 and so here, we'd be in trouble if our application used another library that defines a global with the same name  
@@ -143,6 +145,23 @@ we will see in a moment how to rewrite this example into a code that **leaks no 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 ## other types of events
+
++++
+
+### time-related events
+
+```javascript
+setTimeout(foo, 3000)  // call foo once in 3000 ms
+setInterval(foo, 3000) // call foo every 3000 ms
+```
+
+````{admonition} see also
+:class: seealso
+
+for more details and a more exhaustive list of available events, see [this section in javascript.info](https://javascript.info/event-details)
+````
+
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### code-generated events
 
@@ -156,23 +175,6 @@ elem.addEventListener('myevent', foo, false)
 elem.dispatchEvent(event)
 ```
 
-+++
-
-### time-related events
-
-```javascript
-setTimeout(foo, 3000)  // call foo once in 3000 ms
-setInterval(foo, 3000) // call foo every 3000 ms
-```
-
-+++
-
-````{admonition} see also
-:class: seealso
-
-for more details and a more exhaustive list of available events, see [this section in javascript.info](https://javascript.info/event-details)
-````
-
 +++ {"slideshow": {"slide_type": "slide"}}
 
 ## anonymous function (a.k.a *arrow functions*)
@@ -180,22 +182,19 @@ for more details and a more exhaustive list of available events, see [this secti
 due to the extensive use of callbacks in JavaScript, having to name every function is annoying  
 for this reason, JavaScript has 2 convenient ways to create anonymous functions:
 
-* the legacy one:
-
-```javascript
-const mylambda0 = function (arg0, arg1) { /* some code here */ }
-```
-
 * the modern one:
-
-```javascript
-const mylambda0 = (arg0, arg1) => { /* some code here */ }
-```
+  ```javascript
+  const mylambda0 = (arg0, arg1) => { /* some code here */ }
+  ```
+* the legacy one:
+  ```javascript
+  const mylambda0 = function (arg0, arg1) { /* some code here */ }
+  ```
 
 +++
 
 ````{admonition} functions vs arrow functions
-:class: attention
+:class: attention admonition-smaller
 
 * /!\ Both variants are valid, even if the new one looks nicer
 * with the fat arrow, `{}` and `return` can be sometimes omitted
@@ -228,18 +227,29 @@ tools.sample_from_stem("../samples/34-events-and-callbacks-02",
                         separate_width: "600px", height: 'js'})
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
+## limits of callbacks
 
-## closures
+* highly recommended to study the [introduction to callbacks in javascript.info](https://javascript.info/callbacks)
+* that highlights the fundamental drawback of using callbacks
+* which is that you need to split your code into pieces, and fit the pieces into functions
+* it easily becomes hard to read and modify, especially if there is logic involved
+
+````{admonition} you can skip the rest
+:class: attention
+
+the remainder of this notebook is for advanced readers
+````
 
 +++
+
+## closures
 
 * it is rather frequent that a callback needs to access data that sits **outside of the function context**
 * it is safe to use lexically-bound variables inside the callback
 * see the `context` variable in the example below
 
 ````{admonition} use your browser console
-:class: tip
+:class: error
 
 the behaviour might be unexpected as we're moving outside of the notebook's comfort zone here  
 feel free to cut and paste the code into your web browser's console
@@ -253,8 +263,8 @@ feel free to cut and paste the code into your web browser's console
   setTimeout(
   // here the 'context' variable is visible and remain valid
   // even if we leave the block
-    () => console.log("context is", context),
-    2000)
+    () => console.log("in the callback: ", context),
+    1000)
   console.log("NOW timeout armed")
 }
 
@@ -275,14 +285,11 @@ try {
 ### closures - continued
 
 ```{code-cell}
----
-slideshow:
-  slide_type: ''
-tags: [gridwidth-1-2]
----
+:tags: [gridwidth-1-2]
+
 {
   let context = {a:1, b:2};
-  setTimeout(() => console.log(context), 2000)
+  setTimeout(() => console.log("in callback", context), 1000)
   console.log("armed");
 }
 ```
@@ -293,22 +300,6 @@ tags: [gridwidth-1-2]
 * that is **long gone** at the time the callback triggers
 * but it is still reachable from the callback
 * as it was *captured* in the closure
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## limits of callbacks
-
-+++
-
-* highly recommended to study  
-  the [introduction to callbacks in javascript.info](https://javascript.info/callbacks)
-
-* that highlights the fundamental drawback of using callbacks
-* which is that you need to split your code into pieces  
-  and fit the pieces into functions
-
-* it easily becomes hard to read and modify,  
-  especially if there is logic involved
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
