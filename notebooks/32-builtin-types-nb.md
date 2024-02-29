@@ -328,7 +328,7 @@ value=1 type=string
 ```
 
 and a notable example is e.g. when iterating over the result of `element.querySelectorAll()`  
-that we'll see in the next chapter, but it's worth outlining this already (and see also the cheatsheet)
+that we'll see in the next chapter, but it's worth outlining this already - [see also the cheatsheet](cheatsheet)
 ````
 
 +++
