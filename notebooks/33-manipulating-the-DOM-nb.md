@@ -34,76 +34,94 @@ tools = require('../js/tools'); tools.init()
 ## about the DOM
 
 * the DOM is the tree of the HTML code, as already seen
-* the DOM can be read and modified in JavaScript  
-  using the global variable `document`
-
+* the DOM can be read and modified in JavaScript, using the global variable `document`
 * the DOM exposes a standard API, see the details on [Mozzila MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## reading the DOM basics
 
 +++
 
- * get element by their id: `document.getElementById("someid")`
- * get several elements by there tag `document.getElementsByTagName("sometag")`
- * those functions also work from a given element, for exemple:
- ```javascript
- let x = document.getElementById("someid");
- x.getElementsByTagName("div"); // will provide all 'div'
-                                  // elements within x
- ```
+## spotting elements in the DOM
 
- * read the attribute of an element `element.getAttribute("someattr")`
- * read the element style `element.style`
-   * note: this is not the actual computed style, but the direct style of the element
- * read the class of an element `element.classList`
- * and much more...
+* get element by their id: `document.getElementById("some-id")`
+* get all elements matching a selector `document.querySelectorAll(".the-class")`  
+  this kind of functions also work from a given element, for exemple:
+  ```javascript
+  // spot one specific element in the tree
+  const root = document.getElementById("some-id")
 
-+++ {"slideshow": {"slide_type": "slide"}}
+  // find all elements under 'root' with class 'the-class'
+  root.querySelectorAll(".the-class")
+  ```
+
++++
+
+## messing with an element
+
+* **read** a *computed* property (the one actually applied)
+  ```
+  window.getComputedStyle(element).backgroundColor
+  ```
+  ````{admonition} notice the spelling
+  :class: warning admonition-small
+  
+  the CSS property is called **`background-color`** but in this context it becomes **`backgroundColor`**  
+  can you figure out why the original name could not be used ?
+  ````
+* **set** an element property  
+  several angles are possible, here we are writing directly in the `style=` part of the element  
+  and so, in line with the specificity rules, this will win over all other applicable settings
+  ```
+  element.style.backgroundColor = "rgb(10, 23, 255)"
+  ```
+* manage the class(es) of an element `element.classList`
+  ```
+  // add a class
+  element.classList.add("another-class")
+  // remove a class
+  element.classList.remove("another-class")
+  ```
+* read the attribute of an element `element.getAttribute("someattr")`
+  write it with `element.setAttribute("someattribute", somevalue)`
+  ````{admonition} what's an attribute again ?
+  :class: tip admonition-small
+
+  to set this attribute in HTML, one would have written `<div someattr="some-value">...</div>`  
+  not to be confused with properties !
+  ````
+* and much more...
+
++++
 
 ## creating DOM element from scratch
 
-+++
-
 * simply use e.g. `document.createElement("div")`
-* or copy an existing element `element.cloneNode()`
-* maybe you don't want deep copy `element.cloneNode(false)`
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## modifying the DOM
-
-* add element to the tree  
-  `element.appendChild(another_element)`
-
-* add or change an attribute  
-  `element.setAttribute("someattribute", somevalue)`
-
-* add or change a given style  
-  `element.style.color = "rgb(0 0 0)"`
-
-* add a class to an element  
-  `element.classList.add("someclass")`
-
-* remove a class to an element  
-  `element.classList.remove("someclass")`
-
-* and many more ...
+* mind you, sometimes - like for svg elements for example
+  you need to specify a namespace with `createElementNS()`  
+  see the cheatsheet for an example
+* in any case, **don't forget to add** the new element somewhere in the tree  
+  `father.appendChild(new_node)`
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 ## summary / cheatsheet
 
-you can find a cheatsheet that summarizes most of this
+you can find a cheatsheet that contains all this:
 
-* standalone: open `cheatsheet/cheatsheet.html` as found in the course repo
+* there is [this bookmarkable link](cheatsheet) - (you might want to open it in a new window)
+* if you have cloned the course repo: open `notebooks/_static/cheatsheet.html`
 * from within this notebook: eval next cell
 
 ```{code-cell}
 :tags: [remove-input]
 
-tools.sample_from_stem("../cheatsheet/cheatsheet", {sources_show: false})
+tools.sample_from_stem("_static/cheatsheet", {sources_show: false})
 ```
 
-***
+
+````{admonition} practice
+:class: seealso
+now could be a [right time to start the dynamic grid exercise](https://github.com/ue22-p23/web-grid)  
+
+start with just Step 1:
+* write a function that adds a line, and
+* and see the initial examples on how to attach that function to the button
+````
