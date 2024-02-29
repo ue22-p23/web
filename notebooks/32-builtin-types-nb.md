@@ -40,11 +40,9 @@ tools = require('../js/tools'); tools.init()
 :class: warning admonition-small
 
 as mentioned earlier, all variables should be declared with either `let` or `const`  
-however, in a notebook this is inconvenient because  
-one **cannot declare** the **same variable twice** in the same scope  
+however, in a notebook this is inconvenient because one **cannot declare** the **same variable twice** in the same scope  
 and so using `let` would prevent us from re-evaluating the same cell twice  
-in order to remind you of the necessity to declare everything  
-we will add commented-out `/*let*/` chunks when using a new variable    
+in order to remind you of the necessity to declare everything, we will add `/*let*/` chunks when using a new variable    
 ````
 
 +++
@@ -52,8 +50,8 @@ we will add commented-out `/*let*/` chunks when using a new variable
 ## atomic types
 
 * `number` is the default type for numeric values  
-* `string`
 * `boolean` may be `true` or `false`
+* `string` is, well, for strings
 
 ```{code-cell}
 :tags: [gridwidth-1-2]
@@ -116,13 +114,11 @@ console.log(object.z)
 the syntax for boolean operators is here again inherited from C / C++ / Java:
 
 ```{list-table}
+:align: center
 
-* - and
-  - `&&`
-  - or
-  - `||`
-  - not
-  - `!`
+* - and: `&&`
+  - or: `||`
+  - not: `!`
 ```
 
 ```{code-cell}
@@ -160,11 +156,14 @@ s
 # which in Python would be
 
 x = 10
-
 s = f"format expression like {x*x} in a string"
 ```
 
-+++
+```{code-cell}
+// there are also tons of methods to deal with strings, e.g.
+
+console.log(`length of s is ${s.length}`)
+```
 
 ### see also
 
@@ -667,10 +666,13 @@ and also, because there is no difference between
 ```{code-cell}
 :tags: [level_advanced]
 
-// we need a way to express that a field name is actually a variable
-/* const */ fieldname = 'a'
-/*                 ↓         ↓
-/* const */ obj = {[fieldname]: 1}
+// we need a way to express that a field name is actually an expression
+// that we want to evaluate (could also be a simple variable)
+
+/* const */ [begin, end] = ['a', 'b']
+/*                 ↓           ↓        */
+/* const */ obj = {[begin + end]: 1}
+obj
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -811,6 +813,7 @@ tags: [gridwidth-1-2]
 ---
 // objects are passed by reference too
 // so this function can modify its object argument
+
 function change_object(obj) {
     obj.first_name = 'BOOM'
 }
