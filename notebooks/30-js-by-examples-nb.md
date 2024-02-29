@@ -161,7 +161,6 @@ for that, use `<script src="some-url"></script>`
 * we can also use any URL in the `src` attribute to load from other folders or locations  
   see for example <https://cdnjs.org/>
 
-
 +++
 
 ````{admonition} note on deferred loading
