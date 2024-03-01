@@ -23,7 +23,7 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++
 
-# JavaScript events and callbacks
+# events and callbacks
 
 ```{code-cell}
 tools = require('../js/tools'); tools.init()
@@ -55,31 +55,33 @@ tools = require('../js/tools'); tools.init()
 
 events are handled using **callbacks**
 * callbacks are functions that are triggered when an event occur
-* to get a function to be called on a given event,  
-  you have to use the `addEventListener`
+* to get a function to be called on a given event, you have to use the `addEventListener`
+* the callback function typically receives an **event** object as a parameter
 
 `````{admonition} for example
 :class: tip
 
-for exemple, to have function `foo` called when the page is loaded, you can use the following code:
+for exemple, to catch user clicks on a specific element, you can write:
 
 ```js
-// trigger once the document is loaded
-window.addEventListener("load", foo)
+// typically you locate 'element' using getElementById
+// of course you need to call this 
+// at a time where element has been created...
+element.addEventListener(
+    "click", 
+    (event) => { 
+        console.log("received click", event)
+})
 ```
 
-* where `"load"` is the name of the event - here the end of page loading  
-  (see also [the `DOMContentLoaded` event](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) that is subtly different)
+as we will see in the next example, the `event` variable within the callback is a JS object, that contains all the details on what happened
 
-* and `foo` is a (variable that denotes) a *function* object
 
-````{admonition} what if foo takes arguments ?
-:class: tip dropdown admonition-x-small
+````{admonition} callback with no parameter
+:class: attention admonition-x-small
 
-assuming `foo` is to be called with some argument, you can do something like this instead
-```js
-window.addEventListener("load", () => foo(arg))
-```
+also note, we have seen several examples, a **callback** can also be a function that **takes no parameter**  
+this is possible because JS is so flexible/lenient with respect to argument passing
 ````
 `````
 
@@ -87,26 +89,22 @@ window.addEventListener("load", () => foo(arg))
 
 ### `addEventListener`
 
-* a fundamental tool to record a callback with an event
+* a fundamental tool to register a callback with an event
 * available on most objects (not only `window`, often used on a DOM element)
-* observe, on the example below, how the callback **receives the event** in parameter
-* and because we use `console.log(event)`  
-  we have the option to inspect the event object in the console, and see all its attributes
-
-````{admonition} callback number of parameters
-:class: attention admonition-x-small
-
-also note, we have seen several examples, a **callback** can be a function that **takes no parameter**  
-this is possible because JS is so flexible/lenient with respect to argument passing
-````
+* again, observe on the example below, how the callback **receives the event** in parameter
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-### example: `load`, `click` and `keydown`
+### example: `load`, `click` and `keydown
+
+in this first version we are going to use globally defined functions
 
 ```{code-cell}
-:tags: [remove-input]
-
+---
+slideshow:
+  slide_type: ''
+tags: [remove-input]
+---
 tools.sample_from_stem("../samples/34-events-and-callbacks-01",
                        {separate_show: true, start_with: 'js', 
                         separate_width: "600px", height: 'js'})
@@ -128,16 +126,28 @@ here's a timeline of what is going on
 
 notice from the example :
 
-* how `addEventListener()` are cascaded,
-* we display the event with `console.log()` - this is useful technique for inspecting data
-* in particular we could inspect the event object to display meaningful data
+````{admonition} cascading
+:class: seealso
+see how `addEventListener()` are cascaded, which is a very typical pattern in JS code
+````
+
+````{admonition} the contents of event
+:class: tip admonition-smaller
+
+also notice that the actual content of the `event` object depends on the event type:
+
+* the `keydown` event has a `event.key` that exposes the keyboard key
+* the `click` event has `event.offsetX` that exposes the click coordinates
+
+it is helpful to use `console.log(event)` in the callback, and to inspect the event object in the console, to get the list of all its attributes
+````
 
 +++
 
 ````{admonition} global variables
-:class: note admonition-smaller
+:class: note admonition-small
 
-this code uses **global variables** like e.g. `onclick`  
+also, this code uses **global variables** like e.g. `onclick`  
 and so here, we'd be in trouble if our application used another library that defines a global with the same name  
 we will see in a moment how to rewrite this example into a code that **leaks no global variable**  
 ````
@@ -177,12 +187,12 @@ elem.dispatchEvent(event)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## anonymous function (a.k.a *arrow functions*)
+## anonymous functions
 
 due to the extensive use of callbacks in JavaScript, having to name every function is annoying  
 for this reason, JavaScript has 2 convenient ways to create anonymous functions:
 
-* the modern one:
+* the modern one (*arrow functions*)
   ```javascript
   const mylambda0 = (arg0, arg1) => { /* some code here */ }
   ```
@@ -203,7 +213,7 @@ for this reason, JavaScript has 2 convenient ways to create anonymous functions:
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## anonymous function usage
+### anonymous function usage
 
 in this context, it is common to create functions **on the fly**, e.g.
 ```javascript
@@ -234,8 +244,10 @@ tools.sample_from_stem("../samples/34-events-and-callbacks-02",
 * which is that you need to split your code into pieces, and fit the pieces into functions
 * it easily becomes hard to read and modify, especially if there is logic involved
 
++++
+
 ````{admonition} you can skip the rest
-:class: attention
+:class: danger
 
 the remainder of this notebook is for advanced readers
 ````
