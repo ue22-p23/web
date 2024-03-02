@@ -42,11 +42,15 @@ there is also a looooong list of examples here <https://reactjsexample.com>
 
 the git repo for this app is <https://github.com/ue22-p23/web-react-counters>
 
+````{admonition} read the assignment first
+:class: warning
+
+make sure to read the section "**app #1: the dual counters app**" section entirely before you start anything
+````
+
 +++
 
 ### your assignment
-
-**Note:** read the section "**app #1: the dual counters app**" section entirely before you start anything
 
 * clone the repo
 * get it to work in your laptop
@@ -152,11 +156,8 @@ come with the project when you create it)
 ```
 
 but wait, take a closer look, there's a large number of wtf's waiting for you
-(remember the best measurement of code quality is expressed in wtf/mn ;)
 
-![wtf per minute](media/wtf-per-minute.png)
-
-but seriously though, here are some points of astonishment, as compared to what
+here are some points of astonishment, as compared to what
 you might expect with respect to html/css/js, that deserve to be outlined:
 
 +++
@@ -281,6 +282,12 @@ that already has provisions for that
 +++
 
 ## app #2: a calculator
+
+````{admonition} ditto: read the assignment first
+:class: warning
+
+make sure to read the whole section entirely before you start anything
+````
 
 about this app:
 
