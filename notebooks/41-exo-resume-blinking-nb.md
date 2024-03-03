@@ -40,16 +40,16 @@ in this notebook :
 
 ## assignment
 
-* create or reuse a HTML document as a collection of 3 files 
-* it can be your resumé, say `resume.html`, `resume.css`, `resume.js`  
-  in that case however you may want to commit them first...
+create or reuse a HTML document as a collection of 3 files; it can be your resumé, in that case however you may want to commit them first...
 
 1. make sure the html `<head>` loads **both** the css and js companions
-2. then edit the JavaScript code, so that the **background alternates** every 1 second between 2 different colours
+2. then edit the JavaScript code, so that the **background alternates** every 1 second between 2 different colours  
+   note that there are many approaches to achieving this, and at least 2:
+     * either changing properties directly on the DOM,
+     * or messing with CSS classes  
+   and early finisher should give both angles a go  
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
-something like this
+in any case you should obtain something like this
 
 ```{code-cell}
 ---
@@ -85,7 +85,7 @@ start('some-data')
 
 because:
 - at the time when `start('some-data')` gets executed, your page is **still in the middle** of the loading phase ! 
-- you might be lucky and this may work just fine for you, but then it is *just a coincidence* and **that is not right** 
+- you might be lucky and this may work just fine for you, but then it is *just a coincidence* and **that is not right**
 
 +++
 
