@@ -17,8 +17,6 @@ nbhosting:
   title: exo - spinning wheel
 ---
 
-+++
-
 Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++
@@ -29,8 +27,6 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 tools = require('../js/tools'); tools.init()
 ```
 
-+++
-
 ## what it should look like
 
 ```{code-cell}
@@ -38,8 +34,6 @@ tools = require('../js/tools'); tools.init()
 
 tools.sample_from_stem("../samples/44-spinning-wheel/spinning-wheel", {id: 'finished', sources_show: false})
 ```
-
-+++
 
 ## recommended steps
 
@@ -99,8 +93,6 @@ cleanup the code, and cleanup again
 
 ## a few hints
 
-+++
-
 for example (but that's entirely up to you)
 
 * write a JavaScript class `SpinningWheel`
@@ -115,21 +107,12 @@ for example (but that's entirely up to you)
   * `stop()`
   * `resume()`
   * `clear()`
-  
 * it may be helpful to create a convenience function that creates an SVG element inside a container that is found through its id;  
   e.g. `create_spinning_wheel("spin-container")` would create (and return) a `SpinningWheel` instance inside (the element found by selector) `#spin-container`
 
 +++
 
-* attach to the `load` event of your page
-* a function that creates the spinning wheel
-* and then stops it after a fixed duration
-
-+++
-
 ## also remember that
-
-+++
 
 * svg elements need to be created with the right namespace, i.e.:
 
@@ -142,8 +125,6 @@ let dot = document.createElementNS(svgNS, 'circle');
 
 ## the  HTML part
 
-+++
-
 your html part could look like the following
 
 ```{code-cell}
@@ -151,10 +132,8 @@ your html part could look like the following
 
 tools.sample_from_stem(
     '../samples/44-spinning-wheel/spinning-wheel',
-   {id: 'source-only', css_show: false, js_show: false, output_show: false,})
+   {id: 'source-only', css_show: false, js_show: false, output_show: false, height: '18em'})
 ```
-
-+++
 
 ## observe
 
@@ -183,13 +162,11 @@ and allow callers to set specific parameters in the `options` object; for exampl
 let spin = SpinningWheel(100,
                          { bg_color: [200, 100, 50], period=500})
 ```
-and have the `SpinningClass` code provide default for missing parameters.
+and have the `SpinningClass` code provide defaults for missing parameters.
 
 +++
 
 ### optional assignments
-
-+++
 
 early finishers can :
 

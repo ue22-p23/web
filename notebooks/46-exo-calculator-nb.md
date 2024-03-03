@@ -17,8 +17,6 @@ nbhosting:
   title: exo - calculator
 ---
 
-+++
-
 Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++
@@ -34,7 +32,7 @@ tools = require('../js/tools'); tools.init()
 ## assignement
 
 start from this tutorial here
-https://www.freecodecamp.org/news/how-to-build-an-html-calculator-app-from-scratch-using-javascript-4454b8714b98/
+<https://www.freecodecamp.org/news/how-to-build-an-html-calculator-app-from-scratch-using-javascript-4454b8714b98/>
 
 it comes [**with the html and css template**](https://codepen.io/zellwk/pen/pLgmGL)  
 for a nice yet simple, calculator
@@ -56,25 +54,3 @@ tags: [remove-input]
 ---
 tools.sample_from_stem("../samples/46-calculator", {sources_show: false})
 ```
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## how to code: general tips
-
-* first do not think on coding, but think about what do you want to achieve
-* decompose the thing you are trying to achieve into smaller things  
-  e.g. in the case of the spinning wheel, you need:
-
-  * a button
-  * circles
-  * to change the color of a circle
-  * to start/stop by pressing the button
-  * and more ...
-* try to achieve the smallest objectives first separately or independently
-  * at this step the search engine can help :)
-  * **BUT NEVER USE SOMETHING THAT YOU DO NOT UNDERSTAND**
-  * **always** try to understand what you are using from others
-  * **always** adapt the code you want to use from others
-* gather all technics aquired in previous steps and combine them
-* merge often
-* enjoy ;)

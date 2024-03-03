@@ -17,8 +17,6 @@ nbhosting:
   title: 'practice : games'
 ---
 
-+++
-
 Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++
@@ -31,8 +29,6 @@ tools = require('../js/tools'); tools.init()
 
 ## tic-tac-toe
 
-+++
-
 write a tic-tac-toe game, something like this - there is a lot of room for improvement !
 
 ```{code-cell}
@@ -43,8 +39,6 @@ tools.sample_from_stem("../samples/45-tic-tac-toe/tic-tac-toe",
 ```
 
 ## minesweeper
-
-+++
 
 write a minesweeper game; again you can do better than this :)
 

@@ -29,12 +29,9 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 tools = require('../js/tools'); tools.init()
 ```
 
-+++
-
 * first do not think on coding, but think about what do you want to achieve
 * decompose the thing you are trying to achieve into smaller things  
   e.g. in the case of the spinning wheel, you need:
-
   * a button
   * circles
   * to change the color of a circle
@@ -45,6 +42,7 @@ tools = require('../js/tools'); tools.init()
   * **BUT NEVER USE SOMETHING THAT YOU DO NOT UNDERSTAND**
   * **always** try to understand what you are using from others
   * **always** adapt the code you want to use from others
-* gather all technics aquired in previous steps and combine them
-* merge often
+  * this goes for ChatGPT and/or copilot, of course !
+* gather all technics acquired in previous steps and combine them
+* commit often
 * enjoy ;)

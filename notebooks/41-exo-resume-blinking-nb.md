@@ -29,29 +29,23 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 tools = require('../js/tools'); tools.init()
 ```
 
-+++
+**make sure you read this notebook thoroughly before you start**
 
 in this notebook :
 
 * a simple assignment
 * plus a few tips to get started
-* **make sure you read this notebook thoroughly before you start**
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## assignment
-
-* create a HTML document as a collection of 3 files,
-* say : `resume.html`, `resume.css`, `resume.js`
-* make sure the html `<head>` loads **both** the css and js companions
 
 +++
 
-then
+## assignment
 
-* edit the JavaScript code
-* so that your resume background alternates  
-  every 1 second between 2 different colours
+* create or reuse a HTML document as a collection of 3 files 
+* it can be your resumé, say `resume.html`, `resume.css`, `resume.js`  
+  in that case however you may want to commit them first...
+
+1. make sure the html `<head>` loads **both** the css and js companions
+2. then edit the JavaScript code, so that the **background alternates** every 1 second between 2 different colours
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -81,91 +75,66 @@ it is tempting, but **totally unsafe**, to do something like
 ```html
 <!-- DO NOT DO THIS -->
 
-<script src="thecode.js"></script>
+<script src="thecode.js">
+</script>
+
 <script>
 start('some-data')
 </script>
 ```
 
-because at the time when `start('some-data')` gets executed,  
-your page is still in the middle of the loading phase  
-(you might be lucky and this may work just fine for you  
- but then it is *a coincidence* and that is **not right**)
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-### run code upon load : the proper way
+because:
+- at the time when `start('some-data')` gets executed, your page is **still in the middle** of the loading phase ! 
+- you might be lucky and this may work just fine for you, but then it is *just a coincidence* and **that is not right** 
 
 +++
+
+### the proper way
 
 the proper way is to attach a **callback** to the page **`load`** event
 
 ```javascript
 // attach an (anonymous) function to the 'load' event
 window.addEventListener(
-    'load', function() { start('some-data'))
-
-// OR, same but a little nicer, with an arrow function
-window.addEventListener(
-    'load', () => start('some-data'))
+    'load',                   // the event name
+    () => start('some-data')  // the callback: must be a function
+)
 ```
 
-this time, `start()` will get **called later**  
-at a time where you can be sure the document is entirely **loaded**
+this time, `start()` will get **called later** at a time where you can be sure the document is entirely **loaded**
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"tags": []}
 
-## tip #2: implement a cyclic task
+## tip #2: implementing a cyclic task
 
-+++
+```{admonition} let or const
+:class: admonition-small warning
 
-implementing a cyclic task was done in example 2 already as a reminder: based on `setInterval()`. You may use clearInterval to cancel.
+remember, in the notebook it is inconvenient to use `let` or `const`, but make sure to declare all your variables in your code
+```
 
-```{code-cell}
-:tags: [gridwidth-1-2]
+implementing a cyclic task was done in example 2 already; as a reminder it is based on `setInterval()`:
 
-// so that we can stop the running loop
-active = true;
+```js
+// not mandatory, but with this soft switch
+// we could easily turn the blinking on and off
+/*let*/ active = true;
 
 function one_step() {
     if (active)
         console.log("beep");
 }
 
-// we're using 'var' because in a notebook
-// but make sure you use 'const'
-// and not 'var' in your own code
-var interval = setInterval(one_step, 1000)
+// start the cyclic job: call one_step() every 1s
+/*const*/ interval = setInterval(one_step, 1000)
 ```
-
-```{code-cell}
-:tags: [gridwidth-1-2]
-
-// note that our JS interpreter
-// is still responsive
-// we can stop the endless loop
-active = false
-```
-
-```{code-cell}
-:tags: [gridwidth-1-2]
-
-// it's also possible to stop it
-// altogether
-active = true
-// clearInterval is a builtin function that will cancel setInterval
-clearInterval(interval)
-```
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-### observations on cyclic tasks
 
 +++
 
-in a Python language one would maybe consider writing something like
+````{admonition} single tasking vs multi tasking
+:class: note
 
-+++ {"tags": ["gridwidth-1-2"]}
+the kind-of equivalent in Python would look like:
 
 ```python
 while True:
@@ -174,32 +143,50 @@ while True:
     sleep 1
 ```
 
-+++ {"tags": ["gridwidth-1-2"]}
-
-````{admonition} single tasking vs multi tasking
-:class: note
-
 however with such an approach, the Python interpreter **can't do anything else** at the same time  
-while here with JS, the browser is still able to **do other things** !
+notice how here with JS, the browser is still able to **do other things** ! 
 ````
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## tip #3 : use devel tools
 
 +++
 
-* crucially important to get familiar with these tools  
-*  starting with the most useful ones :
+### turning it off
+
+quick users may want to implement some sort of trick to turn off the blinking  
+with the code above, we have 2 options to do that
+
+1. just do `active = false`
+   in that case the cyclic task is still there, but does nothing
+2. or cancel the cyclic task altogether, like so
+   ```js
+   clearInterval(interval)
+   ```
+
++++
+
+## tip #3: the browser cache (yet again)
+
+the browser cache thingy applies exactly the same with CSS and with JS
+
+````{admonition} the browser cache
+:class: warning
+
+remember to **use Shift-reload**, or other cache-cleaning tool, if changes in a file do not seem to kick in
+````
+
++++
+
+## tip #4 : use devel tools
+
+* crucially important to get familiar with these tools
+* and to turn to them **as soon as something does not behave**
+* here you will need to use the most useful ones :
   * *Elements*
   * *Console*
   * and to a lesser extent, *Sources*
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ### Devel Tools : *Elements*
-
-+++
 
 as mentioned earlier already, you can
 
@@ -208,17 +195,15 @@ as mentioned earlier already, you can
 * see the CSS rules that apply to an element
 * find out where these styles come from
 * see the computed values for each property
-* interactively change a property and  
-  see effect immediately (shown on next slide)
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-### visualizing a changed property
+* interactively change a property and see effect immediately
 
 +++
 
+### visualizing a changed property
+
 ```{image} media/devel-tools-change-properties.png
 :align: center
+:width: 500px
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -227,38 +212,36 @@ as mentioned earlier already, you can
 
 +++
 
-* the place where lands the output of `console.log`  
-  of course quite useful for naive debugging
-
-* **and** that lets you **run JavaScript** on the fly  
-  much like the Python interpreter does  
+* the place where lands the output of `console.log` of course quite useful for naive debugging
+* **and** that lets you **run JavaScript** on the fly much like the Python interpreter does  
   (this is known as a REPL = Read Eval Print Loop)
-* illustrated in the following slides
-
-+++
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 ```{image} media/devel-tools-console-1.png
 :align: center
+:width: 500px
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 ```{image} media/devel-tools-console-2.png
 :align: center
+:width: 500px
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 ```{image} media/devel-tools-console-3.png
 :align: center
+:width: 500px
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 ```{image} media/devel-tools-console-4.png
 :align: center
+:width: 500px
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -267,12 +250,13 @@ as mentioned earlier already, you can
 
 +++ {"tags": ["gridwidth-1-2"]}
 
-* occasionnally useful to browse the code actually loaded
+occasionnally useful to browse the code actually loaded
 
 +++ {"tags": ["gridwidth-1-2"]}
 
 ```{image} media/devel-tools-sources.png
 :align: center
+:width: 500px
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -281,42 +265,23 @@ as mentioned earlier already, you can
 
 +++ {"tags": ["gridwidth-1-2"]}
 
-* the *Sources* tab has buit-in debugging features
+the *Sources* tab has buit-in debugging features
 
 +++ {"tags": ["gridwidth-1-2"]}
 
 ```{image} media/devel-tools-debugging.png
 :align: center
+:width: 500px
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++
 
 ### more on devel tools
-
-+++
 
 * there are standard keyboard shortcuts to invoke devel tools,  
 * e.g. for [google chrome](https://developers.google.com/web/tools/chrome-devtools/shortcuts)  
   * macOS `⌘ ⌥ J` (console) or `⌘ ⌥ I` (your last tab)
   * others `⌃ ⇧ J` (console) or `⌃ ⇧ I` (your last tab)
   * others `ctrl+shift+J` (console) or `ctrl+shift+I` (your last tab)
-* a bit early for now, but be aware that  
-  they come with a complete debugger
-
+* a bit early for now, but be aware that they come with a complete debugger
 * do not hesitate to search for some hands-on / video tuto
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## tip #4: the browser cache (yet again)
-
-+++
-
-* the browser cache thingy applies exactly the same
-* in the case of JavaScript code as what we had seen about CSS
-
-````{admonition} the browser cache
-:class: warning
-
-remember to **use Shift-reload**, or other cache-cleaning tool  
-if changes in a file do not seem to kick in
-````

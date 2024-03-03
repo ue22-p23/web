@@ -23,13 +23,7 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 
 # practice : on codepen
 
-```{code-cell}
-tools = require('../js/tools'); tools.init()
-```
-
 ## miscellaneous practise on codepen
-
-+++
 
 see a collection of assignments here <https://codepen.io/collection/YyapER?grid_type=list>
 
@@ -37,5 +31,4 @@ see a collection of assignments here <https://codepen.io/collection/YyapER?grid_
 :class: tip
 
 do not forget to create an account and to log in `codepen.io` **for your progress to be saved**
-
 ````
