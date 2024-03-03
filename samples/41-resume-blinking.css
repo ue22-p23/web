@@ -23,9 +23,10 @@
 }
 
 section {
-    border: 1px solid red;
     padding: 20px;
     margin: 10px;
+    border: 1px solid #365486;
+    border-radius: 6px;
 }
 
 h1 { font-size: 2em;}
