@@ -71,6 +71,15 @@ $
 console.log(1, "two", [3, "four"])
 ```
 
+````{admonition} super useful for debugging
+:class: tip
+
+if the argument is an object, it will be displayed as a collapsible with togglable arrows `→` / `↓`, and that lets you explore the data structure  
+try `console.log(window)` in the browser to see that in action
+````
+
++++
+
 ## syntax
 
 * the syntax is similar to C, C++ and Java
