@@ -17,7 +17,7 @@ nbhosting:
   title: 30,000 ft overview
 ---
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"slideshow": {"slide_type": "slide"}, "tags": []}
 
 Licence CC BY-NC-ND, Thierry Parmentelat
 
@@ -178,9 +178,9 @@ for (let i=0; i<3; i++) {
 ### declaration
 
 * as usual, variables are **names** that refer to **data in memory**
-* like in Python, any such data is **typed** (although the name is not)
-* core language has some **basic types**
-* variables should be declared using one of the keywords
+  * like in Python, any such data is **typed** (although the name is not)
+  * core language has some **basic types**
+* variables should be **explicitly declared** using one of the keywords `let` or `const`
 
 ````{admonition} link in tuto
 :class: admonition-small
