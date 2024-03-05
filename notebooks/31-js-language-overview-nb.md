@@ -423,6 +423,8 @@ function fuzzy(x, y, z) {
 fuzzy(10)
 fuzzy(10, 20)
 fuzzy("abc", "def", "ghi")
+// and even this !
+fuzzy("abc", "def", "ghi", "trashed")
 ```
 
 ### `this`
