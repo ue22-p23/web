@@ -17,8 +17,6 @@ nbhosting:
   title: 'practice : additional assignments'
 ---
 
-+++
-
 Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++
@@ -29,11 +27,7 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 tools = require('../js/tools'); tools.init()
 ```
 
-+++
-
 ## pythagore
-
-+++
 
 you are tasked to write a "graphical demonstration" for the Pythagorean Theorem, getting inspiration from the page below
 
@@ -45,8 +39,6 @@ the sample app is not responsive, you will need to open it in a separate window
 tools.sample_from_stem("../samples/48-pythagore/pythagore",
                        {sources_show: false, separate_height: '1000px', separate_width: '800px'})
 ```
-
-+++
 
 ## fibonacci and the golden number
 
