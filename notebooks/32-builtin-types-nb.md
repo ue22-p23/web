@@ -300,7 +300,7 @@ and for this reason we recommend against it for beginners
 +++ {"tags": ["gridwidth-1-2"]}
 
 * using `for .. in` iterates over **indices**
-  but see also the warning on next slide
+  but see also the warning on next paragraph
 
 ```{code-cell}
 :tags: [gridwidth-1-2]
@@ -313,7 +313,7 @@ for (let i in array1) {
 ````{admonition} WARNING about for .. in
 
 comparing `for .. in` with `enumerate()` is an oversimplification  
-with some data structures, `for (x in obj)` will iterate over more than the natural indices !
+with some data structures, `for (x in obj)` will iterate over more than the natural indices!
 
 in fact, the indexes that `for .. in` will iterate over are *strings* ! which is, well, insane...
 
@@ -644,6 +644,32 @@ for (let key in bond) {
     console.log(key, ':', bond[key])
 }
 ```
+
+````{admonition} practice
+:class: seealso
+
+Remember that it is not obvious when to use `in` or `of`. Try to guess what the following code returns:
+````
+
+```{code-cell}
+tab = ["A", "B", "C"]
+obj = {x: "A", y: "B", z: "C"}
+tabAsObj = {"1": "A", "2": "B", "3": "C"}
+
+for (let i in tab) 
+    console.log(`value=${i} type=${typeof i}`)
+
+for (let i of tab)
+    console.log(`value=${i} type=${typeof i}`)
+
+//and the try it out with obj et tabAsObj
+```
+
+````{admonition} practice
+:class: seealso
+
+Javascript seems sometimes... unnatural. Check [destroyallsoftware talks on that](https://javascript.info/number)https://www.destroyallsoftware.com/talks/wat), at 1 min. 21.
+````
 
 +++ {"tags": ["level_advanced"]}
 
