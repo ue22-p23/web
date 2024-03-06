@@ -143,8 +143,13 @@ if ( ! false) console.log("not is ! ")
 
 ### strings
 
-* very much alike Python
-* note about **formatting**: the equivalent of *f-strings* is <code><i>&#96;made with ${expression} inside backticks&#96;</i></code>
+**litteral** string: very much alike Python - can use single or double quotes
+
+```{code-cell}
+/*const*/ message = "hello world"    // or 'hello world'
+```
+
+**formatted** string: the equivalent of *f-strings* is <code><i>&#96;made with ${expression} inside backticks&#96;</i></code>
 
 ```{code-cell}
 /*let*/ x = 10
