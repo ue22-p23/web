@@ -19,32 +19,17 @@ nbhosting:
 
 Licence CC BY-NC-ND, Thierry Parmentelat
 
-+++
-
-# practice : a calculator
-
 ```{code-cell}
 tools = require('../js/tools'); tools.init()
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
+# practice : a calculator
 
-## assignement
-
-start from this tutorial here
-<https://www.freecodecamp.org/news/how-to-build-an-html-calculator-app-from-scratch-using-javascript-4454b8714b98/>
-
-it comes [**with the html and css template**](https://codepen.io/zellwk/pen/pLgmGL)  
-for a nice yet simple, calculator
-
-the assignment is to write the **javascript companion** so that
-
-* the device **actually does calculations**
-* in a first step, ignore the '.' and just write an integer calculator
+see on github here: <https://github.com/ue22-p23/web-calculator>
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## what it should look like
+## what the result could look like
 
 ```{code-cell}
 ---
