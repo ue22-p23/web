@@ -17,8 +17,6 @@ nbhosting:
   title: 'practice : networking apps'
 ---
 
-+++
-
 Licence CC BY-NC-ND, Thierry Parmentelat
 
 +++
@@ -29,7 +27,7 @@ Licence CC BY-NC-ND, Thierry Parmentelat
 tools = require('../js/tools'); tools.init()
 ```
 
-the common objective here is: how to talk directly to a backend from JS
+the common objective here is: how to talk directly to an (http) API from JS
 
 +++
 
@@ -44,8 +42,17 @@ clone the repo below, and follow the instructions
 
 +++
 
-## pixels-war
+## chatbox
 
+build your own chatbox using a mistral-7B LLM
+
+clone the repo below, and follow the instructions
+
+<https://github.com/ue22-p23/web-chatbox.git>
+
++++
+
+## pixels-war
 
 build a small app that will let us paint a commonly shared image one pixel at a time
 
