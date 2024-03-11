@@ -25,11 +25,12 @@ tools = require('../js/tools'); tools.init()
 
 # practice : a calculator
 
+````{admonition} calculator:
+we give you the html and css, you have to write the JS:  
 see on github here: <https://github.com/ue22-p23/web-calculator>
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## what the result could look like
+here's what it should look like
+````
 
 ```{code-cell}
 ---
