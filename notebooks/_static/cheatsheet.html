@@ -45,7 +45,7 @@
 
         <code class="code">elts = document.querySelectorAll(".myclass")</code>
         <span class="what">returns all DOM elements that matches
-          <br> a CSS selector; see below for how to iterate over that.
+          <br> a CSS selector; see below for <b>how to iterate</b> over that.
         </span>
       </div>
     </div>
@@ -58,9 +58,20 @@
         <code class="code">elt.style.display = "none"</code>
         <span class="what">change property <code>display</code>
           on <code>elt</code>
-          <br>to change a property whose name contains a dash,
-          <br> like <code>background-color</code>, use
-          <br><code>elt.style.backgroundColor = "none"</code>
+        </span>
+
+        <code class="code">elt.style.display = null</code>
+        <span class="what">cancels previous statement
+          <br>so that property <code>display</code> is no longer defined in the
+          <code>style=</code> attribute
+          <br>so it will <b>revert to the default value</b>
+           (i.e. the one defined in CSS)
+        </span>
+
+        <code class="code">elt.style.backgroundColor = "red"</code>
+        <span class="what">to change a property whose name contains a dash,
+          <br> like <code>background-color</code>, replace it with <b>camelCase</b>
+          <br><code>elt.style.backgroundColor</code>
         </span>
 
         <div class="bullets-sep"></div>
@@ -94,8 +105,18 @@
           <br>it still needs to be inserted somewhere !
         </span>
 
+        <code class="code">father.append(my_div)</code>
+        <span class="what">inserts element <code>my_div</code>
+          as the last child of element <code>parent</code>
+          <br>this is how the newly-created element can become<br>
+          part of the whole tree
+        </span>
+
+        <div class="bullets-sep"></div>
+
         <code class="code"><pre>const svgNS = "http://www.w3.org/2000/svg"
-my_circle = document.createElementNS(svgNS, 'circle')</pre>
+my_circle = document.createElementNS(
+    svgNS, 'circle')</pre>
         </code>
         <span class="what">same but for the tags
           that belong
@@ -103,14 +124,6 @@ my_circle = document.createElementNS(svgNS, 'circle')</pre>
           <br>likewise it needs to be grafted in the tree somewhere
         </span>
 
-        <div class="bullets-sep"></div>
-
-        <code class="code">father.append(my_div)</code>
-        <span class="what">inserts element <code>my_div</code>
-          as the last child of element <code>parent</code>
-          <br>this is how the newly-created element can become<br>
-          part of the whole tree
-        </span>
       </div>
     </div>
 
@@ -206,7 +219,7 @@ my_circle = document.createElementNS(svgNS, 'circle')</pre>
 
       <div class="bullets">
         <code class="code">event.target</code>
-        <span>locate the element that received the event</span>
+        <span>locate the DOM element that received the event</span>
 
         <code class="code">event.key</code>
         <span>what keyboard key was pressed
@@ -218,8 +231,11 @@ my_circle = document.createElementNS(svgNS, 'circle')</pre>
           <br>see also <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent">mouse events</a>
         </span>
 
+        <code class="code">event.preventDefault()</code>
+        <span>keep the event from having its default behaviour</span>
+
         <code class="code">event.stopPropagation()</code>
-        <span>keep the event from bubbling up the document tree</span>
+        <span>stop the event from bubbling up the document tree</span>
 
 
       </div>
