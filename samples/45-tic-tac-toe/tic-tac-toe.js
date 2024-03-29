@@ -1,4 +1,5 @@
-'strict';
+'use strict';
+
 /* TODO */
 
 function check_win(color) {

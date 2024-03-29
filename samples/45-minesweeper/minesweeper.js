@@ -1,4 +1,4 @@
-'strict';
+'use strict';
 
 var BOARD_W = 10;
 var BOARD_H = 10;
