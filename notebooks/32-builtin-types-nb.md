@@ -305,7 +305,7 @@ and for this reason we recommend against it for beginners
 +++ {"tags": ["gridwidth-1-2"]}
 
 * using `for .. in` iterates over **indices**
-  but see also the warning on next slide
+  but see also the warning on next paragraph
 
 ```{code-cell}
 :tags: [gridwidth-1-2]
@@ -318,7 +318,7 @@ for (let i in array1) {
 ````{admonition} WARNING about for .. in
 
 comparing `for .. in` with `enumerate()` is an oversimplification  
-with some data structures, `for (x in obj)` will iterate over more than the natural indices !
+with some data structures, `for (x in obj)` will iterate over more than the natural indices!
 
 in fact, the indexes that `for .. in` will iterate over are *strings* ! which is, well, insane...
 
@@ -649,6 +649,48 @@ for (let key in bond) {
     console.log(key, ':', bond[key])
 }
 ```
+
+````{admonition} practice
+:class: seealso
+
+Remember that it is not obvious when to use `in` or `of`. Try to guess what the following code returns:
+````
+
+```{code-cell}
+tab = ["A", "B", "C"]
+tabAsObj = {"0": "A", "1": "B", "2": "C"}
+obj = {x: "A", y: "B", z: "C"}
+
+function iterateIn(element) {
+    console.log(`in on ${element}:`)
+    for (let i in element)
+        console.log(`value:${i}, type:${typeof i}`)
+}
+
+function iterateOf(element) {
+    console.log(`of on ${element}:`)
+    for (let i of element)
+        console.log(`value:${i}, type:${typeof i}`)
+}
+
+//Guess what the following calls return:
+tab[0]
+tabAsObj[0]
+
+iterateIn(tab)
+iterateIn(tabAsObj)
+iterateIn(obj)
+
+iterateOf(tab)
+iterateOf(tabAsObj)
+iterateOf(obj)
+```
+
+````{admonition} practice
+:class: seealso
+
+Javascript seems sometimes... unnatural. Check [destroyallsoftware talks on that](https://www.destroyallsoftware.com/talks/wat), at 1 min. 21.
+````
 
 +++ {"tags": ["level_advanced"]}
 
