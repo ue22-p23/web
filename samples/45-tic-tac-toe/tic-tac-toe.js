@@ -1,7 +1,5 @@
 'use strict';
 
-/* TODO */
-
 function check_win(color) {
 	/* durty check with pattern */
 	let grid_data = "";
