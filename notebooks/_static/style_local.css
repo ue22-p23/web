@@ -1,0 +1,30 @@
+p:has(+ul) {
+    margin-bottom: 0.1em;
+
+}
+li>ul {
+    margin-top: 0.1em;
+}
+
+
+div.prompt.input_prompt, div.prompt.output_prompt {
+    opacity: 0.6;
+}
+
+/* Deep selection to take precedence from sphinx */
+div.CodeMirror-lines div.CodeMirror-code pre.CodeMirror-line {
+    border: unset;
+    border-radius: unset;
+    /* do NOT shrink down, this would ruin the computation of a
+       decent default width for our samples
+       if needed change the size upper in the tree
+       */
+    font-size: 1em;
+    line-height: 1.1em;
+    background-color: unset;
+}
+
+/* make the right-hand-side index background transparent */
+#bd-toc-nav {
+    background-color: rgb(0 0 0 / 0);
+}
