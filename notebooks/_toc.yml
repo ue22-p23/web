@@ -1,4 +1,5 @@
 format: jb-book
+root: 01-motivation-nb
 parts:
 - caption: intro - Web frontend
   chapters:
@@ -13,9 +14,11 @@ parts:
   chapters:
   - glob: 3*-nb
 - caption: practising JS
+  # last minute: reordering the exos in a more progressive order
+  # do not change numbering though because it's too intrusive
+  # as we're in the middle of the course
   chapters:
   - glob: '[45]*'
 - caption: optional content
   chapters:
   - glob: 6*-nb
-root: 01-motivation-nb
