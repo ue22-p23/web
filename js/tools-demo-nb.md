@@ -43,7 +43,7 @@ tools = require('../js/tools'); tools.init()
 ```
 
 <!-- #region -->
-for convenience (and to reduce the footprint of the recurring init cell), init() does also load the common `style.css` located in `notebooks/_static`
+for convenience (and to reduce the footprint of the recurring init cell), init() does also load the style sheets `style_common.css` and `style_local.css` located in `notebooks/_static`
 
 the code for doing so is - could be useful for some simpler js-based course `.style` file -
 ```js
